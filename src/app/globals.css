@@ -1,26 +1,64 @@
+/* src/app/globals.css */
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+  Define the custom fonts for the project.
+  'font-display: swap;' tells the browser to show a fallback font immediately
+  and then swap to our custom font once it's loaded. This improves perceived performance.
+*/
+@font-face {
+  font-family: 'montreal';
+  font-display: swap;
+  src: url('/fonts/PPNeueMontreal-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: 'montrealbook';
+  font-display: swap;
+  src: url('/fonts/PPNeueMontrealMono-Book.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
+/*
+  Define base styles and CSS variables for the entire application.
+  We use @layer base to ensure these are part of Tailwind's base layer,
+  which means they have the lowest specificity and can be easily overridden
+  by utility classes.
+*/
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /*
+      Define the core color palette as CSS variables.
+      This makes them accessible in both CSS (via var(--background))
+      and our Tailwind config. This is a modern best practice.
+    */
+    --background: 236 14% 97%; /* #F6F5F8 */
+    --foreground: 240 10% 3.9%; /* #0A0A0A */
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 0 0% 100%; /* #FFFFFF */
+    --accent-foreground: 240 5.9% 10%;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Define the dark mode color palette */
+ .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    /*... define other dark mode colors if needed */
+  }
+
+  body {
+    /*
+      Apply the base background and foreground colors.
+      The 'hsl(var(...))' syntax is how we use our CSS variables.
+    */
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: theme('fontFamily.book'); /* Pulls from our tailwind.config.ts */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
