@@ -3,35 +3,38 @@
 import { useFluidScaling } from '@/hooks/use-fluid-scaling'
 import React, { useState } from 'react'
 import { PageLoader } from '../ui/page-loader'
-import { LoaderTransition } from '../ui/loader-transition'
 import { AnimatePresence } from 'framer-motion'
+import { WebGLSceneProvider, useWebGLScene } from './webgl-scene-provider'
+import { GlobalCanvas } from '../layout/global-canvas'
 
-export function AppProviders({ children }: { children: React.ReactNode }) {
-  useFluidScaling()
-  // useLenis() // We'll enable this later
+function AppContent({ children }: { children: React.ReactNode }) {
+  const { setActiveScene } = useWebGLScene()
+  const [isLoaded, setIsLoaded] = useState(false)
 
-  const [isUiLoaded, setIsUiLoaded] = useState(false)
-  const = useState(true)
-
-  const handleUiLoaded = () => {
-    setIsUiLoaded(true)
-    // Set a timer to remove the transition component after it has faded out
-    setTimeout(() => {
-      setIsTransitioning(false)
-    }, 2000) // Match the duration + delay of the transition
+  const handleLoaded = () => {
+    // When the UI loader is done, it tells the WebGL scene to start its transition.
+    // The WebGL component will then handle setting the scene to null when it's finished.
+    setActiveScene('loader')
+    setIsLoaded(true)
   }
 
   return (
     <>
       <AnimatePresence>
-        {!isUiLoaded && <PageLoader onLoaded={handleUiLoaded} />}
+        {!isLoaded && <PageLoader onLoaded={handleLoaded} />}
       </AnimatePresence>
-      
-      <AnimatePresence>
-        {isTransitioning && isUiLoaded && <LoaderTransition />}
-      </AnimatePresence>
-
       {children}
     </>
+  )
+}
+
+export function AppProviders({ children }: { children: React.ReactNode }) {
+  useFluidScaling()
+
+  return (
+    <WebGLSceneProvider>
+      <GlobalCanvas />
+      <AppContent>{children}</AppContent>
+    </WebGLSceneProvider>
   )
 }

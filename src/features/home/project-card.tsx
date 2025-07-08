@@ -5,6 +5,7 @@ import { Canvas } from '@react-three/fiber'
 import { DistortedImagePlane } from './distorted-image-plane'
 import Link from 'next/link'
 import { AnimatedText } from '@/components/ui/animated-text'
+import { Suspense } from 'react'
 
 interface ProjectCardProps {
   project: Project
@@ -25,10 +26,12 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       className={`group ${isFullWidth? 'md:col-span-2' : ''} ${marginLeft}`}
     >
       {/* The R3F Canvas: This creates the WebGL scene */}
-      <div className="w-full aspect-video md:aspect-[1.4/1] overflow-hidden">
+      <div className="w-full aspect-video md:aspect-[1.4/1] overflow-hidden bg-neutral-200">
         <Canvas>
-          {/* Our custom WebGL component */}
-          <DistortedImagePlane imageUrl={coverImage.url!} />
+          {/* Suspense is React's way of showing a fallback while async operations (like loading a texture) complete */}
+          <Suspense fallback={null}>
+            <DistortedImagePlane imageUrl={coverImage.url!} />
+          </Suspense>
         </Canvas>
       </div>
 
