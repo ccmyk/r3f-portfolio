@@ -10,7 +10,7 @@ type SceneContextType = {
 const WebGLSceneContext = createContext<SceneContextType | undefined>(undefined)
 
 export function WebGLSceneProvider({ children }: { children: ReactNode }) {
-  const = useState<string | null>('loader')
+  const [activeScene, setActiveScene] = useState<string | null>('loader')
 
   return (
     <WebGLSceneContext.Provider value={{ activeScene, setActiveScene }}>

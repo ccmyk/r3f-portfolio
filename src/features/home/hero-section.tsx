@@ -48,7 +48,7 @@ export function HeroSection() {
       <Canvas
         className="absolute inset-0 z-10"
         orthographic
-        camera={{ position: , zoom: 100 }}
+        camera={{ position: [0, 0, 1000], zoom: 100 }}
       >
         <motion.group
           initial={{ opacity: 0 }}
