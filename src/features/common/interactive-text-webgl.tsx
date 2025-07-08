@@ -5,6 +5,7 @@ import { useRef, useMemo } from 'react'
 import { useFrame, extend, useLoader } from '@react-three/fiber'
 import { shaderMaterial } from '@react-three/drei'
 import { motion } from 'framer-motion-3d'
+import { power4InOut } from '@/lib/easings'
 
 // 🩻msdf.glsl from /💬/
 const vertexShader = `
@@ -145,7 +146,7 @@ export function InteractiveTextWebGL({ text, size = 1,...props }) {
         transparent
         side={THREE.DoubleSide}
         animate={{ uStart: 0 }}
-        transition={{ duration: 0.8, delay: 0.5, ease: 'power4.inOut' }}
+        transition={{ duration: 0.8, delay: 0.5, ease: power4InOut as any }}
       />
     </motion.mesh>
   )

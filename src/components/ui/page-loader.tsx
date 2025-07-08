@@ -4,15 +4,13 @@ import { useProgress } from '@react-three/drei'
 import { useAnimate, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { AnimatedText } from './animated-text'
-
-// GSAP's 'power2.inOut' corresponds to a standard cubic-bezier easing function.
-// We define it here for Framer Motion.
-const power2InOut = [0.455, 0.03, 0.515, 0.955]
+import { power2InOut } from '@/lib/easings'
 
 export function PageLoader({ onLoaded }: { onLoaded: () => void }) {
   const { progress } = useProgress()
   const [scope, animate] = useAnimate()
-  const = useState(false)
+  const [isAnimationStarted, setIsAnimationStarted] = useState(false)
+  const [currentNumber, setCurrentNumber] = useState(0)
 
   // This effect replicates the GSAP timeline from the original Loader.js
   useEffect(() => {
@@ -28,45 +26,37 @@ export function PageLoader({ onLoaded }: { onLoaded: () => void }) {
         { duration: 0.8, delay: 0.5 }
       )
 
-      // Animate the number from 0 to 90 over a long duration, mimicking the original timeline
-      await animate(scope.current, 90, {
+      // Animate the number from 0 to 90 over a long duration
+      await animate(currentNumber, 90, {
         duration: 10, // 2s 'none' + 8s 'power2.inOut'
-        ease: power2InOut,
+        ease: power2InOut as any,
         onUpdate: (latest) => {
-          if (scope.current) {
-            scope.current.textContent = Math.round(latest)
-             .toString()
-             .padStart(3, '0')
-          }
+          setCurrentNumber(Math.round(latest))
         },
       })
     }
 
     runLoaderAnimation()
-  },)
+  }, [isAnimationStarted, animate, currentNumber])
 
   // This effect watches for the actual asset loading progress
   useEffect(() => {
     if (progress === 100) {
       const runExitAnimation = async () => {
         // Animate the number quickly from its current value to 100
-        await animate(scope.current, 100, {
+        await animate(currentNumber, 100, {
           duration: 0.49,
-          ease: power2InOut,
+          ease: power2InOut as any,
           onUpdate: (latest) => {
-            if (scope.current) {
-              scope.current.textContent = Math.round(latest)
-               .toString()
-               .padStart(3, '0')
-            }
+            setCurrentNumber(Math.round(latest))
           },
         })
 
         // Fade out the entire loader element
         await animate(
-          '.loader-container',
+          scope.current,
           { opacity: 0 },
-          { duration: 0.5, delay: 0.2, ease: power2InOut }
+          { duration: 0.5, delay: 0.2 }
         )
 
         // Signal that loading is complete
@@ -74,10 +64,10 @@ export function PageLoader({ onLoaded }: { onLoaded: () => void }) {
       }
       runExitAnimation()
     }
-  }, [progress, animate, scope, onLoaded])
+  }, [progress, animate, currentNumber, onLoaded])
 
   return (
-    <div className="loader-container fixed inset-0 bg-brand-dark text-brand-light z- flex flex-col justify-between p-4 md:p-8">
+    <div className="loader-container fixed inset-0 bg-brand-dark text-brand-light z-50 flex flex-col justify-between p-4 md:p-8">
       {/* This empty div helps with the justify-between layout */}
       <div></div>
 
@@ -88,7 +78,7 @@ export function PageLoader({ onLoaded }: { onLoaded: () => void }) {
           className="font-main text-[16.7rem] md:text-[28rem] leading-none tracking-tighter"
           style={{ fontVariantNumeric: 'tabular-nums' }}
         >
-          000
+          {currentNumber.toString().padStart(3, '0')}
         </div>
         <div className="loader-text opacity-0 -translate-y-5 flex flex-col items-start mt-4">
           <AnimatedText

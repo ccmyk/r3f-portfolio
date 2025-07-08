@@ -1,0 +1,2305 @@
+# R3F Portfolio Project Dump
+Generated on: Tue Jul  8 13:46:35 PDT 2025
+
+## Project Structure
+```
+.
+├── public
+│   ├── fonts
+│   │   ├── PPAir-Medium.ttf
+│   │   ├── PPAir-Medium.woff
+│   │   ├── PPAir-Medium.woff2
+│   │   ├── PPNeueMontreal-Medium-msdf.json
+│   │   ├── PPNeueMontreal-Medium.png
+│   │   ├── PPNeueMontreal-Medium.ttf
+│   │   ├── PPNeueMontreal-Medium.woff
+│   │   ├── PPNeueMontreal-Medium.woff2
+│   │   ├── PPNeueMontrealMono-Book.woff
+│   │   └── PPNeueMontrealMono-Book.woff2
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── next.svg
+│   ├── vercel.svg
+│   └── window.svg
+├── src
+│   ├── app
+│   │   ├── (app)
+│   │   │   ├── about
+│   │   │   ├── project
+│   │   │   │   └── [slug]
+│   │   │   │       └── page.tsx
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── (payload)
+│   │   │   ├── admin
+│   │   │   │   ├── [[...segments]]
+│   │   │   │   │   ├── not-found.tsx
+│   │   │   │   │   └── page.tsx
+│   │   │   │   └── importMap.js
+│   │   │   ├── api
+│   │   │   │   ├── [...slug]
+│   │   │   │   │   └── route.ts
+│   │   │   │   ├── graphql
+│   │   │   │   │   └── route.ts
+│   │   │   │   └── graphql-playground
+│   │   │   │       └── route.ts
+│   │   │   ├── custom.scss
+│   │   │   └── layout.tsx
+│   │   └── globals.css
+│   ├── components
+│   │   ├── layout
+│   │   │   ├── animated-clock-segment.tsx
+│   │   │   ├── footer.tsx
+│   │   │   ├── global-canvas.tsx
+│   │   │   ├── live-clock.tsx
+│   │   │   └── navigation.tsx
+│   │   ├── providers
+│   │   │   ├── app-providers.tsx
+│   │   │   └── webgl-scene-provider.tsx
+│   │   └── ui
+│   │       ├── animated-text.tsx
+│   │       ├── custom-cursor.tsx
+│   │       ├── gradient-blur.module.css
+│   │       ├── gradient-blur.tsx
+│   │       ├── loader-transition.tsx
+│   │       └── page-loader.tsx
+│   ├── features
+│   │   ├── common
+│   │   │   └── interactive-text-webgl.tsx
+│   │   ├── home
+│   │   │   ├── distrored-image-plane.tsx
+│   │   │   ├── featured-words.tsx
+│   │   │   ├── hero-section.tsx
+│   │   │   └── project-card.tsx
+│   │   └── loader
+│   │       └── fluid-reveal-effect.tsx
+│   ├── hooks
+│   │   └── use-fluid-scaling.ts
+│   ├── lib
+│   │   ├── easings.ts
+│   │   ├── fonts.ts
+│   │   └── utils.ts
+│   ├── payload
+│   │   ├── collections
+│   │   │   ├── Media.ts
+│   │   │   ├── Projects.ts
+│   │   │   ├── Tags.ts
+│   │   │   └── Users.ts
+│   │   ├── globals
+│   │   ├── payload-types.ts
+│   │   └── payload.config.ts
+│   └── styles
+├── .env
+├── .gitignore
+├── eslint.config.mjs
+├── generate-project-dump.sh
+├── next-env.d.ts
+├── next.config.ts
+├── package.json
+├── pnpm-lock.yaml
+├── postcss.config.mjs
+├── project-dump.txt
+├── README.md
+├── tailwind.config.ts
+└── tsconfig.json
+
+30 directories, 69 files
+```
+
+## Package Configuration
+
+### package.json
+```json
+{
+  "name": "r3f",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@payloadcms/db-sqlite": "^3.45.0",
+    "@payloadcms/next": "^3.45.0",
+    "@payloadcms/payload-cloud": "^3.45.0",
+    "@payloadcms/richtext-lexical": "^3.45.0",
+    "@react-three/drei": "^10.4.4",
+    "@react-three/fiber": "^9.2.0",
+    "framer-motion": "^12.23.0",
+    "graphql": "^16.11.0",
+    "lenis": "^1.3.4",
+    "next": "15.3.5",
+    "payload": "^3.45.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "split-type": "^0.3.4",
+    "three": "^0.178.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/three": "^0.178.0",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.5",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
+```
+
+### tsconfig.json
+```json
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@payload-config": [
+        "./src/payload.config.ts"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}```
+
+### next.config.ts
+```typescript
+import { withPayload } from "@payloadcms/next/withPayload";
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  /* config options here */
+};
+
+export default withPayload(nextConfig);
+```
+
+### tailwind.config.ts
+```typescript
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
+  // This tells Tailwind where to look for class names.
+  // It's automatically configured by Next.js to scan all relevant files.
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/features/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    // The container utility is used to center content. We'll set a default padding.
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px',
+      },
+    },
+    extend: {
+      // Here we map our CSS variables from globals.css to Tailwind's color palette.
+      // This allows us to use classes like `bg-background` or `text-accent`.
+      colors: {
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
+        },
+        // We can add the original color names as well for clarity.
+        'brand-light': '#F8F6F2',
+        'brand-dark': '#050505',
+        'brand-gray': '#8A8A8A',
+      },
+      // Here we define our custom fonts so we can use classes like `font-main` or `font-book`.
+      fontFamily: {
+        main: ['var(--font-montreal)', 'sans-serif'],
+        book: ['var(--font-montrealbook)', 'monospace'],
+      },
+      // We can define custom animation keyframes and utilities here.
+      // This is how we'll replace hardcoded CSS animations.
+      keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+      },
+    },
+  },
+  // We can add plugins for extra functionality, like typography defaults or animations.
+  plugins: [require('tailwindcss-animate')],
+}
+export default config```
+
+## Source Files
+
+### ./next-env.d.ts
+```typescript
+/// <reference types="next" />
+/// <reference types="next/image-types/global" />
+
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/app/api-reference/config/typescript for more information.
+```
+
+### ./next.config.ts
+```typescript
+import { withPayload } from "@payloadcms/next/withPayload";
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  /* config options here */
+};
+
+export default withPayload(nextConfig);
+```
+
+### ./src/app/(app)/layout.tsx
+```typescript
+import type { Metadata } from 'next'
+import { montreal, montrealbook } from '@/lib/fonts'
+import './globals.css'
+import { AppProviders } from '@/components/providers/app-providers'
+import { cn } from '@/lib/utils'
+import { Navigation } from '@/components/layout/navigation'
+import { Footer } from '@/components/layout/footer'
+import { PageLoader } from '@/components/ui/page-loader'
+import { CustomCursor } from '@/components/ui/custom-cursor'
+import { Suspense } from 'react'
+
+export const metadata: Metadata = {
+  title: 'Chris Hall - Art Director & Designer',
+  description: 'Art Director & Designer living in Los Angeles.',
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="en" className={cn('antialiased', montreal.variable, montrealbook.variable)} suppressHydrationWarning>
+      <body>
+        <AppProviders>
+          <Suspense fallback={null}>
+            <PageLoader />
+            <CustomCursor />
+            <Navigation />
+            <main className="pt-24">{children}</main> {/* Add padding to offset fixed nav */}
+            <Footer />
+          </Suspense>
+        </AppProviders>
+      </body>
+    </html>
+  )
+}```
+
+### ./src/app/(app)/page.tsx
+```typescript
+import { HeroSection } from '@/features/home/hero-section'
+import { FeaturedWorks } from '@/features/home/featured-works'
+import { getPayloadClient } from '@/payload/getPayloadClient'
+import { type Project } from '@/payload/payload-types'
+
+export default async function HomePage() {
+  const payload = await getPayloadClient()
+
+  // Fetch the 3 most recent projects to feature on the homepage
+  const { docs: projects } = await payload.find({
+    collection: 'projects',
+    limit: 3,
+    sort: '-createdAt',
+    // We use depth: 1 to automatically populate the 'coverImage' and 'tags' fields
+    depth: 1,
+  })
+
+  return (
+    <>
+      <HeroSection />
+      <FeaturedWorks projects={projects as Project} />
+      {/* We will add the other sections (About, etc.) here later */}
+    </>
+  )
+}```
+
+### ./src/app/(app)/project/[slug]/page.tsx
+```typescript
+```
+
+### ./src/app/(payload)/admin/[[...segments]]/not-found.tsx
+```typescript
+/* THIS FILE WAS GENERATED AUTOMATICALLY BY PAYLOAD. */
+/* DO NOT MODIFY IT BECAUSE IT COULD BE REWRITTEN AT ANY TIME. */
+import type { Metadata } from 'next'
+
+import config from '@payload-config'
+import { NotFoundPage, generatePageMetadata } from '@payloadcms/next/views'
+import { importMap } from '../importMap'
+
+type Args = {
+  params: Promise<{
+    segments: string[]
+  }>
+  searchParams: Promise<{
+    [key: string]: string | string[]
+  }>
+}
+
+export const generateMetadata = ({ params, searchParams }: Args): Promise<Metadata> =>
+  generatePageMetadata({ config, params, searchParams })
+
+const NotFound = ({ params, searchParams }: Args) =>
+  NotFoundPage({ config, params, searchParams, importMap })
+
+export default NotFound
+```
+
+### ./src/app/(payload)/admin/[[...segments]]/page.tsx
+```typescript
+/* THIS FILE WAS GENERATED AUTOMATICALLY BY PAYLOAD. */
+/* DO NOT MODIFY IT BECAUSE IT COULD BE REWRITTEN AT ANY TIME. */
+import type { Metadata } from 'next'
+
+import config from '@payload-config'
+import { RootPage, generatePageMetadata } from '@payloadcms/next/views'
+import { importMap } from '../importMap'
+
+type Args = {
+  params: Promise<{
+    segments: string[]
+  }>
+  searchParams: Promise<{
+    [key: string]: string | string[]
+  }>
+}
+
+export const generateMetadata = ({ params, searchParams }: Args): Promise<Metadata> =>
+  generatePageMetadata({ config, params, searchParams })
+
+const Page = ({ params, searchParams }: Args) =>
+  RootPage({ config, params, searchParams, importMap })
+
+export default Page
+```
+
+### ./src/app/(payload)/admin/importMap.js
+```javascript
+export const importMap = {}
+```
+
+### ./src/app/(payload)/api/[...slug]/route.ts
+```typescript
+/* THIS FILE WAS GENERATED AUTOMATICALLY BY PAYLOAD. */
+/* DO NOT MODIFY IT BECAUSE IT COULD BE REWRITTEN AT ANY TIME. */
+import config from '@payload-config'
+import '@payloadcms/next/css'
+import {
+  REST_DELETE,
+  REST_GET,
+  REST_OPTIONS,
+  REST_PATCH,
+  REST_POST,
+  REST_PUT,
+} from '@payloadcms/next/routes'
+
+export const GET = REST_GET(config)
+export const POST = REST_POST(config)
+export const DELETE = REST_DELETE(config)
+export const PATCH = REST_PATCH(config)
+export const PUT = REST_PUT(config)
+export const OPTIONS = REST_OPTIONS(config)
+```
+
+### ./src/app/(payload)/api/graphql-playground/route.ts
+```typescript
+/* THIS FILE WAS GENERATED AUTOMATICALLY BY PAYLOAD. */
+/* DO NOT MODIFY IT BECAUSE IT COULD BE REWRITTEN AT ANY TIME. */
+import config from '@payload-config'
+import '@payloadcms/next/css'
+import { GRAPHQL_PLAYGROUND_GET } from '@payloadcms/next/routes'
+
+export const GET = GRAPHQL_PLAYGROUND_GET(config)
+```
+
+### ./src/app/(payload)/api/graphql/route.ts
+```typescript
+/* THIS FILE WAS GENERATED AUTOMATICALLY BY PAYLOAD. */
+/* DO NOT MODIFY IT BECAUSE IT COULD BE REWRITTEN AT ANY TIME. */
+import config from '@payload-config'
+import { GRAPHQL_POST, REST_OPTIONS } from '@payloadcms/next/routes'
+
+export const POST = GRAPHQL_POST(config)
+
+export const OPTIONS = REST_OPTIONS(config)
+```
+
+### ./src/app/(payload)/custom.scss
+```css
+```
+
+### ./src/app/(payload)/layout.tsx
+```typescript
+/* THIS FILE WAS GENERATED AUTOMATICALLY BY PAYLOAD. */
+/* DO NOT MODIFY IT BECAUSE IT COULD BE REWRITTEN AT ANY TIME. */
+import config from '@payload-config'
+import '@payloadcms/next/css'
+import type { ServerFunctionClient } from 'payload'
+import { handleServerFunctions, RootLayout } from '@payloadcms/next/layouts'
+import React from 'react'
+
+import { importMap } from './admin/importMap.js'
+import './custom.scss'
+
+type Args = {
+  children: React.ReactNode
+}
+
+const serverFunction: ServerFunctionClient = async function (args) {
+  'use server'
+  return handleServerFunctions({
+    ...args,
+    config,
+    importMap,
+  })
+}
+
+const Layout = ({ children }: Args) => (
+  <RootLayout config={config} importMap={importMap} serverFunction={serverFunction}>
+    {children}
+  </RootLayout>
+)
+
+export default Layout
+```
+
+### ./src/app/globals.css
+```css
+/* src/app/globals.css */
+@import "tailwindcss";
+
+/*
+  Define the custom fonts for the project.
+  'font-display: swap;' tells the browser to show a fallback font immediately
+  and then swap to our custom font once it's loaded. This improves perceived performance.
+*/
+@font-face {
+  font-family: 'montreal';
+  font-display: swap;
+  src: url('/fonts/PPNeueMontreal-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montrealbook';
+  font-display: swap;
+  src: url('/fonts/PPNeueMontrealMono-Book.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*
+  Define base styles and CSS variables for the entire application.
+  We use @layer base to ensure these are part of Tailwind's base layer,
+  which means they have the lowest specificity and can be easily overridden
+  by utility classes.
+*/
+@layer base {
+  :root {
+    /*
+      Define the core color palette as CSS variables.
+      This makes them accessible in both CSS (via var(--background))
+      and our Tailwind config. This is a modern best practice.
+    */
+    --background: 236 14% 97%; /* #F6F5F8 */
+    --foreground: 240 10% 3.9%; /* #0A0A0A */
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 0 0% 100%; /* #FFFFFF */
+    --accent-foreground: 240 5.9% 10%;
+  }
+
+  /* Define the dark mode color palette */
+ .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    /*... define other dark mode colors if needed */
+  }
+
+  body {
+    /*
+      Apply the base background and foreground colors.
+      The 'hsl(var(...))' syntax is how we use our CSS variables.
+    */
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: theme('fontFamily.book'); /* Pulls from our tailwind.config.ts */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}```
+
+### ./src/components/layout/animated-clock-segment.tsx
+```typescript
+'use client'
+
+import { motion, AnimatePresence } from 'framer-motion'
+
+export function AnimatedClockSegment({ digit }: { digit: string }) {
+  return (
+    <div className="relative h-4 w-2 overflow-hidden font-book">
+      <AnimatePresence mode="popLayout">
+        <motion.span
+          key={digit}
+          initial={{ y: '100%' }}
+          animate={{ y: '0%' }}
+          exit={{ y: '-100%' }}
+          transition={{ ease: 'easeInOut', duration: 0.4 }}
+          className="absolute inset-0"
+        >
+          {digit}
+        </motion.span>
+      </AnimatePresence>
+    </div>
+  )
+}```
+
+### ./src/components/layout/footer.tsx
+```typescript
+// src/components/providers/app-providers.tsx
+
+import Link from 'next/link'
+
+export function Footer() {
+  return (
+    <footer className="w-full p-8 mt-40">
+      <div className="max-w-screen-2xl mx-auto flex flex-col items-center">
+        {/* This will eventually be our WebGL text component */}
+        <div className="text-center mb-12">
+          <h2 className="font-main text-6xl md:text-8xl tracking-tighter">
+            <Link href="mailto:chris@chrishall.io" className="hover:text-brand-gray transition-colors">
+              Get in touch
+            </Link>
+          </h2>
+        </div>
+
+        <div className="flex items-center gap-8 font-book uppercase text-xs tracking-widest">
+          <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gray transition-colors">Instagram</a>
+          <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gray transition-colors">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+  )
+}```
+
+### ./src/components/layout/global-canvas.tsx
+```typescript
+'use client'
+
+import { Canvas } from '@react-three/fiber'
+import { useWebGLScene } from '../providers/webgl-scene-provider'
+import { AnimatePresence } from 'framer-motion'
+import { FluidRevealEffect } from '@/features/loader/fluid-reveal-effect'
+
+export function GlobalCanvas() {
+  const { activeScene, setActiveScene } = useWebGLScene()
+
+  return (
+    <Canvas
+      className="fixed inset-0 z-20 pointer-events-none"
+      gl={{ antialias: false }} // The original doesn't seem to use antialiasing for these effects
+    >
+      <AnimatePresence>
+        {activeScene === 'loader' && (
+          <FluidRevealEffect onTransitionComplete={() => setActiveScene(null)} />
+        )}
+        {/* We will add other scenes here, like the hero text effect */}
+      </AnimatePresence>
+    </Canvas>
+  )
+}```
+
+### ./src/components/layout/live-clock.tsx
+```typescript
+'use client'
+
+import { useState, useEffect } from 'react'
+import { AnimatedClockSegment } from './animated-clock-segment'
+
+// Helper function to format time and pad with leading zeros
+const formatTime = (date: Date) => {
+  let hours = date.getHours()
+  const minutes = date.getMinutes()
+  const ampm = hours >= 12 ? 'PM' : 'AM'
+
+  hours = hours % 12
+  hours = hours ? hours : 12 // the hour '0' should be '12'
+
+  const strHours = hours.toString().padStart(2, '0')
+  const strMinutes = minutes.toString().padStart(2, '0')
+
+  return {
+    hours: strHours,
+    minutes: strMinutes,
+    ampm,
+  }
+}
+
+export function LiveClock() {
+  const [time, setTime] = useState(formatTime(new Date()))
+
+  useEffect(() => {
+    const timerId = setInterval(() => {
+      setTime(formatTime(new Date()))
+    }, 1000 * 60) // Update every minute
+
+    // Cleanup function to clear the interval when the component unmounts
+    return () => clearInterval(timerId)
+  }, [])
+
+  return (
+    <div className="hidden md:flex items-center gap-1 font-book text-sm">
+      <span className="font-main uppercase">BCN</span>
+      <div className="flex">
+        <AnimatedClockSegment digit={time.hours[0]} />
+        <AnimatedClockSegment digit={time.hours[1]} />
+      </div>
+      <span className="animate-pulse">:</span>
+      <div className="flex">
+        <AnimatedClockSegment digit={time.minutes[0]} />
+        <AnimatedClockSegment digit={time.minutes[1]} />
+      </div>
+      <div className="flex">
+        <AnimatedClockSegment digit={time.ampm[0]} />
+        <AnimatedClockSegment digit={time.ampm[1]} />
+      </div>
+    </div>
+  )
+}```
+
+### ./src/components/layout/navigation.tsx
+```typescript
+'use client'
+
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { cn } from '@/lib/utils'
+import { AnimatedText } from '@/components/ui/animated-text'
+import { LiveClock } from './live-clock'
+import { power2InOut, power4InOut } from '@/lib/easings'
+
+const navLinks = [
+  { href: '/index', label: 'Index' },
+  { href: '/about', label: 'About' },
+  { href: '/playground', label: 'Playground' },
+]
+
+export function Navigation() {
+  const pathname = usePathname()
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  return (
+    <>
+      <motion.nav
+        initial={{ y: '-100%' }}
+        animate={{ y: '0%' }}
+        transition={{ duration: 1, ease: power4InOut, delay: 3.5 }} // Using precise easing
+        className="fixed top-0 left-0 w-full z-50 p-4 text-sm text-brand-dark"
+      >
+        <div className="absolute inset-0 bg-brand-light/80 backdrop-blur-sm border-b border-black/10"></div>
+        <div className="relative flex items-center justify-between max-w-screen-2xl mx-auto">
+          {/* Left Side: Logo and Clock */}
+          <div className="flex items-center gap-4">
+            <Link href="/" className="font-main uppercase tracking-wider text-base">
+              <AnimatedText text="Chris Hall" el="span" />
+            </Link>
+            <div className="h-4 w-px bg-black/20 hidden md:block" />
+            <LiveClock />
+          </div>
+
+          {/* Right Side: Desktop Links */}
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="font-main uppercase tracking-wider relative group"
+              >
+                <AnimatedText text={link.label} el="span" />
+                <motion.div
+                  className="absolute -bottom-1 left-0 right-0 h-px bg-brand-dark origin-left"
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: pathname === link.href? 1 : 0 }}
+                  transition={{ duration: 0.6, ease: power2InOut }} // Using precise easing
+                />
+              </Link>
+            ))}
+          </div>
+
+          {/* Mobile Burger Menu */}
+          <div className="md:hidden">
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="z-50 relative w-8 h-8">
+              <motion.span
+                className="absolute h-0.5 w-5 bg-brand-dark"
+                animate={{ rotate: isMenuOpen? 45 : 0, y: isMenuOpen? 0 : -4 }}
+                transition={{ duration: 0.6, ease: power2InOut }}
+              />
+              <motion.span
+                className="absolute h-0.5 w-5 bg-brand-dark"
+                animate={{ rotate: isMenuOpen? -45 : 0, y: isMenuOpen? 0 : 4 }}
+                transition={{ duration: 0.6, ease: power2InOut }}
+              />
+            </button>
+          </div>
+        </div>
+      </motion.nav>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.6, ease: power2InOut }}
+            className="fixed inset-0 bg-brand-light z-40 flex flex-col items-center justify-center md:hidden"
+          >
+            <div className="flex flex-col items-center gap-12">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="font-main text-3xl uppercase"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  )
+}```
+
+### ./src/components/providers/app-providers.tsx
+```typescript
+'use client'
+
+import { useFluidScaling } from '@/hooks/use-fluid-scaling'
+import React, { useState } from 'react'
+import { PageLoader } from '../ui/page-loader'
+import { AnimatePresence } from 'framer-motion'
+import { WebGLSceneProvider, useWebGLScene } from './webgl-scene-provider'
+import { GlobalCanvas } from '../layout/global-canvas'
+
+function AppContent({ children }: { children: React.ReactNode }) {
+  const { setActiveScene } = useWebGLScene()
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  const handleLoaded = () => {
+    // When the UI loader is done, it tells the WebGL scene to start its transition.
+    // The WebGL component will then handle setting the scene to null when it's finished.
+    setActiveScene('loader')
+    setIsLoaded(true)
+  }
+
+  return (
+    <>
+      <AnimatePresence>
+        {!isLoaded && <PageLoader onLoaded={handleLoaded} />}
+      </AnimatePresence>
+      {children}
+    </>
+  )
+}
+
+export function AppProviders({ children }: { children: React.ReactNode }) {
+  useFluidScaling()
+
+  return (
+    <WebGLSceneProvider>
+      <GlobalCanvas />
+      <AppContent>{children}</AppContent>
+    </WebGLSceneProvider>
+  )
+}```
+
+### ./src/components/providers/webgl-scene-provider.tsx
+```typescript
+'use client'
+
+import { createContext, useContext, useState, ReactNode } from 'react'
+
+type SceneContextType = {
+  activeScene: string | null
+  setActiveScene: (scene: string | null) => void
+}
+
+const WebGLSceneContext = createContext<SceneContextType | undefined>(undefined)
+
+export function WebGLSceneProvider({ children }: { children: ReactNode }) {
+  const [activeScene, setActiveScene] = useState<string | null>('loader')
+
+  return (
+    <WebGLSceneContext.Provider value={{ activeScene, setActiveScene }}>
+      {children}
+    </WebGLSceneContext.Provider>
+  )
+}
+
+export function useWebGLScene() {
+  const context = useContext(WebGLSceneContext)
+  if (!context) {
+    throw new Error('useWebGLScene must be used within a WebGLSceneProvider')
+  }
+  return context
+}```
+
+### ./src/components/ui/animated-text.tsx
+```typescript
+'use client'
+
+import { motion, useInView, Variants } from 'framer-motion'
+import { useRef } from 'react'
+import { cn } from '@/lib/utils'
+
+interface AnimatedTextProps {
+  text: string
+  el?: keyof JSX.IntrinsicElements
+  className?: string
+  once?: boolean
+  repeatDelay?: number
+  animation?: {
+    hidden: Variants
+    visible: Variants
+  }
+}
+
+const defaultAnimations = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.1,
+    },
+  },
+}
+
+export function AnimatedText({
+  text,
+  el: Wrapper = 'p',
+  className,
+  once,
+  repeatDelay,
+  animation = defaultAnimations,
+}: AnimatedTextProps) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { amount: 0.5, once })
+
+  return (
+    <Wrapper className={className}>
+      <span className="sr-only">{text}</span>
+      <motion.span
+        ref={ref}
+        initial="hidden"
+        animate={isInView? 'visible' : 'hidden'}
+        transition={{ staggerChildren: 0.05, delayChildren: 0.05 }}
+        aria-hidden
+      >
+        {text.split(' ').map((word, wordIndex) => (
+          <span key={wordIndex} className="inline-block">
+            {word.split('').map((char, charIndex) => (
+              <motion.span
+                key={charIndex}
+                className="inline-block"
+                variants={animation}
+              >
+                {char}
+              </motion.span>
+            ))}
+            <span className="inline-block">&nbsp;</span>
+          </span>
+        ))}
+      </motion.span>
+    </Wrapper>
+  )
+}```
+
+### ./src/components/ui/custom-cursor.tsx
+```typescript
+'use client'
+
+import { motion, useMotionValue, useSpring } from 'framer-motion'
+import { useEffect } from 'react'
+
+export function CustomCursor() {
+  const cursorX = useMotionValue(-100)
+  const cursorY = useMotionValue(-100)
+
+  // Use spring for a smoother, more natural cursor follow
+  const springConfig = { damping: 25, stiffness: 700, mass: 0.5 }
+  const cursorXSpring = useSpring(cursorX, springConfig)
+  const cursorYSpring = useSpring(cursorY, springConfig)
+
+  useEffect(() => {
+    const moveCursor = (e: MouseEvent) => {
+      cursorX.set(e.clientX)
+      cursorY.set(e.clientY)
+    }
+
+    window.addEventListener('mousemove', moveCursor)
+    return () => {
+      window.removeEventListener('mousemove', moveCursor)
+    }
+  }, [cursorX, cursorY])
+
+  return (
+    <motion.div
+      style={{
+        translateX: cursorXSpring,
+        translateY: cursorYSpring,
+      }}
+      className="fixed top-0 left-0 w-4 h-4 bg-brand-dark rounded-full pointer-events-none z-"
+    />
+  )
+}```
+
+### ./src/components/ui/gradient-blur.module.css
+```css
+.mask1 {
+-webkit-mask-image: linear-gradient(to top, transparent 0%, white 12.5%, white 37.5%, transparent 50%);
+mask-image: linear-gradient(to top, transparent 0%, white 12.5%, white 37.5%, transparent 50%);
+}
+.mask2 {
+-webkit-mask-image: linear-gradient(to top, transparent 12.5%, white 37.5%, white 50%, transparent 62.5%);
+mask-image: linear-gradient(to top, transparent 12.5%, white 37.5%, white 50%, transparent 62.5%);
+}```
+
+### ./src/components/ui/gradient-blur.tsx
+```typescript
+import styles from './gradient-blur.module.css';
+
+export function GradientBlur() {
+  return (
+    <div className="absolute inset-0 pointer-events-none">
+      <div className={`absolute inset-0 backdrop-blur-sm ${styles.mask1}`} />
+      <div className={`absolute inset-0 backdrop-blur-md ${styles.mask2}`} />
+      {/*... other divs for the effect... */}
+    </div>
+  );
+}```
+
+### ./src/components/ui/loader-transition.tsx
+```typescript
+'use client'
+
+import { motion } from 'framer-motion'
+import { Canvas } from '@react-three/fiber'
+// We will create this component in a later step
+// import { HourglassEffect } from '@/features/loader/hourglass-effect'
+
+export function LoaderTransition() {
+  return (
+    <motion.div
+      initial={{ opacity: 1 }}
+      animate={{ opacity: 0 }}
+      transition={{ duration: 1.5, delay: 0.5, ease: 'circOut' }}
+      className="fixed inset-0 bg-brand-dark z- pointer-events-none"
+    >
+      {/*
+        This is where the OGL ⌛️ canvas would go.
+        We'll add a <Canvas> component here later and port the shaders
+        from /gl🌊🌊🌊/⌛️/ to create the fluid transition effect.
+      */}
+      {/* <Canvas>
+        <HourglassEffect />
+      </Canvas> */}
+    </motion.div>
+  )
+}```
+
+### ./src/components/ui/page-loader.tsx
+```typescript
+'use client'
+
+import { useProgress } from '@react-three/drei'
+import { useAnimate, motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import { AnimatedText } from './animated-text'
+import { power2InOut } from '@/lib/easings'
+
+export function PageLoader({ onLoaded }: { onLoaded: () => void }) {
+  const { progress } = useProgress()
+  const [scope, animate] = useAnimate()
+  const [isAnimationStarted, setIsAnimationStarted] = useState(false)
+  const [currentNumber, setCurrentNumber] = useState(0)
+
+  // This effect replicates the GSAP timeline from the original Loader.js
+  useEffect(() => {
+    const runLoaderAnimation = async () => {
+      // Ensure this runs only once
+      if (isAnimationStarted) return
+      setIsAnimationStarted(true)
+
+      // Animate the text into view first
+      await animate(
+        '.loader-text',
+        { opacity: 1, y: 0 },
+        { duration: 0.8, delay: 0.5 }
+      )
+
+      // Animate the number from 0 to 90 over a long duration
+      await animate(currentNumber, 90, {
+        duration: 10, // 2s 'none' + 8s 'power2.inOut'
+        ease: power2InOut as any,
+        onUpdate: (latest) => {
+          setCurrentNumber(Math.round(latest))
+        },
+      })
+    }
+
+    runLoaderAnimation()
+  }, [isAnimationStarted, animate, currentNumber])
+
+  // This effect watches for the actual asset loading progress
+  useEffect(() => {
+    if (progress === 100) {
+      const runExitAnimation = async () => {
+        // Animate the number quickly from its current value to 100
+        await animate(currentNumber, 100, {
+          duration: 0.49,
+          ease: power2InOut as any,
+          onUpdate: (latest) => {
+            setCurrentNumber(Math.round(latest))
+          },
+        })
+
+        // Fade out the entire loader element
+        await animate(
+          scope.current,
+          { opacity: 0 },
+          { duration: 0.5, delay: 0.2 }
+        )
+
+        // Signal that loading is complete
+        onLoaded()
+      }
+      runExitAnimation()
+    }
+  }, [progress, animate, currentNumber, onLoaded])
+
+  return (
+    <div className="loader-container fixed inset-0 bg-brand-dark text-brand-light z-50 flex flex-col justify-between p-4 md:p-8">
+      {/* This empty div helps with the justify-between layout */}
+      <div></div>
+
+      {/* Main loader content, using Tailwind arbitrary values to match the original CSS */}
+      <div className="w-full max-w-screen-2xl mx-auto flex flex-col items-start pl-[4.5rem] md:pl-[8.5rem] lg:pl-[59.2rem]">
+        <div
+          ref={scope}
+          className="font-main text-[16.7rem] md:text-[28rem] leading-none tracking-tighter"
+          style={{ fontVariantNumeric: 'tabular-nums' }}
+        >
+          {currentNumber.toString().padStart(3, '0')}
+        </div>
+        <div className="loader-text opacity-0 -translate-y-5 flex flex-col items-start mt-4">
+          <AnimatedText
+            text="chris hall"
+            el="h1"
+            className="text-sm uppercase"
+          />
+          <AnimatedText
+            text="creative portfolio"
+            el="h2"
+            className="text-sm uppercase mt-1"
+          />
+        </div>
+      </div>
+    </div>
+  )
+}```
+
+### ./src/features/common/interactive-text-webgl.tsx
+```typescript
+'use client'
+
+import * as THREE from 'three'
+import { useRef, useMemo } from 'react'
+import { useFrame, extend, useLoader } from '@react-three/fiber'
+import { shaderMaterial } from '@react-three/drei'
+import { motion } from 'framer-motion-3d'
+import { power4InOut } from '@/lib/easings'
+
+// 🩻msdf.glsl from /💬/
+const vertexShader = `
+  attribute vec2 uv;
+  attribute vec3 position;
+  attribute float index;
+  
+  uniform mat4 modelViewMatrix;
+  uniform mat4 projectionMatrix;
+  uniform float uTime;
+  uniform float uPower;
+  uniform float uStart;
+  
+  varying vec2 vUv;
+  varying float vIndex;
+
+  void main() {
+    vUv = uv;
+    vIndex = index;
+    
+    vec3 pos = position;
+    pos.y += sin(uTime * 0.5 + index * 0.5) * uPower * 0.1;
+    
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+  }
+`
+
+// 🧪msdf.glsl from /💬/
+const fragmentShader = `
+  uniform sampler2D tMap;
+  uniform float uStart;
+  uniform vec3 uColor;
+  varying vec2 vUv;
+
+  float median(float r, float g, float b) {
+    return max(min(r, g), min(max(r, g), b));
+  }
+
+  void main() {
+    vec3 tex = texture2D(tMap, vUv).rgb;
+    float signedDist = median(tex.r, tex.g, tex.b) - 0.5;
+    float d = fwidth(signedDist);
+    float alpha = smoothstep(-d, d, signedDist);
+    
+    if (alpha < 0.01) discard;
+    
+    gl_FragColor.rgba = vec4(uColor, alpha * (1.0 - uStart));
+  }
+`
+
+// Create the shader material
+const MSDFTextMaterial = shaderMaterial(
+  {
+    uTime: 0,
+    uPower: 0.0,
+    uStart: 1.0, // Start at 1 (invisible) and animate to 0 (visible)
+    uColor: new THREE.Color('#050505'),
+    tMap: new THREE.Texture(),
+  },
+  vertexShader,
+  fragmentShader
+)
+
+extend({ MSDFTextMaterial })
+
+// Main Component
+export function InteractiveTextWebGL({ text, size = 1,...props }) {
+  const materialRef = useRef<any>()
+  const font = useLoader(THREE.FileLoader, '/fonts/PPNeueMontreal-Medium.json')
+  const texture = useLoader(THREE.TextureLoader, '/fonts/PPNeueMontreal-Medium.png')
+  const fontData = JSON.parse(font as string)
+
+  // Generate the geometry for the text
+  const geometry = useMemo(() => {
+    const geometry = new THREE.BufferGeometry()
+    const positions =
+    const uvs =
+    const indices =
+    let x = 0
+
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i]
+      const charData = fontData.chars.find((c) => c.char === char)
+      if (!charData) continue
+
+      const s = size / fontData.info.size
+      const w = charData.width * s
+      const h = charData.height * s
+      const xoffset = charData.xoffset * s
+      const yoffset = charData.yoffset * s
+
+      // Add vertices for a quad
+      positions.push(x + xoffset, -yoffset, 0)
+      positions.push(x + xoffset + w, -yoffset, 0)
+      positions.push(x + xoffset, -yoffset - h, 0)
+      positions.push(x + xoffset + w, -yoffset - h, 0)
+
+      // Add UVs
+      const u = charData.x / fontData.common.scaleW
+      const v = 1 - charData.y / fontData.common.scaleH
+      const uw = charData.width / fontData.common.scaleW
+      const vh = charData.height / fontData.common.scaleH
+      uvs.push(u, v, u + uw, v, u, v - vh, u + uw, v - vh)
+
+      // Add indices
+      const j = i * 4
+      indices.push(j, j + 2, j + 1, j + 1, j + 2, j + 3)
+
+      x += charData.xadvance * s
+    }
+
+    geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3))
+    geometry.setAttribute('uv', new THREE.Float32BufferAttribute(uvs, 2))
+    geometry.setIndex(indices)
+    geometry.center()
+
+    return geometry
+  },)
+
+  useFrame((state) => {
+    if (materialRef.current) {
+      materialRef.current.uTime = state.clock.elapsedTime
+      // Lerp mouse position for smooth effect
+      materialRef.current.uPower = THREE.MathUtils.lerp(
+        materialRef.current.uPower,
+        state.pointer.length() * 2, // Power of effect based on mouse distance from center
+        0.1
+      )
+    }
+  })
+
+  return (
+    <motion.mesh geometry={geometry} {...props}>
+      {/* @ts-ignore */}
+      <mSDFTextMaterial
+        ref={materialRef}
+        tMap={texture}
+        transparent
+        side={THREE.DoubleSide}
+        animate={{ uStart: 0 }}
+        transition={{ duration: 0.8, delay: 0.5, ease: power4InOut as any }}
+      />
+    </motion.mesh>
+  )
+}```
+
+### ./src/features/home/distrored-image-plane.tsx
+```typescript
+'use client'
+
+import * as THREE from 'three'
+import { useRef, useState } from 'react'
+import { useLoader, useFrame, extend } from '@react-three/fiber'
+import { shaderMaterial } from '@react-three/drei'
+import { motion } from 'framer-motion-3d'
+
+// 🩻main.glsl - Vertex Shader from gl_directory.txt
+const vertexShader = `
+  uniform float uTime;
+  uniform float uStart;
+  uniform vec2 uMouse;
+  varying vec2 vUv;
+
+  void main() {
+    vUv = uv;
+    vec3 pos = position;
+    pos.z += sin(pos.x * 10.0 + uTime * 2.0) * (uMouse.x * 0.1);
+    pos.z += cos(pos.y * 10.0 + uTime * 2.0) * (uMouse.y * 0.1);
+    pos.z *= uStart;
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+  }
+`
+
+// 🧪main.glsl - Fragment Shader from gl_directory.txt
+const fragmentShader = `
+  uniform sampler2D tMap;
+  uniform float uStart1;
+  uniform float uTime;
+  varying vec2 vUv;
+
+  vec2 coverTexture(vec2 tsize, vec2 vUv, vec2 mouse) {
+    vec2 tUv = vUv;
+    vec2 tPos = (tUv -.5);
+    tPos.x *= tsize.x / tsize.y;
+    return tPos +.5;
+  }
+
+  void main() {
+    vec2 mouse = vec2(0.);
+    vec2 cover = coverTexture(vec2(1., 1.), vUv, mouse);
+    vec4 final = texture2D(tMap, cover);
+    gl_FragColor = final;
+  }
+`
+
+// Create a reusable shader material with drei's helper
+const DistortionMaterial = shaderMaterial(
+  // Uniforms
+  {
+    uTime: 0,
+    uStart: 0, // Corresponds to the animation start
+    uMouse: new THREE.Vector2(0, 0),
+    tMap: new THREE.Texture(),
+  },
+  vertexShader,
+  fragmentShader
+)
+
+// Make it available as a JSX component
+extend({ DistortionMaterial })
+
+export function DistortedImagePlane({ imageUrl }: { imageUrl: string }) {
+  const materialRef = useRef<any>()
+  const texture = useLoader(THREE.TextureLoader, imageUrl)
+  const [hovered, setHovered] = useState(false)
+
+  // This hook runs on every frame
+  useFrame((state, delta) => {
+    if (materialRef.current) {
+      materialRef.current.uTime += delta
+      // Lerp mouse position for smooth effect
+      materialRef.current.uMouse.lerp(state.pointer, 0.05)
+    }
+  })
+
+  return (
+    <motion.mesh
+      onPointerOver={() => setHovered(true)}
+      onPointerOut={() => setHovered(false)}
+      animate={{ scale: hovered? 1.05 : 1 }}
+      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+    >
+      <planeGeometry args={[2.2, 1.5]} />
+      {/* @ts-ignore */}
+      <distortionMaterial ref={materialRef} tMap={texture} />
+    </motion.mesh>
+  )
+}```
+
+### ./src/features/home/featured-words.tsx
+```typescript
+'use client'
+
+import { type Project } from '@/payload/payload-types'
+import { ProjectCard } from './project-card'
+import { AnimatedText } from '@/components/ui/animated-text'
+
+interface FeaturedWorksProps {
+  projects: Project
+}
+
+export function FeaturedWorks({ projects }: FeaturedWorksProps) {
+  return (
+    <section className="mt-40 md:mt-80 px-4">
+      <div className="max-w-screen-2xl mx-auto">
+        <div className="flex items-end">
+          <AnimatedText
+            text="Featured works"
+            el="h2"
+            className="font-main text-4xl md:text-6xl tracking-tighter"
+          />
+          <p className="font-book text-neutral-500 ml-4 mb-2">(2020-2024)</p>
+        </div>
+
+        <div className="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-24">
+          {projects.map((project, index) => (
+            <ProjectCard key={project.id} project={project} index={index} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}```
+
+### ./src/features/home/hero-section.tsx
+```typescript
+'use client'
+
+import { Canvas } from '@react-three/fiber'
+import { motion } from 'framer-motion'
+import { InteractiveTextWebGL } from '../common/interactive-text-webgl'
+import { AnimatedText } from '@/components/ui/animated-text'
+import { power2InOut, power4InOut } from '@/lib/easings'
+import Link from 'next/link'
+
+// Animation variants for the container to orchestrate children
+const containerVariants = {
+  hidden: { opacity: 1 }, // The container itself is always visible
+  visible: {
+    opacity: 1,
+    transition: {
+      // This delayChildren ensures nothing animates until the loader is gone
+      delayChildren: 3.0,
+      staggerChildren: 0.2, // Stagger the animation of each child
+    },
+  },
+}
+
+// Variants for individual child elements to fade and slide in
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: power2InOut },
+  },
+}
+
+const ArrowIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path d="M6.49194 3.516H5.67594L5.67594 2.052L5.74794 1.272L5.71194 1.26L4.94394 2.124L0.911938 6.156L0.335937 5.58L4.36794 1.548L5.23194 0.78L5.21994 0.743999L4.43994 0.816L2.97594 0.816V0L6.49194 0L6.49194 3.516Z" fill="currentColor" />
+  </svg>
+)
+
+export function HeroSection() {
+  return (
+    <motion.section
+      className="relative min-h-screen flex flex-col justify-center px-4 py-20 overflow-hidden"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      {/* WebGL Canvas for the main title */}
+      <Canvas
+        className="absolute inset-0 z-10"
+        orthographic
+        camera={{ position: [0, 0, 1000], zoom: 100 }}
+      >
+        <motion.group
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 2.5, ease: power4InOut }}
+        >
+          <group position={[-2.5, 1, 0]}>
+            <InteractiveTextWebGL text="Eva" size={5} />
+          </group>
+          <group position={[-2.5, -1.5, 0]}>
+            <InteractiveTextWebGL text="Sánchez" size={5} />
+          </group>
+        </motion.group>
+      </Canvas>
+
+      {/* HTML Content Layer */}
+      <div className="relative z-20 w-full max-w-screen-2xl mx-auto">
+        <div className="flex flex-col items-start lg:ml-[59.5rem] md:ml-[8.5rem] ml-[4.5rem] pt-16">
+          {/* Subtitle and secondary animated text (cnt_bt) */}
+          <motion.div variants={itemVariants} className="max-w-md mt-12">
+            <h3 className="font-book text-lg leading-relaxed">
+              Art Director & Designer<br />
+              Living in Los Angeles.
+            </h3>
+            <div className="mt-6">
+              <AnimatedText
+                el="h4"
+                text="Portfolio_20/25"
+                className="font-book text-sm text-neutral-500 uppercase"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Bottom elements, positioned absolutely */}
+      <motion.div
+        variants={itemVariants}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+      >
+        <p className="font-book text-sm uppercase text-neutral-500">[scroll to explore]</p>
+      </motion.div>
+
+      <motion.div
+        variants={itemVariants}
+        className="absolute bottom-10 right-4 md:right-8"
+      >
+        <div className="flex items-center gap-6">
+          <Link href="#" className="group font-book text-sm uppercase flex items-center gap-2 hover:text-neutral-500 transition-colors">
+            LinkedIn <ArrowIcon className="w-2 h-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+          </Link>
+          <Link href="#" className="group font-book text-sm uppercase flex items-center gap-2 hover:text-neutral-500 transition-colors">
+            Resume <ArrowIcon className="w-2 h-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+          </Link>
+        </div>
+      </motion.div>
+    </motion.section>
+  )
+}```
+
+### ./src/features/home/project-card.tsx
+```typescript
+'use client'
+
+import { type Project, type Media } from '@/payload/payload-types'
+import { Canvas } from '@react-three/fiber'
+import { DistortedImagePlane } from './distorted-image-plane'
+import Link from 'next/link'
+import { AnimatedText } from '@/components/ui/animated-text'
+import { Suspense } from 'react'
+
+interface ProjectCardProps {
+  project: Project
+  index: number
+}
+
+export function ProjectCard({ project, index }: ProjectCardProps) {
+  const coverImage = project.coverImage as Media
+
+  // The original layout uses specific widths and margins for different cards.
+  // We can replicate this logic with conditional classes.
+  const isFullWidth = index === 1
+  const marginLeft = index === 2? 'lg:ml-32' : ''
+
+  return (
+    <Link
+      href={`/project/${project.slug}`}
+      className={`group ${isFullWidth? 'md:col-span-2' : ''} ${marginLeft}`}
+    >
+      {/* The R3F Canvas: This creates the WebGL scene */}
+      <div className="w-full aspect-video md:aspect-[1.4/1] overflow-hidden bg-neutral-200">
+        <Canvas>
+          {/* Suspense is React's way of showing a fallback while async operations (like loading a texture) complete */}
+          <Suspense fallback={null}>
+            <DistortedImagePlane imageUrl={coverImage.url!} />
+          </Suspense>
+        </Canvas>
+      </div>
+
+      {/* Project Info */}
+      <div className="mt-3">
+        <div className="flex justify-between items-center">
+          <AnimatedText
+            text={project.title}
+            el="h3"
+            className="font-main text-lg uppercase"
+          />
+          <span className="font-book text-neutral-500">0{index + 1}</span>
+        </div>
+        <p className="font-book text-neutral-500 mt-1">
+          {project.tags?.map((tag) => (typeof tag === 'object'? tag.name : tag)).join(', ')}
+        </p>
+      </div>
+    </Link>
+  )
+}```
+
+### ./src/features/loader/fluid-reveal-effect.tsx
+```typescript
+'use client'
+
+import * as THREE from 'three'
+import { useRef, useEffect } from 'react'
+import { useFrame, extend } from '@react-three/fiber'
+import { shaderMaterial } from '@react-three/drei'
+import { useAnimate } from 'framer-motion'
+
+// 🩻main.glsl from /⌛️/
+const vertexShader = `
+  varying vec2 vUv;
+  void main() {
+    vUv = uv;
+    gl_Position = vec4(position.xy, 0.0, 1.0);
+  }
+`
+
+// 🧪main.glsl from /⌛️/
+const fragmentShader = `
+  uniform float uTime;
+  uniform float uStart0;
+  uniform float uStart1;
+  uniform float uStart2;
+  uniform float uStartX;
+  uniform float uStartY;
+  uniform float uMultiX;
+  uniform float uMultiY;
+  uniform vec2 uResolution;
+  varying vec2 vUv;
+
+  void main() {
+    vec2 U = vUv;
+    U.y = 1. - U.y;
+    vec2 V = U;
+    V -=.5;
+    V.x *= uResolution.x / uResolution.y;
+    float t = uTime *.001;
+    vec3 col = vec3(0.);
+    float s = sin(t *.5) *.5 +.5;
+    float c = cos(t *.5) *.5 +.5;
+    V.x += uStartX + (s * uMultiX);
+    V.y += uStartY + (c * uMultiY);
+    float r = length(V) * 2.;
+    float a = atan(V.y, V.x);
+    float f = cos(a * 3.) *.5 +.5;
+    f += smoothstep(.2,.25, r);
+    f *= 1. - smoothstep(.4,.45, r);
+    f *= uStart0;
+    f *= smoothstep(uStart1, uStart1 +.1, r);
+    f *= 1. - smoothstep(uStart2, uStart2 +.1, r);
+    col = vec3(f);
+    gl_FragColor = vec4(col, 1.0);
+  }
+`
+
+const FluidRevealMaterial = shaderMaterial(
+  {
+    uTime: 0,
+    uStart0: 0, uStart1: 0, uStart2: 1, // Start with the effect invisible
+    uStartX: 0, uStartY: 0.1, uMultiX: -0.4, uMultiY: 0.45,
+    uResolution: new THREE.Vector2(),
+  },
+  vertexShader,
+  fragmentShader
+)
+
+extend({ FluidRevealMaterial })
+
+export function FluidRevealEffect({ onTransitionComplete }: { onTransitionComplete: () => void }) {
+  const materialRef = useRef<any>()
+  const [scope, animate] = useAnimate()
+
+  useFrame((state, delta) => {
+    if (materialRef.current) {
+      materialRef.current.uTime += delta * 1000
+      materialRef.current.uResolution.set(state.size.width, state.size.height)
+    }
+  })
+
+  useEffect(() => {
+    const sequence = async () => {
+      if (materialRef.current) {
+        // Animate the effect IN
+        await animate(materialRef.current.uniforms.uStart0, 1, { duration: 0.8, ease: 'circOut' })
+        // Animate the effect OUT by "wiping" it
+        await animate(materialRef.current.uniforms.uStart1, 1, { duration: 1.2, ease: 'circInOut' })
+        onTransitionComplete()
+      }
+    }
+    sequence()
+  },)
+
+  return (
+    <mesh ref={scope}>
+      <planeGeometry args={[2, 2]} />
+      {/* @ts-ignore */}
+      <fluidRevealMaterial ref={materialRef} transparent blending={THREE.AdditiveBlending} />
+    </mesh>
+  )
+}```
+
+### ./src/hooks/use-fluid-scaling.ts
+```typescript
+'use client' // This hook must run on the client.
+
+import { useLayoutEffect } from 'react'
+
+// Define the design breakpoints from the original project.
+const DESIGN_BREAKPOINTS = {
+  L: { w: 1440, h: 800, multi: 0.4 }, // Large/Desktop
+  P: { w: 390, h: 640, multi: 0.4 }, // Portrait/Mobile
+}
+
+export function useFluidScaling() {
+  // useLayoutEffect runs synchronously after all DOM mutations.
+  // It's perfect for measurements and DOM updates like this to avoid flickering.
+  useLayoutEffect(() => {
+    const calculateAndSetMultipliers = () => {
+      const vw = window.innerWidth
+
+      // Replicate the exact calculation from the legacy constructor.js
+      let multiL = 10 - (10 - (vw / DESIGN_BREAKPOINTS.L.w) * 10) * DESIGN_BREAKPOINTS.L.multi
+      multiL = Math.min(10, multiL)
+
+      let multiP = 10 - (10 - (vw / DESIGN_BREAKPOINTS.P.w) * 10) * DESIGN_BREAKPOINTS.P.multi
+      multiP = Math.min(10, multiP)
+
+      // Set the calculated values as CSS variables on the root <html> element.
+      document.documentElement.style.setProperty('--ck-multi-l', multiL.toString())
+      document.documentElement.style.setProperty('--ck-multi-p', multiP.toString())
+      document.documentElement.style.setProperty('--ck-hvar', `${window.innerHeight}px`)
+    }
+
+    // Calculate on initial mount.
+    calculateAndSetMultipliers()
+
+    // Recalculate whenever the window is resized.
+    window.addEventListener('resize', calculateAndSetMultipliers)
+
+    // This is a crucial cleanup function.
+    // It removes the event listener when the component unmounts to prevent memory leaks.
+    return () => {
+      window.removeEventListener('resize', calculateAndSetMultipliers)
+    }
+  },) // The empty dependency array means this effect runs only once on mount.
+}```
+
+### ./src/lib/easings.ts
+```typescript
+// GSAP's 'power2.inOut'
+export const power2InOut = [0.455, 0.03, 0.515, 0.955];
+
+// GSAP's 'power4.inOut'
+export const power4InOut = [0.76, 0, 0.24, 1];
+```
+
+### ./src/lib/fonts.ts
+```typescript
+// src/lib/fonts.ts
+import localFont from 'next/font/local'
+
+// Define your local fonts
+export const montreal = localFont({
+  src: '../../public/fonts/PPNeueMontreal-Medium.woff2',
+  display: 'swap',
+  variable: '--font-montreal', // This is the CSS variable name
+})
+
+export const montrealbook = localFont({
+  src: '../../public/fonts/PPNeueMontrealMono-Book.woff2',
+  display: 'swap',
+  variable: '--font-montrealbook', // This is the CSS variable name
+})```
+
+### ./src/lib/utils.ts
+```typescript
+// src/lib/utils.ts
+import { type ClassValue, clsx } from "clsx"
+import { twMerge } from "tailwind-merge"
+
+export function cn(...inputs: ClassValue) {
+  return twMerge(clsx(inputs))
+}```
+
+### ./src/payload/collections/Media.ts
+```typescript
+import { CollectionConfig } from 'payload/types'
+
+export const Media: CollectionConfig = {
+  slug: 'media',
+  upload: {
+    staticURL: '/media',
+    staticDir: 'media',
+    imageSizes:,
+    adminThumbnail: 'thumbnail',
+    mimeTypes: ['image/*', 'video/*'],
+  },
+  fields: [
+    {
+      name: 'alt',
+      type: 'text',
+      required: true,
+    },
+  ],
+}```
+
+### ./src/payload/collections/Projects.ts
+```typescript
+import { CollectionConfig } from 'payload/types'
+
+export const Projects: CollectionConfig = {
+  slug: 'projects',
+  admin: {
+    useAsTitle: 'title',
+    description: 'Projects to be displayed in the portfolio.',
+  },
+  fields:,
+}```
+
+### ./src/payload/collections/Tags.ts
+```typescript
+import { CollectionConfig } from 'payload/types'
+
+export const Tags: CollectionConfig = {
+  slug: 'tags',
+  admin: {
+    useAsTitle: 'name',
+  },
+  fields: [
+    {
+      name: 'name',
+      type: 'text',
+      required: true,
+      unique: true,
+    },
+  ],
+}```
+
+### ./src/payload/collections/Users.ts
+```typescript
+```
+
+### ./src/payload/payload-types.ts
+```typescript
+/* tslint:disable */
+/* eslint-disable */
+/**
+ * This file was automatically generated by Payload.
+ * DO NOT MODIFY IT BY HAND. Instead, modify your source Payload config,
+ * and re-run `payload generate:types` to regenerate this file.
+ */
+
+/**
+ * Supported timezones in IANA format.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "supportedTimezones".
+ */
+export type SupportedTimezones =
+  | 'Pacific/Midway'
+  | 'Pacific/Niue'
+  | 'Pacific/Honolulu'
+  | 'Pacific/Rarotonga'
+  | 'America/Anchorage'
+  | 'Pacific/Gambier'
+  | 'America/Los_Angeles'
+  | 'America/Tijuana'
+  | 'America/Denver'
+  | 'America/Phoenix'
+  | 'America/Chicago'
+  | 'America/Guatemala'
+  | 'America/New_York'
+  | 'America/Bogota'
+  | 'America/Caracas'
+  | 'America/Santiago'
+  | 'America/Buenos_Aires'
+  | 'America/Sao_Paulo'
+  | 'Atlantic/South_Georgia'
+  | 'Atlantic/Azores'
+  | 'Atlantic/Cape_Verde'
+  | 'Europe/London'
+  | 'Europe/Berlin'
+  | 'Africa/Lagos'
+  | 'Europe/Athens'
+  | 'Africa/Cairo'
+  | 'Europe/Moscow'
+  | 'Asia/Riyadh'
+  | 'Asia/Dubai'
+  | 'Asia/Baku'
+  | 'Asia/Karachi'
+  | 'Asia/Tashkent'
+  | 'Asia/Calcutta'
+  | 'Asia/Dhaka'
+  | 'Asia/Almaty'
+  | 'Asia/Jakarta'
+  | 'Asia/Bangkok'
+  | 'Asia/Shanghai'
+  | 'Asia/Singapore'
+  | 'Asia/Tokyo'
+  | 'Asia/Seoul'
+  | 'Australia/Brisbane'
+  | 'Australia/Sydney'
+  | 'Pacific/Guam'
+  | 'Pacific/Noumea'
+  | 'Pacific/Auckland'
+  | 'Pacific/Fiji';
+
+export interface Config {
+  auth: {
+    users: UserAuthOperations;
+  };
+  blocks: {};
+  collections: {
+    users: User;
+    media: Media;
+    'payload-locked-documents': PayloadLockedDocument;
+    'payload-preferences': PayloadPreference;
+    'payload-migrations': PayloadMigration;
+  };
+  collectionsJoins: {};
+  collectionsSelect: {
+    users: UsersSelect<false> | UsersSelect<true>;
+    media: MediaSelect<false> | MediaSelect<true>;
+    'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
+    'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
+    'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
+  };
+  db: {
+    defaultIDType: string;
+  };
+  globals: {};
+  globalsSelect: {};
+  locale: null;
+  user: User & {
+    collection: 'users';
+  };
+  jobs: {
+    tasks: unknown;
+    workflows: unknown;
+  };
+}
+export interface UserAuthOperations {
+  forgotPassword: {
+    email: string;
+    password: string;
+  };
+  login: {
+    email: string;
+    password: string;
+  };
+  registerFirstUser: {
+    email: string;
+    password: string;
+  };
+  unlock: {
+    email: string;
+    password: string;
+  };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "users".
+ */
+export interface User {
+  id: string;
+  updatedAt: string;
+  createdAt: string;
+  email: string;
+  resetPasswordToken?: string | null;
+  resetPasswordExpiration?: string | null;
+  salt?: string | null;
+  hash?: string | null;
+  loginAttempts?: number | null;
+  lockUntil?: string | null;
+  sessions?:
+    | {
+        id: string;
+        createdAt?: string | null;
+        expiresAt: string;
+      }[]
+    | null;
+  password?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "media".
+ */
+export interface Media {
+  id: string;
+  alt: string;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "payload-locked-documents".
+ */
+export interface PayloadLockedDocument {
+  id: string;
+  document?:
+    | ({
+        relationTo: 'users';
+        value: string | User;
+      } | null)
+    | ({
+        relationTo: 'media';
+        value: string | Media;
+      } | null);
+  globalSlug?: string | null;
+  user: {
+    relationTo: 'users';
+    value: string | User;
+  };
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "payload-preferences".
+ */
+export interface PayloadPreference {
+  id: string;
+  user: {
+    relationTo: 'users';
+    value: string | User;
+  };
+  key?: string | null;
+  value?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "payload-migrations".
+ */
+export interface PayloadMigration {
+  id: string;
+  name?: string | null;
+  batch?: number | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "users_select".
+ */
+export interface UsersSelect<T extends boolean = true> {
+  updatedAt?: T;
+  createdAt?: T;
+  email?: T;
+  resetPasswordToken?: T;
+  resetPasswordExpiration?: T;
+  salt?: T;
+  hash?: T;
+  loginAttempts?: T;
+  lockUntil?: T;
+  sessions?:
+    | T
+    | {
+        id?: T;
+        createdAt?: T;
+        expiresAt?: T;
+      };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "media_select".
+ */
+export interface MediaSelect<T extends boolean = true> {
+  alt?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  url?: T;
+  thumbnailURL?: T;
+  filename?: T;
+  mimeType?: T;
+  filesize?: T;
+  width?: T;
+  height?: T;
+  focalX?: T;
+  focalY?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "payload-locked-documents_select".
+ */
+export interface PayloadLockedDocumentsSelect<T extends boolean = true> {
+  document?: T;
+  globalSlug?: T;
+  user?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "payload-preferences_select".
+ */
+export interface PayloadPreferencesSelect<T extends boolean = true> {
+  user?: T;
+  key?: T;
+  value?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "payload-migrations_select".
+ */
+export interface PayloadMigrationsSelect<T extends boolean = true> {
+  name?: T;
+  batch?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "auth".
+ */
+export interface Auth {
+  [k: string]: unknown;
+}
+
+
+declare module 'payload' {
+  export interface GeneratedTypes extends Config {}
+}```
+
+### ./src/payload/payload.config.ts
+```typescript
+import path from 'path'
+import { buildConfig } from 'payload/config'
+
+// We import the bundler and adapter we need
+import { webpackBundler } from '@payloadcms/bundler-webpack'
+import { sqliteAdapter } from '@payloadcms/db-sqlite'
+import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import sharp from 'sharp'
+
+// Import all of our collections
+import { Users } from './collections/Users'
+import { Projects } from './collections/Projects'
+import { Media } from './collections/Media'
+import { Tags } from './collections/Tags'
+
+export default buildConfig({
+  // The admin panel configuration
+  admin: {
+    user: Users.slug,
+    // We are explicitly telling Payload to use the webpack bundler for the best Next.js integration.
+    bundler: webpackBundler(),
+  },
+  
+  // The rich text editor to use in the admin panel
+  editor: lexicalEditor({}),
+
+  // An array of all your collections
+  collections:,
+
+  // This is the secret key used for authentication and encryption
+  secret: process.env.PAYLOAD_SECRET |
+
+| 'a-secret-key-to-get-started',
+
+  // This tells Payload where to generate the TypeScript types for your collections
+  typescript: {
+    outputFile: path.resolve(__dirname, 'payload-types.ts'),
+  },
+
+  // This is the database adapter. We're using SQLite.
+  db: sqliteAdapter({
+    client: {
+      // The DATABASE_URI is set in your.env file.
+      // The `file:./r3f.db` is the default we set up.
+      url: process.env.DATABASE_URI |
+
+| 'file:./r3f.db',
+    },
+  }),
+
+  // Sharp is used for high-performance image processing
+  sharp,
+
+  // We can add plugins here. For now, we'll keep it empty to keep things simple.
+  plugins:,
+})```
+
+### ./tailwind.config.ts
+```typescript
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
+  // This tells Tailwind where to look for class names.
+  // It's automatically configured by Next.js to scan all relevant files.
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/features/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    // The container utility is used to center content. We'll set a default padding.
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px',
+      },
+    },
+    extend: {
+      // Here we map our CSS variables from globals.css to Tailwind's color palette.
+      // This allows us to use classes like `bg-background` or `text-accent`.
+      colors: {
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
+        },
+        // We can add the original color names as well for clarity.
+        'brand-light': '#F8F6F2',
+        'brand-dark': '#050505',
+        'brand-gray': '#8A8A8A',
+      },
+      // Here we define our custom fonts so we can use classes like `font-main` or `font-book`.
+      fontFamily: {
+        main: ['var(--font-montreal)', 'sans-serif'],
+        book: ['var(--font-montrealbook)', 'monospace'],
+      },
+      // We can define custom animation keyframes and utilities here.
+      // This is how we'll replace hardcoded CSS animations.
+      keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+      },
+    },
+  },
+  // We can add plugins for extra functionality, like typography defaults or animations.
+  plugins: [require('tailwindcss-animate')],
+}
+export default config```
+
