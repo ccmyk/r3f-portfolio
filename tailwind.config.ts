@@ -37,6 +37,13 @@ const config: Config = {
         'brand-dark': '#050505',
         'brand-gray': '#8A8A8A',
       },
+      spacing: {
+        // Add custom spacing from the original CSS for easy reuse
+        '59.2': '59.2rem',
+        '8.5': '8.5rem',
+        '4.5': '4.5rem',
+        '3.7': '3.7rem',
+      },
       // Here we define our custom fonts so we can use classes like `font-main` or `font-book`.
       fontFamily: {
         main: ['var(--font-montreal)', 'sans-serif'],

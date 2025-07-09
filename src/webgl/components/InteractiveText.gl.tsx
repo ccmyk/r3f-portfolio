@@ -1,10 +1,10 @@
+// src/features/common/interactive-text-webgl.tsx
 'use client'
 
 import * as THREE from 'three'
 import { useRef, useMemo } from 'react'
 import { useFrame, extend, useLoader } from '@react-three/fiber'
 import { shaderMaterial } from '@react-three/drei'
-import { motion } from 'framer-motion-3d'
 import { power4InOut } from '@/lib/easings'
 
 // 🩻msdf.glsl from /💬/
@@ -72,7 +72,7 @@ const MSDFTextMaterial = shaderMaterial(
 extend({ MSDFTextMaterial })
 
 // Main Component
-export function InteractiveTextWebGL({ text, size = 1,...props }) {
+export function InteractiveTextWebGL({ text, size = 1, ...props }: { text: string; size?: number; [key: string]: any }) {
   const materialRef = useRef<any>()
   const font = useLoader(THREE.FileLoader, '/fonts/PPNeueMontreal-Medium.json')
   const texture = useLoader(THREE.TextureLoader, '/fonts/PPNeueMontreal-Medium.png')
@@ -81,9 +81,9 @@ export function InteractiveTextWebGL({ text, size = 1,...props }) {
   // Generate the geometry for the text
   const geometry = useMemo(() => {
     const geometry = new THREE.BufferGeometry()
-    const positions =
-    const uvs =
-    const indices =
+    const positions: number[] = []
+    const uvs: number[] = []
+    const indices: number[] = []
     let x = 0
 
     for (let i = 0; i < text.length; i++) {
@@ -123,7 +123,7 @@ export function InteractiveTextWebGL({ text, size = 1,...props }) {
     geometry.center()
 
     return geometry
-  },)
+  }, [text, size, fontData])
 
   useFrame((state) => {
     if (materialRef.current) {

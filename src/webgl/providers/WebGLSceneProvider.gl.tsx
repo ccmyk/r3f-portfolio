@@ -1,3 +1,4 @@
+// src/webgl/providers/WebGLSceneProvider.gl.tsx
 'use client'
 
 import { createContext, useContext, useState, ReactNode } from 'react'
@@ -10,7 +11,8 @@ type SceneContextType = {
 const WebGLSceneContext = createContext<SceneContextType | undefined>(undefined)
 
 export function WebGLSceneProvider({ children }: { children: ReactNode }) {
-  const [activeScene, setActiveScene] = useState<string | null>('loader')
+  // FIX: Added [activeScene, setActiveScene] to the useState hook.
+  const [activeScene, setActiveScene] = useState<string | null>(null)
 
   return (
     <WebGLSceneContext.Provider value={{ activeScene, setActiveScene }}>

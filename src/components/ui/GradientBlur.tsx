@@ -1,3 +1,4 @@
+// src/components/ui/gradient-blur.tsx
 import styles from './gradient-blur.module.css';
 
 export function GradientBlur() {

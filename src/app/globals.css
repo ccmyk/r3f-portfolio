@@ -1,63 +1,48 @@
 /* src/app/globals.css */
 @import "tailwindcss";
 
-/*
-  Define the custom fonts for the project.
-  'font-display: swap;' tells the browser to show a fallback font immediately
-  and then swap to our custom font once it's loaded. This improves perceived performance.
-*/
-@font-face {
-  font-family: 'montreal';
-  font-display: swap;
-  src: url('/fonts/PPNeueMontreal-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-}
+@import "../styles/base.css";
+@import "../styles/layout.css";
+@import "../styles/typography.css";
+@import "../styles/animation.css";
+@import "../styles/loader.css";
+@import "../styles/navigation.css";
+@import "../styles/home.css";
+@import "../styles/footer.css";
 
-@font-face {
-  font-family: 'montrealbook';
-  font-display: swap;
-  src: url('/fonts/PPNeueMontrealMono-Book.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
 
-/*
-  Define base styles and CSS variables for the entire application.
-  We use @layer base to ensure these are part of Tailwind's base layer,
-  which means they have the lowest specificity and can be easily overridden
-  by utility classes.
-*/
 @layer base {
-  :root {
-    /*
-      Define the core color palette as CSS variables.
-      This makes them accessible in both CSS (via var(--background))
-      and our Tailwind config. This is a modern best practice.
-    */
-    --background: 236 14% 97%; /* #F6F5F8 */
-    --foreground: 240 10% 3.9%; /* #0A0A0A */
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 0 0% 100%; /* #FFFFFF */
-    --accent-foreground: 240 5.9% 10%;
+  @font-face {
+    font-family: 'montreal';
+    font-display: swap;
+    src: url('/fonts/PPNeueMontreal-Medium.woff2') format('woff2');
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: 'montrealbook';
+    font-display: swap;
+    src: url('/fonts/PPNeueMontrealMono-Book.woff2') format('woff2');
+    font-weight: 400;
   }
 
-  /* Define the dark mode color palette */
- .dark {
+  :root {
+    --background: 236 14% 97%;
+    --foreground: 240 10% 3.9%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 0 0% 100%;
+    --accent-foreground: 240 5.9% 10%;
+  }
+    
+  .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
-    /*... define other dark mode colors if needed */
   }
 
   body {
-    /*
-      Apply the base background and foreground colors.
-      The 'hsl(var(...))' syntax is how we use our CSS variables.
-    */
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
-    font-family: theme('fontFamily.book'); /* Pulls from our tailwind.config.ts */
+    font-family: theme('fontFamily.book');
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

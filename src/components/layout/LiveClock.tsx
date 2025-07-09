@@ -1,7 +1,7 @@
+// src/components/layout/LiveClock.tsx
 'use client'
-
 import { useState, useEffect } from 'react'
-import { AnimatedClockSegment } from './animated-clock-segment'
+import { AnimatedClockSegment } from './AnimatedClockSegment' // CORRECTED
 
 // Helper function to format time and pad with leading zeros
 const formatTime = (date: Date) => {

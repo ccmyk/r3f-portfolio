@@ -1,0 +1,34 @@
+/* src/styles/layout.css */
+:root {
+  --pgrid: 0.8rem; /* Mobile default */
+}
+@media (min-width: 744px) and (orientation: portrait) {
+  :root { --pgrid: calc(50vw - 36.8rem); }
+}
+@media (min-width: 1024px) {
+  :root { --pgrid: calc(50vw - 70.4rem); }
+}
+
+.content-grid { /* Replaces .c-vw */
+  margin: 0 auto;
+  width: 100%;
+  padding-left: var(--pgrid);
+  padding-right: var(--pgrid);
+}
+
+.background-grid { /* Replaces .Mbg */
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  opacity: 0.15;
+  pointer-events: none;
+  padding: 0 var(--pgrid);
+}
+.background-grid-column { /* Replaces .Mbg_col */
+  flex-shrink: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent 50%, #9c9c9c 50%);
+  background-size: 100% 8px;
+}

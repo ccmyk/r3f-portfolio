@@ -1,4 +1,5 @@
-'use client' // This hook must run on the client.
+// src/hooks/useFluidScaling.ts
+'use client'
 
 import { useLayoutEffect } from 'react'
 

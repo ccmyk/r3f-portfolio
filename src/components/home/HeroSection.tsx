@@ -1,27 +1,23 @@
+// src/components/home/HeroSection.tsx
 'use client'
 
-import { Canvas } from '@react-three/fiber'
-import { motion } from 'framer-motion'
-import { InteractiveTextWebGL } from '../common/interactive-text-webgl'
-import { AnimatedText } from '@/components/ui/animated-text'
-import { power2InOut, power4InOut } from '@/lib/easings'
+import { useRef } from 'react'
+import { motion, Variants } from 'framer-motion'
 import Link from 'next/link'
+import { View } from '@react-three/drei'
+import { AnimatedText } from '@/components/ui/AnimatedText'
+import { power2InOut } from '@/lib/easings'
+import { InteractiveTextGL } from '@/webgl/components/InteractiveText.gl'
 
-// Animation variants for the container to orchestrate children
-const containerVariants = {
-  hidden: { opacity: 1 }, // The container itself is always visible
+const containerVariants: Variants = {
+  hidden: { opacity: 1 },
   visible: {
     opacity: 1,
-    transition: {
-      // This delayChildren ensures nothing animates until the loader is gone
-      delayChildren: 3.0,
-      staggerChildren: 0.2, // Stagger the animation of each child
-    },
+    transition: { staggerChildren: 0.2 },
   },
 }
 
-// Variants for individual child elements to fade and slide in
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -36,38 +32,23 @@ const ArrowIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 )
 
-export function HeroSection() {
+export function HeroSection({ isVisible }: { isVisible: boolean }) {
+  const titleLine1 = useRef<HTMLDivElement>(null)
+  const titleLine2 = useRef<HTMLDivElement>(null)
+
   return (
     <motion.section
       className="relative min-h-screen flex flex-col justify-center px-4 py-20 overflow-hidden"
       variants={containerVariants}
       initial="hidden"
-      animate="visible"
+      animate={isVisible ? 'visible' : 'hidden'}
     >
-      {/* WebGL Canvas for the main title */}
-      <Canvas
-        className="absolute inset-0 z-10"
-        orthographic
-        camera={{ position: [0, 0, 1000], zoom: 100 }}
-      >
-        <motion.group
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 2.5, ease: power4InOut }}
-        >
-          <group position={[-2.5, 1, 0]}>
-            <InteractiveTextWebGL text="Eva" size={5} />
-          </group>
-          <group position={[-2.5, -1.5, 0]}>
-            <InteractiveTextWebGL text="Sánchez" size={5} />
-          </group>
-        </motion.group>
-      </Canvas>
-
-      {/* HTML Content Layer */}
       <div className="relative z-20 w-full max-w-screen-2xl mx-auto">
         <div className="flex flex-col items-start lg:ml-[59.5rem] md:ml-[8.5rem] ml-[4.5rem] pt-16">
-          {/* Subtitle and secondary animated text (cnt_bt) */}
+          <div className="font-main text-8xl md:text-[18rem] tracking-tighter leading-[0.9]">
+            <div ref={titleLine1}>Chris</div>
+            <div ref={titleLine2}>Hall</div>
+          </div>
           <motion.div variants={itemVariants} className="max-w-md mt-12">
             <h3 className="font-book text-lg leading-relaxed">
               Art Director & Designer<br />
@@ -84,18 +65,10 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Bottom elements, positioned absolutely */}
-      <motion.div
-        variants={itemVariants}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
-      >
+      <motion.div variants={itemVariants} className="absolute bottom-10 left-1/2 -translate-x-1/2">
         <p className="font-book text-sm uppercase text-neutral-500">[scroll to explore]</p>
       </motion.div>
-
-      <motion.div
-        variants={itemVariants}
-        className="absolute bottom-10 right-4 md:right-8"
-      >
+      <motion.div variants={itemVariants} className="absolute bottom-10 right-4 md:right-8">
         <div className="flex items-center gap-6">
           <Link href="#" className="group font-book text-sm uppercase flex items-center gap-2 hover:text-neutral-500 transition-colors">
             LinkedIn <ArrowIcon className="w-2 h-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -105,6 +78,13 @@ export function HeroSection() {
           </Link>
         </div>
       </motion.div>
+
+      <View track={titleLine1}>
+        <InteractiveTextGL text="CHRIS" size={5} />
+      </View>
+      <View track={titleLine2}>
+        <InteractiveTextGL text="HALL" size={5} />
+      </View>
     </motion.section>
   )
 }

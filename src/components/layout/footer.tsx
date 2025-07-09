@@ -1,4 +1,4 @@
-// src/components/providers/app-providers.tsx
+// src/components/layout/Footer.tsx
 
 import Link from 'next/link'
 

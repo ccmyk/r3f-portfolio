@@ -1,3 +1,4 @@
+// src/payload/payload.config.ts
 import path from 'path'
 import { buildConfig } from 'payload/config'
 

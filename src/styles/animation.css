@@ -1,0 +1,33 @@
+/* src/styles/animation.css */
+.animated-text-container { /* Replaces .Awrite */
+  position: relative;
+  text-transform: uppercase;
+  --dark: theme('colors.brand-dark');
+  --light: theme('colors.brand-light');
+}
+.animated-text-container .char {
+  position: relative;
+  display: inline-block;
+}
+.animated-text-container .char .real-char { /* .n */
+  opacity: 0;
+  color: var(--dark);
+}
+.animated-text-container .char .fake-char { /* .f */
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  color: var(--light);
+  z-index: 1;
+  background: var(--dark);
+  transform-origin: left center;
+}
+.animated-text-inverted { /* .Awrite-inv */
+  color: var(--light);
+  padding: 2px 4px 1px;
+  background: var(--dark);
+}
+.animated-text-inverted .real-char {
+  color: var(--light);
+}

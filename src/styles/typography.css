@@ -1,0 +1,109 @@
+/* src/styles/typography.css */
+
+/* Base body font size, pulling from Tailwind config */
+body {
+  font-family: theme('fontFamily.book');
+  font-size: theme('fontSize.sm'); /* Or your preferred base size */
+  line-height: 1;
+  background-color: theme('colors.brand-light');
+  color: theme('colors.brand-dark');
+}
+
+/* Base class for the text animation system */
+.Awrite {
+  position: relative;
+  text-transform: uppercase;
+  /* --dark and --light will be set by components for inversion */
+  --dark: theme('colors.brand-dark');
+  --light: theme('colors.brand-light');
+}
+.Awrite .char {
+  position: relative;
+  display: inline-block;
+  pointer-events: none;
+}
+.Awrite .char .n { /* "Natural" character */
+  opacity: 0;
+  color: var(--dark);
+}
+.Awrite .char .f { /* "Fake" character */
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  color: var(--light);
+  z-index: 1;
+  background: var(--dark);
+  transform-origin: left center;
+}
+.Awrite-inv {
+  color: var(--light);
+  padding: 2px 4px 1px;
+  background: var(--dark);
+}
+
+/* Type Styles from original .ttj, .tt1, .tt3 classes */
+.hero-title {
+  font-family: theme('fontFamily.main');
+  letter-spacing: -0.02em;
+  font-size: 7.6rem; /* Mobile first */
+  line-height: 1;
+}
+.section-title {
+  font-family: theme('fontFamily.main');
+  letter-spacing: -0.02em;
+  font-size: 3.8rem;
+}
+.body-title {
+  font-family: theme('fontFamily.main');
+  font-size: 1.6rem;
+  letter-spacing: -0.01em;
+}
+
+/* Responsive Overrides */
+@media (min-width: 768px) {
+  .hero-title { font-size: 14.8rem; }
+  .section-title { font-size: 4.8rem; }
+}
+@media (min-width: 1024px) {
+  .hero-title { font-size: 18rem; line-height: 0.9; }
+  .section-title { font-size: 8rem; }
+}
+
+/* Type Styles */
+.hero-title-jumbo { /* .ttj */
+  font-family: theme('fontFamily.main');
+  letter-spacing: -0.02em;
+  font-size: 7.6rem;
+  line-height: 1;
+}
+.section-title-large { /* .tt1 */
+  font-family: theme('fontFamily.main');
+  letter-spacing: -0.02em;
+  font-size: 3.8rem;
+}
+.body-title-medium { /* .tt3 */
+  font-family: theme('fontFamily.main');
+  font-size: 1.6rem;
+  letter-spacing: -0.01em;
+}
+
+/* Responsive Overrides */
+@media (min-width: 744px) {
+  .hero-title-jumbo { font-size: 14.8rem; }
+  .section-title-large { font-size: 4.8rem; }
+}
+@media (min-width: 1024px) {
+  .hero-title-jumbo { font-size: 18rem; line-height: 0.9; }
+  .section-title-large { font-size: 8rem; }
+}
+
+/* Responsive Type Styles */
+@media (min-width: 744px) {
+  .ttj { font-size: 14.8rem; }
+  .tt1 { font-size: 4.8rem; }
+}
+@media (min-width: 1024px) {
+  .ttj { font-size: 18rem; line-height: 0.9; }
+  .tt1 { font-size: 8rem; }
+}
