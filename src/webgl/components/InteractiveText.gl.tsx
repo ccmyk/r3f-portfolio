@@ -1,10 +1,11 @@
-// src/features/common/interactive-text-webgl.tsx
+// src/webgl/components/InteractiveText.gl.tsx
 'use client'
 
 import * as THREE from 'three'
 import { useRef, useMemo } from 'react'
 import { useFrame, extend, useLoader } from '@react-three/fiber'
 import { shaderMaterial } from '@react-three/drei'
+import { motion } from 'framer-motion-3d'
 import { power4InOut } from '@/lib/easings'
 
 // 🩻msdf.glsl from /💬/
