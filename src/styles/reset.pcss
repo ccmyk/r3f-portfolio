@@ -1,0 +1,233 @@
+/* src/styles/reset.pcss - Modern CSS Reset for Next.js */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* HTML and body setup */
+html {
+  font-size: 16px;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  overscroll-behavior: none;
+}
+
+body {
+  margin: 0;
+  line-height: 1;
+  font-family: system-ui, sans-serif;
+  overscroll-behavior: none;
+}
+
+/* Remove list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Make images and videos responsive */
+img, video {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+}
+
+/* SVG adjustments */
+svg {
+  max-width: 100%;
+  
+  &:not(:root) {
+    overflow: hidden;
+  }
+  
+  & title {
+    font-size: 0;
+  }
+}
+
+/* Remove outline on focus */
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+/* Link styles */
+a {
+  background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+  
+  &:active,
+  &:hover {
+    outline: 0;
+  }
+}
+
+/* Button styles */
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+  outline: none;
+  pointer-events: auto;
+  
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+/* Form elements */
+input,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  pointer-events: auto;
+  font: inherit;
+  color: inherit;
+}
+
+input {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  &[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+/* Paragraphs */
+p {
+  margin: 0;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+/* Hidden elements */
+[hidden],
+template {
+  display: none;
+}
+
+/* CSS Custom Properties */
+html {
+  --dark: #000;
+  --light: #f8f6f2;
+  --bg: #f8f6f2;
+}
+
+/* Screen reader only text */
+.scr_read {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  word-break: normal;
+}
+
+/* Rotate device warning for mobile */
+.rotatedev {
+  z-index: 500;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  display: none;
+  
+  @media (min-aspect-ratio: 1/1) {
+    .touch & {
+      display: flex;
+    }
+  }
+}
+
+/* Lenis smooth scrolling */
+html {
+  &.lenis {
+    height: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.lenis {
+  &.lenis-smooth {
+    scroll-behavior: auto;
+    
+    & [data-lenis-prevent] {
+      overscroll-behavior: contain;
+    }
+  }
+  
+  &.lenis-stopped {
+    overflow: hidden;
+  }
+  
+  &.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+}
+
+/* Mobile touch handling */
+html.touch body main {
+  position: relative;
+  overflow: clip;
+}

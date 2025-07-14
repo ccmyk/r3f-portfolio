@@ -1,0 +1,24 @@
+{
+  "title": "Project One",
+  "description": "A sample project description",
+  "image": "https://via.placeholder.com/600x400",
+  "slug": "project-one",
+  "tags": [
+    "React",
+    "Three.js"
+  ],
+  "date": "2024-01-01T00:00:00.000Z",
+  "body": {
+    "raw": "\n# Project One\n\nThis is a sample project content.",
+    "html": "<h1>Project One</h1>\n<p>This is a sample project content.</p>"
+  },
+  "_id": "projects/project1.md",
+  "_raw": {
+    "sourceFilePath": "projects/project1.md",
+    "sourceFileName": "project1.md",
+    "sourceFileDir": "projects",
+    "contentType": "markdown",
+    "flattenedPath": "projects/project1"
+  },
+  "type": "Project"
+}

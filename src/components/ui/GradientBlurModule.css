@@ -1,9 +1,0 @@
-// src/components/ui/gradient-blur.module.css
-.mask1 {
--webkit-mask-image: linear-gradient(to top, transparent 0%, white 12.5%, white 37.5%, transparent 50%);
-mask-image: linear-gradient(to top, transparent 0%, white 12.5%, white 37.5%, transparent 50%);
-}
-.mask2 {
--webkit-mask-image: linear-gradient(to top, transparent 12.5%, white 37.5%, white 50%, transparent 62.5%);
-mask-image: linear-gradient(to top, transparent 12.5%, white 37.5%, white 50%, transparent 62.5%);
-}

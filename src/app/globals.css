@@ -1,49 +1,69 @@
 /* src/app/globals.css */
-@import "tailwindcss";
 
-@import "../styles/base.css";
-@import "../styles/layout.css";
-@import "../styles/typography.css";
-@import "../styles/animation.css";
-@import "../styles/loader.css";
-@import "../styles/navigation.css";
-@import "../styles/home.css";
-@import "../styles/footer.css";
+@import '../styles/reset.pcss';
+@import '../styles/typography.pcss';
+@import '../styles/design-system.pcss';
+@import '../styles/animations.pcss';
+@import '../styles/home.pcss';
+@import '../styles/navigation.pcss';
+@import '../styles/footer.pcss';
+@import '../styles/loader.pcss';
+@import '../styles/background.pcss';
+@import '../styles/about.pcss';
+@import '../styles/error.pcss';
+@import '../styles/playground.pcss';
+@import '../styles/project.pcss';
+@import '../styles/projects.pcss';
 
+/* Global styles */
+html {
+  scroll-behavior: smooth;
+}
 
-@layer base {
-  @font-face {
-    font-family: 'montreal';
-    font-display: swap;
-    src: url('/fonts/PPNeueMontreal-Medium.woff2') format('woff2');
-    font-weight: 500;
-  }
-  @font-face {
-    font-family: 'montrealbook';
-    font-display: swap;
-    src: url('/fonts/PPNeueMontrealMono-Book.woff2') format('woff2');
-    font-weight: 400;
-  }
+body {
+  font-family: 'montrealbook', sans-serif;
+  color: var(--color-text-primary);
+  background: var(--color-bg-primary);
+  overflow-x: hidden;
+}
 
-  :root {
-    --background: 236 14% 97%;
-    --foreground: 240 10% 3.9%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 0 0% 100%;
-    --accent-foreground: 240 5.9% 10%;
-  }
-    
-  .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-  }
+/* Prevent scroll restoration */
+html {
+  scroll-behavior: auto;
+}
 
-  body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-    font-family: theme('fontFamily.book');
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+/* Lenis smooth scroll classes */
+.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Font Declarations */
+@font-face {
+  font-family: 'montreal';
+  font-display: swap;
+  src: url('/fonts/PPNeueMontreal-Medium.woff2') format('woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'montrealbook';
+  font-display: swap;
+  src: url('/fonts/PPNeueMontrealMono-Book.woff2') format('woff2');
+  font-weight: 400;
+}
+
+/* Base HTML and Body styles */
+html {
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
