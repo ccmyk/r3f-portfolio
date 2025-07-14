@@ -37,21 +37,6 @@ html {
   overflow: hidden;
 }
 
-/* Font Declarations */
-@font-face {
-  font-family: 'montreal';
-  font-display: swap;
-  src: url('/fonts/PPNeueMontreal-Medium.woff2') format('woff2');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'montrealbook';
-  font-display: swap;
-  src: url('/fonts/PPNeueMontrealMono-Book.woff2') format('woff2');
-  font-weight: 400;
-}
-
 /* Base HTML and Body styles */
 html {
   font-size: var(--base-font-size);

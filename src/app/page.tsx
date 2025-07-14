@@ -1,171 +1,70 @@
-'use client'
+// src/app/page.tsx
+"use client";
 
-import { allProjects } from 'contentlayer/generated'
-import { useState, useRef } from 'react'
-import { Loader } from '@/components/Loader'
-import { AnimatedText } from '@/components/AnimatedText'
-import { LoaderWebGL } from '@/webgl/LoaderWebGL'
-import { TitleWebGL } from '@/webgl/TitleWebGL'
-import { BackgroundWebGL } from '@/webgl/BackgroundWebGL'
-import { MediaWebGl } from '@/webgl/MediaWebGL'
-import { ProjectCard } from '@/components/ProjectCard'
-import { FooterWebGL } from '@/webgl/FooterWebGL'
-import { Footer } from '@/components/Footer'
-
-import { useAnimationController } from '@/hooks/useAnimationController'
+import { Animated } from "@/components/Animated";
+// We are NOT importing useAnimationController
 
 export default function HomePage() {
-  const { state, observeElement } = useAnimationController()
-  const heroRef = useRef<HTMLElement>(null)
-  const projectsRef = useRef<HTMLElement>(null)
-  const aboutRef = useRef<HTMLElement>(null)
-  const footerRef = useRef<HTMLElement>(null)
-
-  const projects = allProjects
-
-  observeElement(heroRef, 'heroVisible')
-  observeElement(projectsRef, 'projectsVisible')
-  observeElement(aboutRef, 'aboutVisible')
-  observeElement(footerRef, 'footerVisible')
-
-  if (!state.loaderComplete) {
-    return (
-      <>
-        <Loader onComplete={() => {}} />
-        <LoaderWebGL />
-      </>
-    )
-  }
+  // No more complex state or refs to control animations!
+  // Framer Motion's `whileInView` handles this automatically inside the component.
 
   return (
     <>
-      <BackgroundWebGL />
-      <section ref={heroRef} className="home_hero">
+      {/* The background can be a separate component */}
+      {/* <BackgroundWebGL /> */}
+
+      <section className="home_hero">
         <div className="c-vw cnt">
           <div className="cnt_hold">
             <h2 className="cnt_tt">
-              <div className="Atitle">
-               <AnimatedText>
-                 <div className="cCover">
-                   <div className="Oi Oi-tt"></div>                 
-                     <TitleWebGL>
-                       text="Chris"
-                       type="word char"
-                       className="ttj Oiel act"
-                       isVisible={state.heroVisible}
-                       data-oi="0"
-                     </TitleWebGL>
-                   </div>
-                 </div>
-               /AnimatedText> 
-              </div>
-                </h2>
-                </div>
-              </div>
-            </h2>
-            <div className="cnt_tt">
-              <AnimatedText
-                    text="Chris"
-                    type="word char"
-                    className="ttj Oiel act"
-                    isVisible={state.heroVisible}
-                    data-io="1"
-                  />
-              <AnimatedText
-                text="Hall"
-                type="char"
-                className="Atitle tt1"
-                isVisible={state.heroVisible}
-                data-io="1"
+              {/* The Animated component handles its own reveal. */}
+              {/* No more isVisible props! */}
+              <Animated
+                as="div"
+                variant="Awrite"
+                text="Chris Hall"
+                className="ttj" // Your typography class
+                stagger={0.08}
               />
-            </div>
+            </h2>
             <div className="cnt_bt">
-            
-              <AnimatedText
+              <Animated
+                as="h3"
+                variant="Awrite"
                 text="Art Director & Designer"
-                type="char"
-                className="Awrite"
-                isVisible={state.heroVisible}
-                data-io="2"
+                className="Awrite" // The component adds this, but being explicit is fine
+                delay={0.5} // Start this animation 0.5s after it appears
               />
             </div>
             <div className="cnt_sc">
-              <AnimatedText
+              <Animated
+                as="p"
+                variant="Aline"
                 text="[SCROLL TO EXPLORE]"
-                type="line"
                 className="Atext"
-                isVisible={state.heroVisible}
-                data-io="3"
-              />
-            </div>
-            <div className="cnt_lk">
-              <AnimatedText
-                text="View Projects"
-                type="char"
-                className="Awrite"
-                isVisible={state.heroVisible}
-                data-io="4"
+                delay={1.0}
               />
             </div>
           </div>
         </div>
       </section>
-      <section ref={projectsRef} className="home_prjs">
-        <div className="c-vw cnt">
+
+      {/* Add some space to make the page scrollable */}
+      <div style={{ height: '100vh' }}></div>
+
+      <section className="home_prjs">
+         <div className="c-vw cnt">
           <div className="cnt_t">
-            <AnimatedText
+            <Animated
+              as="h2"
+              variant="Awrite"
               text="Featured works"
-              type="char"
-              className="Awrite"
-              isVisible={state.projectsVisible}
-              data-io="6"
-              data-params="1.3"
-            />
-          </div>
-          <div className="cnt_hold">
-            {projects.map((project, index) => (
-              <ProjectCard
-                key={project._id}
-                project={project}
-                isVisible={state.projectsVisible}
-                data-io={`7${index}`}
-                delay={index * 0.2}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-      <section ref={aboutRef} className="home_about">
-        <div className="c-vw cnt">
-          <div className="cnt_tp">
-            <AnimatedText
-              text="Interactive Designer,"
-              type="char"
-              className="Awrite"
-              isVisible={state.aboutVisible}
-              data-io="10"
-            />
-            <AnimatedText
-              text="also Speaker & Teacher"
-              type="char"
-              className="Awrite"
-              isVisible={state.aboutVisible}
-              data-io="10"
-            />
-          </div>
-          <div className="cnt_x">
-            <AnimatedText
-              text="Crafting engaging and innovative solutions"
-              type="line"
-              className="Atext"
-              isVisible={state.aboutVisible}
-              data-io="11"
+              className="Atitle tt1"
+              delay={0} // No delay, it will trigger when it scrolls into view
             />
           </div>
         </div>
       </section>
-      <Footer ref={footerRef} isVisible={state.footerVisible} />
-      <FooterWebGL text="Get in touch" />
     </>
-  )
+  );
 }

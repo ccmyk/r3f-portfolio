@@ -1,20 +1,21 @@
 // src/app/layout.tsx
-import { ScrollProvider } from '@/providers/ScrollProvider'
-import './globals.css'
+import { ClientLayout } from './ClientLayout';
+import { montreal, montrealbook } from '@/lib/fonts';
+import './globals.css';
+import '@/styles/animations.pcss';
 
 export const metadata = {
   title: 'Chris Hall - Portfolio',
   description: 'Art Director and Designer',
-}
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${montreal.variable} ${montrealbook.variable}`}>
       <body>
-        <ScrollProvider>
-          {children}
-        </ScrollProvider>
+        {/* ClientLayout now contains the ScrollProvider and other client components */}
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
-  )
+  );
 }
