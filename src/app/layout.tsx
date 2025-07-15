@@ -1,8 +1,7 @@
-// src/app/layout.tsx
+// src/app/layout.tsx 
 import { ClientLayout } from './ClientLayout';
 import { montreal, montrealbook } from '@/lib/fonts';
 import './globals.css';
-import '@/styles/animations.pcss';
 
 export const metadata = {
   title: 'Chris Hall - Portfolio',

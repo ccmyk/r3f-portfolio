@@ -1,4 +1,4 @@
-// src/hooks/useAnimationController.ts
+// src/hooks/useAnimationController.ts 
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'

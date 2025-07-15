@@ -1,4 +1,4 @@
-// src/webgl/Footer.tsx
+// src/webgl/FooterWebGL.tsx 
 'use client'
 
 import { useFrame, useThree } from '@react-three/fiber'

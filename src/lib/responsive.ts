@@ -1,4 +1,4 @@
-// src/lib/utils/responsive.ts - Constructor equivalent for responsive system
+// src/lib/responsive.ts 
 
 interface DesignConfig {
   L: {

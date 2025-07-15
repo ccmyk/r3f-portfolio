@@ -1,4 +1,4 @@
-// src/lib/fonts.ts
+// src/lib/fonts.ts 
 import localFont from 'next/font/local'
 
 // Define your local fonts

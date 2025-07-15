@@ -1,39 +1,36 @@
-// components/Animated.tsx
+// src/components/Animated.tsx 
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
+import { power4InOut } from '@/lib/easings';
 
-// --- Helper to get random characters for the scramble effect ---
-const getRandomChar = (characterSet: string): string => {
-  return characterSet[Math.floor(Math.random() * characterSet.length)];
+// --- FIX: Use a deterministic function to generate scramble characters ---
+// This uses the character's index to pick from the set, ensuring the server
+// and client always generate the same "random" sequence.
+const getDeterministicChar = (characterSet: string, index: number): string => {
+  return characterSet[index % characterSet.length];
 };
 
 // --- Component Props Interface ---
-interface AnimatedProps {
-  // The text to animate. Use `\n` for line breaks with 'Atext' or 'Aline'.
+type AnimatedProps<T extends React.ElementType> = {
+  as?: T;
   text: string;
-  // The HTML tag to render, e.g., 'h1', 'p'. Defaults to 'div'.
-  as?: React.ElementType;
-  // The animation variant, corresponding to your CSS classes.
   variant: 'Awrite' | 'Atext' | 'Aline' | 'Awrite-inv';
-  // Any additional class names you want to add.
   className?: string;
-  // Animation timing controls
   stagger?: number;
   delay?: number;
-  // Scramble-specific controls
   scrambleDuration?: number;
   revealDuration?: number;
   scrambleChars?: string;
   scrambleCount?: number;
-  // Line-specific controls
   lineStagger?: number;
   lineDuration?: number;
-}
+} & Omit<React.ComponentPropsWithoutRef<T>, 'as' | 'variant'>;
+
 
 // --- The Main Component ---
-export const Animated: React.FC<AnimatedProps> = ({
+export const Animated = <T extends React.ElementType = 'div'>({
+  as,
   text,
-  as: Tag = 'div',
   variant,
   className = '',
   stagger = 0.03,
@@ -44,34 +41,29 @@ export const Animated: React.FC<AnimatedProps> = ({
   scrambleCount = 2,
   lineStagger = 0.1,
   lineDuration = 0.6,
-}) => {
-  // --- Base Class Name Logic ---
-  // This maps the variant prop to the correct CSS class.
+  ...rest
+}: AnimatedProps<T>) => {
+  const isLineBased = variant === 'Atext' || variant === 'Aline';
+  // FIX: Default to 'div' for line-based animations to prevent invalid nesting.
+  // A <p> tag can't contain divs. This ensures valid HTML by default.
+  const Tag = as || (isLineBased ? 'div' : 'span');
+
   const baseClass = {
     'Awrite': 'Awrite',
-    'Awrite-inv': 'Awrite Awrite-inv', // Combine classes for the inverse variant
+    'Awrite-inv': 'Awrite Awrite-inv',
     'Atext': 'Atext',
     'Aline': 'Aline',
   }[variant];
 
-  // --- Render Logic ---
-  // Decide which animation to render based on the variant.
   if (variant === 'Awrite' || variant === 'Awrite-inv') {
-    // --- CHARACTER SCRAMBLE ANIMATION ('Awrite') ---
     const characters = Array.from(text);
-
     const containerVariants: Variants = {
       hidden: {},
-      visible: {
-        transition: { delayChildren: delay, staggerChildren: stagger },
-      },
+      visible: { transition: { delayChildren: delay, staggerChildren: stagger } },
     };
 
     return (
-      <Tag
-        className={`${baseClass} ${className}`}
-        aria-label={text}
-      >
+      <Tag className={`${baseClass} ${className}`} aria-label={text} {...rest}>
         <motion.span
             style={{ display: 'inline-block' }}
             variants={containerVariants}
@@ -80,19 +72,18 @@ export const Animated: React.FC<AnimatedProps> = ({
             viewport={{ once: true, amount: 0.5 }}
         >
           {characters.map((char, charIndex) => {
-            const fakes = Array.from({ length: scrambleCount }).map(() => getRandomChar(scrambleChars));
+            // FIX: Use the deterministic function
+            const fakes = Array.from({ length: scrambleCount }).map((_, i) => getDeterministicChar(scrambleChars, charIndex + i));
             return (
               <span key={charIndex} className="char" style={{ display: 'inline-block', position: 'relative' }}>
-                {/* Real Character with class 'n' */}
                 <motion.span
                   className="n"
                   style={{ position: 'relative', zIndex: 1, opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ delay: scrambleCount * scrambleDuration, duration: revealDuration, ease: [0.25, 1, 0.5, 1] }}
+                  transition={{ delay: scrambleCount * scrambleDuration, duration: revealDuration, ease: power4InOut }}
                 >
                   {char === ' ' ? '\u00A0' : char}
                 </motion.span>
-                {/* Fake Characters with class 'f' */}
                 {fakes.map((fakeChar, fakeIndex) => (
                   <motion.span
                     key={fakeIndex}
@@ -100,7 +91,7 @@ export const Animated: React.FC<AnimatedProps> = ({
                     style={{ position: 'absolute', top: 0, left: 0, opacity: 0, transformOrigin: 'left center' }}
                     initial={{ opacity: 1, scaleX: 1 }}
                     animate={{ opacity: 0, scaleX: 0 }}
-                    transition={{ delay: fakeIndex * (scrambleDuration / scrambleCount), duration: scrambleDuration, ease: [0.76, 0, 0.24, 1] }}
+                    transition={{ delay: fakeIndex * (scrambleDuration / scrambleCount), duration: scrambleDuration, ease: power4InOut }}
                   >
                     {fakeChar}
                   </motion.span>
@@ -113,32 +104,23 @@ export const Animated: React.FC<AnimatedProps> = ({
     );
   }
 
-  if (variant === 'Atext' || variant === 'Aline') {
-    // --- LINE-BY-LINE ANIMATION ('Atext' / 'Aline') ---
-    // Split text by newline characters to get an array of lines.
+  if (isLineBased) {
     const lines = text.split('\n');
-
     const containerVariants: Variants = {
         hidden: {},
-        visible: {
-            transition: {
-                delayChildren: delay,
-                staggerChildren: lineStagger,
-            },
-        },
+        visible: { transition: { delayChildren: delay, staggerChildren: lineStagger } },
     };
-
     const lineVariants: Variants = {
         hidden: { opacity: 0, y: '50%' },
         visible: {
             opacity: 1,
             y: '0%',
-            transition: { duration: lineDuration, ease: [0.76, 0, 0.24, 1] },
+            transition: { duration: lineDuration, ease: power4InOut },
         },
     };
 
     return (
-      <Tag className={`${baseClass} ${className}`}>
+      <Tag className={`${baseClass} ${className}`} {...rest}>
         <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -146,7 +128,8 @@ export const Animated: React.FC<AnimatedProps> = ({
             viewport={{ once: true, amount: 0.5 }}
         >
             {lines.map((line, index) => (
-                // Add a wrapper div to handle `overflow: hidden` for the y-axis animation
+                // This structure is now valid: the parent Tag is a div (by default)
+                // which can safely contain other divs.
                 <div key={index} className="line" style={{ overflow: 'hidden' }}>
                     <motion.div variants={lineVariants}>
                         {line.trim() === '' ? '\u00A0' : line}
@@ -158,5 +141,5 @@ export const Animated: React.FC<AnimatedProps> = ({
     );
   }
 
-  return null; // Should not happen if a valid variant is provided
+  return null;
 };

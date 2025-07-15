@@ -1,4 +1,4 @@
-// src/hooks/useResponsiveSystem.tsx
+// src/hooks/useResponsiveSystem.ts 
 'use client'
 
 import { useEffect, useState } from 'react'

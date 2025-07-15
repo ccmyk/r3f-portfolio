@@ -1,4 +1,4 @@
-// src/providers/ScrollProvider.tsx
+// src/providers/ScrollProvider.tsx 
 'use client'
 
 import { createContext, useContext, useEffect, useRef } from 'react'

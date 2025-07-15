@@ -1,4 +1,4 @@
-// src/webgl/Loader.tsx'
+// src/webgl/LoaderWebGL.tsx 
 'use client'
 
 import { useFrame, useThree } from '@react-three/fiber'

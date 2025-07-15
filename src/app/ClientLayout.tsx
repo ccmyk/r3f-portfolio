@@ -1,19 +1,20 @@
-// src/app/ClientLayout.tsx
-"use client"
+// src/app/ClientLayout.tsx 
+"use client";
 
 import { Nav } from '@/components/Nav';
 import { Mouse } from '@/components/Mouse';
 import { ScrollProvider } from '@/providers/ScrollProvider';
+import { AnimationProvider } from '@/providers/AnimationProvider';
 
-// This component wraps your main page content with client-side providers and components.
 export function ClientLayout({ children }: { children: React.ReactNode }) {
   return (
-    // The ScrollProvider now correctly wraps the children within a client component.
+    // Foundational providers wrap more specific ones.
     <ScrollProvider>
-      <Nav />
-      <Mouse />
-      <main>{children}</main>
+      <AnimationProvider>
+        <Nav />
+        <Mouse />
+        <main>{children}</main>
+      </AnimationProvider>
     </ScrollProvider>
   );
 }
-

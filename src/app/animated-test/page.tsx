@@ -1,4 +1,4 @@
-// src/app/animated-test/page.tsx
+// src/app/animated-test/page.tsx 
 "use client";
 
 import { Animated } from "@/components/Animated";

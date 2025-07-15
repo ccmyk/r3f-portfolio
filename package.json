@@ -9,11 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/is-prop-valid": "^1.3.1",
     "@react-three/drei": "^10.5.0",
     "@react-three/fiber": "^9.2.0",
     "clsx": "^2.1.1",
     "contentlayer2": "^0.5.8",
-    "framer-motion": "^12.23.3",
+    "framer-motion": "^12.23.5",
     "graphql": "^16.11.0",
     "lenis": "^1.3.4",
     "next": "15.3.5",
@@ -30,7 +31,7 @@
     "@types/react-dom": "^19.1.6",
     "@types/three": "^0.178.1",
     "autoprefixer": "^10.4.21",
-    "cssnano": "^7.0.7",
+    "cssnano": "^7.1.0",
     "eslint": "^9.31.0",
     "eslint-config-next": "15.3.5",
     "postcss": "^8.5.6",

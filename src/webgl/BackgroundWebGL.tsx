@@ -1,4 +1,4 @@
-// src/webgl/Background.tsx
+// src/webgl/BackgroundWebGL.tsx 
 'use client'
 
 import { useFrame, useThree } from '@react-three/fiber'

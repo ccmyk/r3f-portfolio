@@ -1,4 +1,4 @@
-// src/components/Loader.tsx
+// src/components/Loader.tsx 
 'use client'
 
 import { useState, useEffect } from 'react'

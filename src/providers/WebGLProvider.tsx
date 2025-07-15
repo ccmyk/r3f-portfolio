@@ -1,4 +1,4 @@
-// src/providers/WebGLProvider.tsx
+// src/providers/WebGLProvider.tsx 
 'use client'
 
 import { Canvas } from '@react-three/fiber'

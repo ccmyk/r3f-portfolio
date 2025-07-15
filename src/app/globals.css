@@ -1,19 +1,20 @@
 /* src/app/globals.css */
 
-@import '../styles/reset.pcss';
-@import '../styles/typography.pcss';
-@import '../styles/design-system.pcss';
-@import '../styles/animations.pcss';
-@import '../styles/home.pcss';
-@import '../styles/navigation.pcss';
-@import '../styles/footer.pcss';
-@import '../styles/loader.pcss';
-@import '../styles/background.pcss';
-@import '../styles/about.pcss';
-@import '../styles/error.pcss';
-@import '../styles/playground.pcss';
-@import '../styles/project.pcss';
-@import '../styles/projects.pcss';
+/* Update all imports to use the .css extension */
+@import '../styles/reset.css';
+@import '../styles/typography.css';
+@import '../styles/design-system.css';
+@import '../styles/animations.css';
+@import '../styles/home.css';
+@import '../styles/navigation.css';
+@import '../styles/footer.css';
+@import '../styles/loader.css';
+@import '../styles/background.css';
+@import '../styles/about.css';
+@import '../styles/error.css';
+@import '../styles/playground.css';
+@import '../styles/project.css';
+@import '../styles/projects.css';
 
 /* Global styles */
 html {
