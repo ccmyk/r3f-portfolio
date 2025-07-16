@@ -1,0 +1,6421 @@
+# R3F Portfolio Project Dump
+Generated on: Wed Jul 16 11:17:30 PDT 2025
+Project directory: /Users/chrishall/development/r3f
+
+## Project Structure
+```
+.
+├── public
+│   ├── fonts
+│   │   ├── .DS_Store
+│   │   ├── PPNeueMontreal-Medium.json
+│   │   ├── PPNeueMontreal-Medium.png
+│   │   ├── PPNeueMontreal-Medium.ttf
+│   │   ├── PPNeueMontreal-Medium.woff
+│   │   ├── PPNeueMontreal-Medium.woff2
+│   │   ├── PPNeueMontrealMono-Book.woff
+│   │   └── PPNeueMontrealMono-Book.woff2
+│   ├── images
+│   │   ├── 00_eva_sanchez_abou_home_website-1366x2049.jpg.webp
+│   │   ├── 00_eva_sanchez_about_website-1366x2049.jpg.webp
+│   │   ├── 00_eva_sanchez_about_website.jpg.webp
+│   │   ├── 00_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 002_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 01_eva_sanchez_kids_agency_website-860x645.jpg.webp
+│   │   ├── 01_eva_sanchez_paya_health_ecommerce_website-860x645.jpg.webp
+│   │   ├── 01_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 01_eva_sanchez_vibia_landing_page_website-860x645.jpg.webp
+│   │   ├── 02_eva_sanchez_classe_website-860x645.jpg.webp
+│   │   ├── 02_eva_sanchez_classe_website.jpg.webp
+│   │   ├── 02_eva_sanchez_now_new_next_website-860x645.jpg.webp
+│   │   ├── 02_eva_sanchez_paya_health_ecommerce_website-860x645.jpg.webp
+│   │   ├── 02_eva_sanchez_playground_website-860x645.jpg.webp
+│   │   ├── 02_eva_sanchez_vibia_landing_page_website-860x645.jpg.webp
+│   │   ├── 02_eva_sanchez_villalon_studio_website-860x645.jpg.webp
+│   │   ├── 02.2_eva_sanchez_ciclope_fest_cover_website.jpg.webp
+│   │   ├── 02.2_eva_sanchez_ciclope_fest_website-860x645.jpg.webp
+│   │   ├── 02.2_eva_sanchez_ciclope_fest_website.jpg.webp
+│   │   ├── 03_eva_sanchez_banjo_cover_soundscape_website.jpg.webp
+│   │   ├── 03_eva_sanchez_classe_website-860x645.jpg.webp
+│   │   ├── 03_eva_sanchez_classe_website.jpg.webp
+│   │   ├── 03_eva_sanchez_kids_agency_website-860x645.jpg.webp
+│   │   ├── 03_eva_sanchez_now_new_next_website-860x645.jpg.webp
+│   │   ├── 03_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 03_eva_sanchez_vibia_landing_page_website-860x645.jpg.webp
+│   │   ├── 04_eva_sanchez_ciclope_fest_website.jpg.webp
+│   │   ├── 04_eva_sanchez_now_new_next_website-860x645.jpg.webp
+│   │   ├── 04_eva_sanchez_paya_health_ecommerce_website-860x645.jpg.webp
+│   │   ├── 04_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 04_eva_sanchez_vibia_landing_page_website-860x645.jpg.webp
+│   │   ├── 04_eva_sanchez_villalon_studio_website-860x645.jpg.webp
+│   │   ├── 05_eva_sanchez_ciclope_fest_website-860x645.jpg.webp
+│   │   ├── 05_eva_sanchez_ciclope_fest_website.jpg.webp
+│   │   ├── 05_eva_sanchez_classe_website-860x645.jpg.webp
+│   │   ├── 05_eva_sanchez_classe_website.jpg.webp
+│   │   ├── 05_eva_sanchez_paya_health_ecommerce_website-860x645.jpg.webp
+│   │   ├── 05_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 05_eva_sanchez_villalon_studio_website-860x645.jpg.webp
+│   │   ├── 06_eva_sanchez_classe_website-860x645.jpg.webp
+│   │   ├── 06_eva_sanchez_classe_website.jpg.webp
+│   │   ├── 06_eva_sanchez_paya_health_ecommerce_website-860x645.jpg.webp
+│   │   ├── 06_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 07_eva_sanchez_banjo_soundscape_website-860x645.jpg.webp
+│   │   ├── 07_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 08_eva_sanchez_ciclope_fest_website.jpg.webp
+│   │   ├── 08_eva_sanchez_classe_website.jpg.webp
+│   │   ├── 08_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 08_eva_sanchez_villalon_studio_website-860x645.jpg.webp
+│   │   ├── 09_eva_sanchez_kids_agency_website-860x645.jpg.webp
+│   │   ├── 09_eva_sanchez_playground_website.jpeg.webp
+│   │   ├── 10_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 11_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 12_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 13_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 14_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 15_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 16_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 17_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 18_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 19_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 20_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 21_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 22_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 23_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 24_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 25_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 26_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 27_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 28_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 29_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 30_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 31_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 32_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 33_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 34_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 35_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 36_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 37_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 38_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 39_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 40_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 41_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 42_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 43_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 46_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 47_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 48_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 49_eva_sanchez_playground_website.jpg.webp
+│   │   ├── 50_eva_sanchez_playground_website.jpg.webp
+│   │   └── 51_eva_sanchez_playground_website.jpg.webp
+│   ├── videos
+│   │   ├── .DS_Store
+│   │   ├── 00_eva_sanchez_kids_agency_cover_website.mp4
+│   │   ├── 00_eva_sanchez_vibia_landing_page_cover_website.mp4
+│   │   ├── 01_eva_sanchez_banjo_cover_soundscape_website.mp4
+│   │   ├── 01_eva_sanchez_ciclope_fest_cover_website.mp4
+│   │   ├── 01_eva_sanchez_ciclope_fest_website.mp4
+│   │   ├── 01_eva_sanchez_classe_cover_website.mp4
+│   │   ├── 01_eva_sanchez_classe_website.mp4
+│   │   ├── 01_eva_sanchez_now_new_next_cover_website.mp4
+│   │   ├── 02_eva_sanchez_banjo_cover_soundscape_website.mp4
+│   │   ├── 02_eva_sanchez_ciclope_fest_cover_website.mp4
+│   │   ├── 02_eva_sanchez_ciclope_fest_website.mp4
+│   │   ├── 03_eva_sanchez_banjo_cover_soundscape_website.mp4
+│   │   ├── 03_eva_sanchez_ciclope_fest_website.mp4
+│   │   ├── 03_eva_sanchez_now_new_next_cover_website.mp4
+│   │   ├── 04_eva_sanchez_classe_website.mp4
+│   │   ├── 04_eva_sanchez_kids_agency_cover_website.mp4
+│   │   ├── 06_eva_sanchez_ciclope_fest_cover_website.mp4
+│   │   ├── 06_eva_sanchez_ciclope_fest_website.mp4
+│   │   ├── 07_eva_sanchez_ciclope_fest_website.mp4
+│   │   ├── 07_eva_sanchez_classe_website.mp4
+│   │   ├── 09_eva_sanchez_ciclope_fest_website.mp4
+│   │   ├── 09_eva_sanchez_classe_website.mp4
+│   │   ├── 10_eva_sanchez_classe_website.mp4
+│   │   ├── 44_eva_sanchez_playground_website.mp4
+│   │   └── 45_eva_sanchez_playground_website.mp4
+│   └── .DS_Store
+├── src
+│   ├── app
+│   │   ├── about
+│   │   │   └── page.tsx
+│   │   ├── index
+│   │   │   └── page.tsx
+│   │   ├── playground
+│   │   │   └── page.tsx
+│   │   ├── project
+│   │   │   └── [slug]
+│   │   │       └── page.tsx
+│   │   ├── .DS_Store
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components
+│   │   ├── .DS_Store
+│   │   ├── Animated.tsx
+│   │   ├── Background.tsx
+│   │   ├── Footer.tsx
+│   │   ├── HeroTitle.tsx
+│   │   ├── Loader.tsx
+│   │   ├── Mouse.tsx
+│   │   ├── Nav.tsx
+│   │   ├── ProjectCard.tsx
+│   │   └── Wysiwyg.tsx
+│   ├── content
+│   │   └── projects
+│   │       ├── project-1.mdx
+│   │       └── project-2.mdx
+│   ├── hooks
+│   │   └── .DS_Store
+│   ├── lib
+│   │   ├── easings.ts
+│   │   └── fonts.ts
+│   ├── providers
+│   │   ├── AnimationProvider.tsx
+│   │   ├── MouseProvider.tsx
+│   │   └── ResponsiveProvider.tsx
+│   ├── styles
+│   │   ├── .DS_Store
+│   │   ├── about.css
+│   │   ├── animations.css
+│   │   ├── background.css
+│   │   ├── design-system.css
+│   │   ├── footer.css
+│   │   ├── home.css
+│   │   ├── loader.css
+│   │   ├── navigation.css
+│   │   ├── playground.css
+│   │   ├── project.css
+│   │   ├── projects.css
+│   │   ├── reset.css
+│   │   ├── typography.css
+│   │   ├── webgl-utils.css
+│   │   └── wysiwyg.css
+│   └── webgl
+│       ├── .DS_Store
+│       ├── BackgroundWebGL.tsx
+│       ├── FooterWebGL.tsx
+│       ├── LoaderScene.tsx
+│       ├── MainCanvas.tsx
+│       ├── Media.tsx
+│       └── TitleWebGL.tsx
+├── .DS_Store
+├── .gitignore
+├── next-env.d.ts
+├── next.config.js
+├── package.json
+├── postcss.config.js
+├── README.md
+└── tsconfig.json
+
+20 directories, 183 files
+```
+
+## Package Configuration
+
+### package.json
+```json
+{
+  "name": "r3f",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/is-prop-valid": "^1.3.1",
+    "@mdx-js/loader": "^3.1.0",
+    "@next/mdx": "^15.4.1",
+    "@react-three/drei": "^10.5.1",
+    "@react-three/fiber": "^9.2.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.6",
+    "graphql": "^16.11.0",
+    "gray-matter": "^4.0.3",
+    "lenis": "^1.3.6",
+    "next": "15.3.5",
+    "next-mdx-remote": "^5.0.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "three": "^0.178.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@types/node": "^24.0.14",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@types/three": "^0.178.1",
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.1.0",
+    "eslint": "^9.31.0",
+    "eslint-config-next": "15.3.5",
+    "postcss": "^8.5.6",
+    "postcss-custom-media": "^11.0.6",
+    "postcss-custom-properties": "^14.0.6",
+    "postcss-import": "^16.1.1",
+    "postcss-nested": "^7.0.2",
+    "typescript": "^5.8.3"
+  }
+}
+```
+
+### tsconfig.json
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": [
+    "src",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}```
+
+### next.config.js
+```javascript
+// next.config.js
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+});
+
+/** @type {import('next').NextConfig} */
+const nextConfig = withMDX({
+  // Your Next.js config here
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'], // add md/mdx
+});
+ 
+module.exports = nextConfig;```
+
+### postcss.config.js
+```javascript
+module.exports = {
+  plugins: {
+    'postcss-import': {},
+    'postcss-nested': {}, // This is the plugin that allows nested syntax
+    'postcss-custom-properties': {},
+    'postcss-custom-media': {},
+    'autoprefixer': {},
+    // Only run cssnano in production
+    'cssnano': process.env.NODE_ENV === 'production' ? {} : false,
+  },
+}```
+
+### next-env.d.ts
+```typescript
+/// <reference types="next" />
+/// <reference types="next/image-types/global" />
+
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/app/api-reference/config/typescript for more information.
+```
+
+## Source Files
+
+### ./next-env.d.ts
+```typescript
+/// <reference types="next" />
+/// <reference types="next/image-types/global" />
+
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/app/api-reference/config/typescript for more information.
+```
+
+### ./next.config.js
+```javascript
+// next.config.js
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+});
+
+/** @type {import('next').NextConfig} */
+const nextConfig = withMDX({
+  // Your Next.js config here
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'], // add md/mdx
+});
+ 
+module.exports = nextConfig;```
+
+### ./postcss.config.js
+```javascript
+module.exports = {
+  plugins: {
+    'postcss-import': {},
+    'postcss-nested': {}, // This is the plugin that allows nested syntax
+    'postcss-custom-properties': {},
+    'postcss-custom-media': {},
+    'autoprefixer': {},
+    // Only run cssnano in production
+    'cssnano': process.env.NODE_ENV === 'production' ? {} : false,
+  },
+}```
+
+### ./src/app/about/page.tsx
+```typescript
+// src/app/about/page.tsx
+import { allAbouts } from 'contentlayer/generated';
+import { Wysiwyg } from '@/components/Wysiwyg';
+import { Animated } from '@/components/Animated';
+
+export default function AboutPage() {
+  // Contentlayer generates an array, so we take the first (and only) item.
+  const aboutContent = allAbouts;
+
+  return (
+    <main className="about">
+      <section className="about_intro">
+        <div className="c-vw cnt">
+          <Animated
+            as="h1"
+            variant="Atext"
+            className="tt1"
+            text={aboutContent.title}
+            isVisible={true}
+          />
+        </div>
+      </section>
+
+      <section className="about_content">
+        <div className="c-vw cnt">
+          <Wysiwyg content={aboutContent.body.html} />
+        </div>
+      </section>
+    </main>
+  );
+}```
+
+### ./src/app/globals.css
+```css
+/* src/app/globals.css */
+@import '../styles/reset.css';
+@import '../styles/design-system.css';
+@import '../styles/typography.css';
+@import '../styles/animations.css';
+@import '../styles/loader.css';
+@import '../styles/navigation.css';
+@import '../styles/background.css';
+@import '../styles/home.css';
+@import '../styles/footer.css';
+@import '../styles/about.css';
+@import '../styles/wysiwyg.css';
+@import '../styles/webgl-utils.css'; ```
+
+### ./src/app/index/page.tsx
+```typescript
+// src/app/index/page.tsx 
+```
+
+### ./src/app/layout.tsx
+```typescript
+// src/app/layout.tsx
+import { montreal, montrealbook } from '@/lib/fonts';
+import { AnimationProvider } from '@/providers/AnimationProvider';
+import { ResponsiveProvider } from '@/providers/ResponsiveProvider';
+import { MouseProvider } from '@/providers/MouseProvider';
+import { MainCanvas } from '@/webgl/MainCanvas';
+import { Footer } from '@/components/Footer';
+import { Mouse } from '@/components/Mouse';
+import './globals.css';
+
+export const metadata = {
+  title: 'Chris Hall | Portfolio',
+  description: 'Interactive Designer & Developer',
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en" className={`${montreal.variable} ${montrealbook.variable}`}>
+      <body id="root">
+        <MouseProvider>
+          <ResponsiveProvider>
+            <AnimationProvider>
+              <MainCanvas /> {/* Background WebGL layer */}
+              {children}   {/* Main page content */}
+              <Footer />     {/* Footer content */}
+              <Mouse />      {/* Foreground cursor overlay */}
+            </AnimationProvider>
+          </ResponsiveProvider>
+        </MouseProvider>
+      </body>
+    </html>
+  );
+}```
+
+### ./src/app/page.tsx
+```typescript
+// src/app/page.tsx
+'use client';
+
+import { useRef } from 'react';
+// import { allProjects, type Project } from 'contentlayer/generated';
+// import { compareDesc } from 'date-fns';
+import { useAnimation } from '@/providers/AnimationProvider';
+import { Loader } from '@/components/Loader';
+import { Nav } from '@/components/Nav';
+import { Background } from '@/components/Background';
+import { ProjectCard } from '@/components/ProjectCard';
+import { AnimatePresence, motion } from 'framer-motion';
+import { View } from '@react-three/drei';
+import { TitleWebGL } from '@/webgl/TitleWebGL';
+import { LoaderScene } from '@/webgl/LoaderScene';
+import { BackgroundWebGL } from '@/webgl/BackgroundWebGL';
+import { Animated } from '@/components/Animated';
+
+export default function HomePage() {
+  const { state } = useAnimation();
+  const isContentVisible = state === 'CONTENT_VISIBLE' |
+
+| state === 'IDLE';
+
+  const heroTitle1 = useRef<HTMLDivElement>(null);
+  const heroTitle2 = useRef<HTMLDivElement>(null);
+  const aboutBgRef = useRef<HTMLDivElement>(null);
+  
+  const projects: any =;
+  // const projects: Project = allProjects.sort((a, b) =>
+  //   compareDesc(new Date(a.date), new Date(b.date))
+  //);
+
+  return (
+    <>
+      <AnimatePresence>
+        {state === 'LOADING' && <Loader />}
+        {state === 'LOADER_EXITING' && (
+          <div style={{ position: 'fixed', inset: 0, zIndex: 99 }}>
+            <LoaderScene onComplete={() => dispatch({ type: 'SET_IDLE' })} />
+          </div>
+        )}
+      </AnimatePresence>
+      <Nav />
+      <Background />
+
+      <main className="home">
+        <motion.section
+          className="home_hero"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isContentVisible? 1 : 0 }}
+          transition={{ duration: 1 }}
+        >
+          <div className="c-vw cnt">
+            <div className="cnt_hold">
+              <h2 className="cnt_tt">
+                <div className="Atitle">
+                  <div ref={heroTitle1} className="cCover" />
+                  <div className="ttj Oiel act">Chris</div>
+                </div>
+                <div className="Atitle">
+                  <div ref={heroTitle2} className="cCover" />
+                  <div className="ttj Oiel act">Hall</div>
+                </div>
+              </h2>
+
+              <div className="cnt_bt">
+                <div className="iO"></div>
+                <Animated as="h3" className="tt3" variant="Aline" text={"Art Director & Designer\nBased in Los Angeles."} isVisible={isContentVisible} delay={0.5} />
+                <Animated as="h4" variant="Awrite" text="PORTFOLIO_20/25" isVisible={isContentVisible} delay={0.7} />
+                <div className="iO iO-std"></div>
+              </div>
+
+              <div className="cnt_sc">
+                <Animated as="h4" variant="Awrite" text="[SCROLL TO EXPLORE]" isVisible={isContentVisible} delay={0.9} />
+                <div className="iO iO-std"></div>
+              </div>
+
+              <div className="cnt_lk">
+                <Animated as="a" href="https://linkedin.com/in/chrisryanhall" variant="Awrite" text="LINKEDIN" isVisible={isContentVisible} delay={1.1} />
+                <div className="iO iO-std"></div>
+                  <i style="display: inline-block; position: relative;">
+                    <svg viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; position: relative;">
+                      <path d="M6.49194 3.516H5.67594L5.67594 2.052L5.74794 1.272L5.71194 1.26L4.94394 2.124L0.911938 6.156L0.335937 5.58L4.36794 1.548L5.23194 0.78L5.21994 0.743999L4.43994 0.816L2.97594 0.816V0L6.49194 0L6.49194 3.516Z" fill="black">  
+                      </path>
+                    </svg>
+                  </i>
+                <Animated as="a" href="#" variant="Awrite" text="RESUME" isVisible={isContentVisible} delay={1.2} />
+                <div className="iO iO-std"></div>
+                  <i style="display: inline-block; position: relative;">
+                    <svg viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; position: relative;">
+                      <path d="M6.49194 3.516H5.67594L5.67594 2.052L5.74794 1.272L5.71194 1.26L4.94394 2.124L0.911938 6.156L0.335937 5.58L4.36794 1.548L5.23194 0.78L5.21994 0.743999L4.43994 0.816L2.97594 0.816V0L6.49194 0L6.49194 3.516Z" fill="black">
+                      </path>
+                    </svg>
+                  </i>
+              </div>
+            </div>
+          </div>
+        </motion.section>
+
+        <section className="home_prjs">
+          <div className="c-vw cnt">
+            <div className="cnt_t">
+              <div className="Atitle">
+                <div className="cCover" />
+                <h2 className="tt1 Oiel act">Featured Works</h2>
+              <Animated as="h3" variant="Awrite" text="Featured works" isVisible={isContentVisible} delay={1.5} />
+            </div>
+            <div className="cnt_els">
+              {projects.map((project) => (
+                <ProjectCard key={project.slug} project={project} isVisible={isContentVisible} />
+              ))}
+            </div>
+            <div className="cnt_ft">
+            <div className="cnt_st">
+            </div>  
+          </div>
+        </section>
+        <section className="home_about">
+          <div className="Oi Oi-bg" ref={aboutBgRef}>
+            <View track={aboutBgRef} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100vh' }}>
+              <BackgroundWebGL />
+            </View>
+          </div>
+        </section>
+      </main>
+
+      {/* WebGL Views */}
+      {isContentVisible && (
+        <>
+          <View track={heroTitle1}>
+            <TitleWebGL text="Chris" isVisible={isContentVisible} />
+          </View>
+          <View track={heroTitle2}>
+            <TitleWebGL text="Hall" isVisible={isContentVisible} />
+          </View>
+        </>
+      )}
+    </>
+  );
+}```
+
+### ./src/app/playground/page.tsx
+```typescript
+// src/app/playground/page.tsx 
+```
+
+### ./src/app/project/[slug]/page.tsx
+```typescript
+// src/app/project/[slug]/page.tsx 
+import fs from 'fs/promises'
+import path from 'path'
+import matter from 'gray-matter'
+import { MDXRemote } from 'next-mdx-remote/rsc'
+
+interface ProjectFrontmatter {
+  title: string
+  slug: string
+  date: string
+}
+
+export default async function ProjectPage({ params }: { params: { slug: string } }) {
+  const projectPath = path.join(process.cwd(), 'src', 'content', 'projects', `${params.slug}.mdx`)
+  const source = await fs.readFile(projectPath, 'utf8')
+  const { content, data: frontmatter } = matter(source)
+
+  // Optionally: type-cast frontmatter if you want (not enforced on the .mdx file itself)
+  const meta = frontmatter as ProjectFrontmatter
+
+  return (
+    <article>
+      <h1>{meta.title}</h1>
+      <MDXRemote source={content} />
+    </article>
+  )
+}```
+
+### ./src/components/Animated.tsx
+```typescript
+// src/components/Animated.tsx
+'use client';
+
+import React from 'react';
+import { motion, Variants } from 'framer-motion';
+import { power4InOut } from '@/lib/easings';
+
+// Helper to get a deterministic "random" character to prevent client/server hydration mismatch
+const getDeterministicChar = (characterSet: string, index: number): string => {
+  return characterSet;
+};
+
+type AnimatedProps<T extends React.ElementType> = {
+  as?: T;
+  text: string;
+  variant: 'Awrite' | 'Atext' | 'Aline' | 'Awrite-inv';
+  className?: string;
+  stagger?: number;
+  delay?: number;
+  scrambleDuration?: number;
+  revealDuration?: number;
+  scrambleChars?: string;
+  scrambleCount?: number;
+  isVisible?: boolean; // Prop to manually trigger animation
+} & Omit<React.ComponentPropsWithoutRef<T>, 'as' | 'variant'>;
+
+export const Animated = <T extends React.ElementType = 'div'>({
+  as,
+  text,
+  variant,
+  className = '',
+  stagger = 0.05,
+  delay = 0,
+  scrambleDuration = 0.16,
+  revealDuration = 0.3,
+  scrambleChars = '##·$%&/=€|()@+09*+]',
+  scrambleCount = 2,
+  isVisible = false,
+...rest
+}: AnimatedProps<T>) => {
+  // CORRECTED: Use the logical OR operator '||' instead of bitwise OR '|'
+  const Tag = as |
+
+| 'span';
+
+  const baseClass = {
+    'Awrite': 'Awrite',
+    'Awrite-inv': 'Awrite Awrite-inv',
+    'Atext': 'Atext',
+    'Aline': 'Aline',
+  }[variant];
+
+  const characters = Array.from(text);
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { delayChildren: delay, staggerChildren: stagger },
+    },
+  };
+
+  return (
+    <Tag className={`${baseClass} ${className}`} aria-label={text} {...rest}>
+      <motion.span
+        style={{ display: 'inline-block' }}
+        variants={containerVariants}
+        initial="hidden"
+        animate={isVisible? 'visible' : 'hidden'}
+        viewport={{ once: true, amount: 0.5 }}
+      >
+        {characters.map((char, charIndex) => {
+          const fakes = Array.from({ length: scrambleCount }).map((_, i) =>
+            getDeterministicChar(scrambleChars, charIndex + i)
+          );
+          return (
+            <span key={charIndex} className="char" style={{ display: 'inline-block', position: 'relative' }}>
+              <motion.span
+                className="n"
+                style={{ position: 'relative', zIndex: 1, opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  delay: scrambleCount * (scrambleDuration / scrambleCount),
+                  duration: revealDuration,
+                  ease: power4InOut,
+                }}
+              >
+                {char === ' '? '\u00A0' : char}
+              </motion.span>
+              {fakes.map((fakeChar, fakeIndex) => (
+                <motion.span
+                  key={fakeIndex}
+                  className="f"
+                  style={{ position: 'absolute', top: 0, left: 0, opacity: 0, transformOrigin: 'left center' }}
+                  initial={{ opacity: 1, scaleX: 1 }}
+                  animate={{ opacity: 0, scaleX: 0 }}
+                  transition={{
+                    delay: fakeIndex * (scrambleDuration / scrambleCount),
+                    duration: scrambleDuration,
+                    ease: power4InOut,
+                  }}
+                >
+                  {fakeChar}
+                </motion.span>
+              ))}
+            </span>
+          );
+        })}
+      </motion.span>
+    </Tag>
+  );
+};```
+
+### ./src/components/Background.tsx
+```typescript
+// src/components/Background.tsx
+'use client';
+
+import { motion } from 'framer-motion';
+import { useAnimation } from '@/providers/AnimationProvider';
+import { power2InOut } from '@/lib/easings';
+
+export function Background() {
+  const { state } = useAnimation();
+  const isVisible = state === 'CONTENT_VISIBLE' |
+
+| state === 'IDLE';
+
+  return (
+    <motion.div
+      className="Mbg"
+      initial={{ maxHeight: '0vh' }}
+      animate={{ maxHeight: isVisible? '100vh' : '0vh' }}
+      transition={{ duration: 2, ease: power2InOut }}
+    >
+      {/* Create 13 columns for the grid, matching the original design */}
+      {Array.from({ length: 13 }).map((_, i) => (
+        <div key={i} className="Mbg_col">
+          <div className="Mbg_col_el Mbg_col_el-1"></div>
+          <div className="Mbg_col_el Mbg_col_el-2"></div>
+        </div>
+      ))}
+    </motion.div>
+  );
+}```
+
+### ./src/components/Footer.tsx
+```typescript
+// src/components/Footer.tsx
+'use client';
+
+import { useRef } from 'react';
+import { motion } from 'framer-motion';
+import { View } from '@react-three/drei';
+import { Animated } from './Animated';
+import { FooterWebGL } from '@/webgl/FooterWebGL';
+
+export function Footer() {
+  const footerTitleRef = useRef<HTMLDivElement>(null);
+
+  return (
+    <motion.footer
+      className="footer"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8 }}
+    >
+      <div className="footer_cm">
+        <div className="Atitle">
+          <div ref={footerTitleRef} className="cCover" />
+          <h2 className="ttj Oiel act">Let's talk</h2>
+          <View track={footerTitleRef} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}>
+            <FooterWebGL text="Let's talk" isVisible={true} />
+          </View>
+        </div>
+      </div>
+      <div className="cnt c-vw">
+        <div className="cnt_lk">
+          <Animated as="a" href="#" className="cnt_lk_el" variant="Awrite" text="LINKEDIN" isVisible={true} delay={0.4} />
+          <Animated as="a" href="#" className="cnt_lk_el" variant="Awrite" text="INSTAGRAM" isVisible={true} delay={0.5} />
+          <Animated as="a" href="#" className="cnt_lk_el" variant="Awrite" text="READ.CV" isVisible={true} delay={0.6} />
+          <Animated as="a" href="#" className="cnt_lk_el" variant="Awrite" text="ARE.NA" isVisible={true} delay={0.7} />
+        </div>
+        <div className="cnt_cr">
+          <div className="cnt_cr_el">
+            <Animated as="span" variant="Awrite" text="CREDITS" isVisible={true} delay={0.8} />
+          </div>
+          <div className="cnt_cr_el">
+            <Animated as="span" variant="Awrite" text="DESIGNED BY EVA SANCHEZ" isVisible={true} delay={0.9} />
+            <Animated as="span" variant="Awrite" text="DEVELOPED BY CHRIS HALL" isVisible={true} delay={1.0} />
+          </div>
+        </div>
+        <div className="cnt_cp">
+          <Animated as="span" variant="Awrite" text="©2025" isVisible={true} delay={1.1} />
+        </div>
+      </div>
+    </motion.footer>
+  );
+}```
+
+### ./src/components/HeroTitle.tsx
+```typescript
+// src/components/HeroTitle.tsx
+'use client';
+
+import { useState }from 'react';
+import { motion } from 'framer-motion';
+import clsx from 'clsx';
+
+export function HeroTitle({ text, webglRef }) {
+  // 1. State: The component's "memory". Does it think it's active?
+  const [isActive, setIsActive] = useState(false);
+
+  return (
+    <motion.div
+      className="Atitle"
+      // 2. Declarative Trigger: When this component scrolls into view...
+      onViewportEnter={() => setIsActive(true)}
+      //...and only do it once.
+      viewport={{ once: true, amount: 0.5 }}
+    >
+      <div ref={webglRef} className="cCover" />
+
+      {/* 3. Declarative Rendering: The className is a direct RESULT of the state. */}
+      <div className={clsx('ttj', 'Oiel', isActive && 'act')}>
+        {text}
+      </div>
+    </motion.div>
+  );
+}```
+
+### ./src/components/Loader.tsx
+```typescript
+// src/components/Loader.tsx
+'use client';
+
+import { useState, useEffect } from 'react';
+import { motion, animate } from 'framer-motion';
+import { useAnimation } from '@/providers/AnimationProvider';
+import { Animated } from './Animated';
+import { power2InOut } from '@/lib/easings';
+
+export function Loader() {
+  const { dispatch } = useAnimation();
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const controls = animate(0, 100, {
+      duration: 2.6, // Total duration of the loading animation
+      ease: power2InOut,
+      onUpdate: (value) => {
+        // Replicates the non-linear count from the original
+        if (value < 42) setCount(Math.round(value * 2.38)); // 0-100 in 2s, scaled to 42% of time
+        else if (value < 90) setCount(Math.round(42 + (value - 42) * 1.25)); // 42-90 in 0.6s
+        else setCount(Math.round(value)); // 90-100
+      },
+      onComplete: () => {
+        dispatch({ type: 'LOADER_EXIT_COMPLETE' });
+      },
+    });
+
+    return () => controls.stop();
+  }, [dispatch]);
+
+  return (
+    <motion.div
+      className="loader"
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.8, ease: power2InOut }}
+    >
+      <div className="loader_cnt">
+        <div className="loader_tp">{String(count).padStart(3, '0')}</div>
+        <div className="loader_bp">
+          <Animated as="h1" variant="Awrite" text="CHRIS HALL" isVisible={true} />
+          <Animated as="h2" variant="Awrite" text="ART DIRECTOR & DESIGNER_PORTFOLIO" isVisible={true} delay={0.4} />
+        </div>
+      </div>
+    </motion.div>
+  );
+}```
+
+### ./src/components/Mouse.tsx
+```typescript
+// src/components/Mouse.tsx
+'use client';
+
+import { motion } from 'framer-motion';
+import { useMouse } from '@/providers/MouseProvider';
+
+export function Mouse() {
+  const { mousePosition } = useMouse();
+
+  return (
+    <motion.div
+      className="mouse"
+      animate={{
+        x: mousePosition.x,
+        y: mousePosition.y,
+      }}
+      transition={{
+        type: 'spring',
+        stiffness: 500,
+        damping: 30,
+        restDelta: 0.001,
+      }}
+    />
+  );
+}```
+
+### ./src/components/Nav.tsx
+```typescript
+// src/components/Nav.tsx
+'use client';
+
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { useAnimation } from '@/providers/AnimationProvider';
+import { Animated } from './Animated';
+
+export function Nav() {
+  const { state } = useAnimation();
+  const isNavVisible = state === 'CONTENT_VISIBLE' |
+
+| state === 'IDLE';
+  const = useState({ h: '00', m: '00', a: 'AM' });
+
+  useEffect(() => {
+    const updateClock = () => {
+      const now = new Date();
+      let hours = now.getHours();
+      const minutes = now.getMinutes();
+      const ampm = hours >= 12? 'PM' : 'AM';
+      hours = hours % 12;
+      hours = hours? hours : 12; // the hour '0' should be '12'
+
+      setTime({
+        h: String(hours).padStart(2, '0'),
+        m: String(minutes).padStart(2, '0'),
+        a: ampm,
+      });
+    };
+
+    updateClock();
+    const timerId = setInterval(updateClock, 60000); // Update every minute
+    return () => clearInterval(timerId);
+  },);
+
+  return (
+    <motion.nav
+      className="nav"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: isNavVisible? 1 : 0 }}
+      transition={{ duration: 0.5, ease: 'linear' }}
+    >
+      <div className="nav_top c-vw">
+        <div className="nav_left">
+          <Link href="/" className="nav_logo">
+            <Animated as="span" variant="Awrite" text="EVA SANCHEZ" isVisible={isNavVisible} />
+          </Link>
+          <div className="sep"></div>
+          <div className="nav_clock">
+            <div className="nav_clock_p">
+              <Animated as="span" variant="Awrite" text="_BCN" isVisible={isNavVisible} delay={0.1} />
+            </div>
+            <div className="nav_clock_h">
+              <Animated as="span" variant="Awrite" text={time.h} isVisible={isNavVisible} delay={0.2} />
+            </div>
+            <div className="nav_clock_s">:</div>
+            <div className="nav_clock_m">
+              <Animated as="span" variant="Awrite" text={time.m} isVisible={isNavVisible} delay={0.3} />
+            </div>
+            <div className="nav_clock_a">
+              <Animated as="span" variant="Awrite" text={time.a} isVisible={isNavVisible} delay={0.4} />
+            </div>
+          </div>
+        </div>
+        <div className="nav_right">
+          <div className="nav_right_ops">
+            <Link href="/index">
+              <Animated as="span" variant="Awrite" text="INDEX" isVisible={isNavVisible} delay={0.5} />
+            </Link>
+            <Link href="/about">
+              <Animated as="span" variant="Awrite" text="ABOUT" isVisible={isNavVisible} delay={0.6} />
+            </Link>
+            <Link href="/playground">
+              <Animated as="span" variant="Awrite" text="PLAYGROUND" isVisible={isNavVisible} delay={0.7} />
+            </Link>
+          </div>
+          <a href="mailto:chris@chrishall.io">
+            <Animated as="span" variant="Awrite-inv" text="LET'S TALK" isVisible={isNavVisible} delay={0.9} />
+          </a>
+        </div>
+      </div>
+    </motion.nav>
+  );
+}```
+
+### ./src/components/ProjectCard.tsx
+```typescript
+// src/components/ProjectCard.tsx
+'use client';
+
+import { useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { View } from '@react-three/drei';
+import { type Project } from 'contentlayer/generated';
+import { Animated } from './Animated';
+import { Media } from '@/webgl/Media';
+
+type ProjectCardProps = {
+  project: Project;
+  isVisible: boolean;
+};
+
+export function ProjectCard({ project, isVisible }: ProjectCardProps) {
+  const mediaRef = useRef<HTMLDivElement>(null);
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <motion.div
+      className="project_card"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+    >
+      <div className="project_card_media" ref={mediaRef}>
+        <View track={mediaRef}>
+          <Media url={project.image} isHovered={isHovered} />
+        </View>
+      </div>
+      <div className="project_card_info">
+        <Link href={`/project/${project.slug}`}>
+          <Animated as="h4" variant="Awrite" text={project.title} isVisible={isVisible} />
+        </Link>
+        <div className="project_card_meta">
+          <Animated as="span" variant="Aline" text={new Date(project.date).getFullYear().toString()} isVisible={isVisible} delay={0.2} />
+          <Animated as="span" variant="Aline" text={project.tags.join(', ')} isVisible={isVisible} delay={0.3} />
+        </div>
+      </div>
+    </motion.div>
+  );
+}```
+
+### ./src/components/Wysiwyg.tsx
+```typescript
+// src/components/Wysiwyg.tsx
+'use client';
+
+import { motion } from 'framer-motion';
+
+type WysiwygProps = {
+  content: string;
+  className?: string;
+};
+
+export function Wysiwyg({ content, className = '' }: WysiwygProps) {
+  return (
+    <motion.div
+      className={`wysi ${className}`}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+      dangerouslySetInnerHTML={{ __html: content }}
+    />
+  );
+}```
+
+### ./src/lib/easings.ts
+```typescript
+// src/lib/easings.ts 
+
+// GSAP's power2.inOut
+export const power2InOut = [0.68, 0, 0.32, 1] as const;
+
+// GSAP's power4.inOut
+export const power4InOut = [0.76, 0, 0.24, 1] as const;
+
+
+// addtional easings 
+
+// GSAP's power1.inOut (equivalent to easeInOutQuad)
+export const power1InOut = [0.455, 0.03, 0.515, 0.955] as const;
+
+// GSAP's power3.inOut (easeInOutQuart)
+export const power3InOut = [0.77, 0, 0.175, 1] as const;
+```
+
+### ./src/lib/fonts.ts
+```typescript
+// src/lib/fonts.ts 
+import localFont from 'next/font/local'
+
+// Define your local fonts
+export const montreal = localFont({
+  src: '../../public/fonts/PPNeueMontreal-Medium.woff2',
+  display: 'swap',
+  variable: '--font-montreal', // This is the CSS variable name
+})
+
+export const montrealbook = localFont({
+  src: '../../public/fonts/PPNeueMontrealMono-Book.woff2',
+  display: 'swap',
+  variable: '--font-montrealbook', // This is the CSS variable name
+})
+```
+
+### ./src/providers/AnimationProvider.tsx
+```typescript
+// src/providers/AnimationProvider.tsx
+'use client';
+
+import { createContext, useContext, useReducer, ReactNode } from 'react';
+
+type AnimationState = 'LOADING' | 'LOADER_EXITING' | 'CONTENT_VISIBLE' | 'IDLE';
+type Action = { type: 'LOADER_EXIT_COMPLETE' } | { type: 'SET_IDLE' };
+
+interface AnimationContextProps {
+  state: AnimationState;
+  dispatch: React.Dispatch<Action>;
+}
+
+const AnimationContext = createContext<AnimationContextProps | undefined>(undefined);
+
+const animationReducer = (state: AnimationState, action: Action): AnimationState => {
+  switch (action.type) {
+    case 'LOADER_EXIT_COMPLETE':
+      return 'CONTENT_VISIBLE';
+    case 'SET_IDLE':
+      return 'IDLE';
+    default:
+      return state;
+  }
+};
+
+export const AnimationProvider = ({ children }: { children: ReactNode }) => {
+  const [state, dispatch] = useReducer(animationReducer, 'LOADING');
+
+  return (
+    <AnimationContext.Provider value={{ state, dispatch }}>
+      {children}
+    </AnimationContext.Provider>
+  );
+};
+
+export const useAnimation = () => {
+  const context = useContext(AnimationContext);
+  if (!context) {
+    throw new Error('useAnimation must be used within an AnimationProvider');
+  }
+  return context;
+};```
+
+### ./src/providers/MouseProvider.tsx
+```typescript
+// src/providers/MouseProvider.tsx
+'use client';
+
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+
+interface MouseContextProps {
+  mousePosition: { x: number; y: number };
+}
+
+const MouseContext = createContext<MouseContextProps | undefined>(undefined);
+
+export const MouseProvider = ({ children }: { children: ReactNode }) => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (event: MouseEvent) => {
+      setMousePosition({ x: event.clientX, y: event.clientY });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  },);
+
+  return (
+    <MouseContext.Provider value={{ mousePosition }}>
+      {children}
+    </MouseContext.Provider>
+  );
+};
+
+export const useMouse = () => {
+  const context = useContext(MouseContext);
+  if (!context) {
+    throw new Error('useMouse must be used within a MouseProvider');
+  }
+  return context;
+};```
+
+### ./src/providers/ResponsiveProvider.tsx
+```typescript
+// src/providers/ResponsiveProvider.tsx
+'use client';
+
+import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+
+interface ResponsiveContextProps {
+  isDesktop: boolean;
+  isTouch: boolean;
+}
+
+const ResponsiveContext = createContext<ResponsiveContextProps | undefined>(undefined);
+
+export const ResponsiveProvider = ({ children }: { children: ReactNode }) => {
+  const = useState(true);
+  const = useState(false);
+
+  useEffect(() => {
+    const updateResponsiveState = () => {
+      const isTouchDevice = 'ontouchstart' in window |
+
+| navigator.maxTouchPoints > 0;
+      const isDesktopDevice = window.innerWidth > 1024; // A common breakpoint for desktop
+
+      setIsTouch(isTouchDevice);
+      setIsDesktop(isDesktopDevice);
+
+      document.documentElement.classList.toggle('T', isTouchDevice);
+      document.documentElement.classList.toggle('D',!isTouchDevice);
+
+      // Replicating the original's dynamic CSS variable injection from constructor🫀.js
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+      // These multipliers are for fluid typography and layout scaling
+      const multiL = window.innerWidth / 2560; // Landscape multiplier
+      const multiP = window.innerWidth / 750;  // Portrait multiplier
+      document.documentElement.style.setProperty('--ck_multiL', `${multiL}`);
+      document.documentElement.style.setProperty('--ck_multiP', `${multiP}`);
+    };
+
+    updateResponsiveState();
+    window.addEventListener('resize', updateResponsiveState);
+
+    return () => {
+      window.removeEventListener('resize', updateResponsiveState);
+    };
+  },);
+
+  const value = { isDesktop, isTouch };
+
+  return (
+    <ResponsiveContext.Provider value={value}>
+      {children}
+    </ResponsiveContext.Provider>
+  );
+};
+
+export const useResponsive = () => {
+  const context = useContext(ResponsiveContext);
+  if (!context) {
+    throw new Error('useResponsive must be used within a ResponsiveProvider');
+  }
+  return context;
+};```
+
+### ./src/styles/about.css
+```css
+// src/styles/about.css
+.about_intro {
+  min-height: 100vh;
+  height: 100lvh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+:root.D .about_intro {
+  justify-content: center;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+@media (orientation: landscape) {
+  :root.T .about_intro {
+    justify-content: center;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .about_intro {
+    justify-content: center;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+}
+.about_intro .cnt {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 6.7rem;
+}
+@media (orientation: portrait) {
+  :root.T .about_intro .cnt {
+    overflow-x: clip;
+    padding-bottom: 4.2rem;
+  }
+}
+@media only screen and (max-width: 430px) {
+  :root.T .about_intro .cnt {
+    padding-bottom: 6.7rem;
+  }
+}
+.about_intro .Atext {
+  text-align: center;
+  --dark: #8a8a8a;
+}
+.about_intro .Atext .iO {
+  width: 10px;
+}
+.about_intro .Atitle {
+  margin: 4rem auto 0;
+}
+:root.D .about_intro .Atitle {
+  width: 125rem;
+}
+@media (orientation: landscape) {
+  :root.T .about_intro .Atitle {
+    width: 125rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .about_intro .Atitle {
+    width: 74rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .about_intro .Atitle {
+    width: 37.4rem;
+  }
+}
+:root.D .about_intro .Atitle .cCover {
+  left: -4rem;
+  right: -4rem;
+  top: -4rem;
+  bottom: -4rem;
+  transform: translateY(3.2rem);
+}
+@media (orientation: landscape) {
+  :root.T .about_intro .Atitle .cCover {
+    left: -4rem;
+    right: -4rem;
+    top: -4rem;
+    bottom: -4rem;
+    transform: translateY(3.2rem);
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .about_intro .Atitle .cCover {
+    left: -4rem;
+    right: -4rem;
+    top: -4rem;
+    bottom: -4rem;
+    transform: translateY(3.4rem);
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .about_intro .Atitle .cCover {
+    left: -6rem;
+    right: -6rem;
+    top: -6rem;
+    bottom: -6rem;
+    transform: translateY(2.6rem);
+  }
+}
+.about_intro .Atitle canvas {
+  opacity: 0;
+}
+.about_intro .Atitle .tt1 {
+  opacity: 0;
+  text-align: center;
+  line-height: 0.98;
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .about_intro .Atitle .tt1 {
+    font-size: 6.4rem;
+  }
+}
+:root.AND .about_intro .Atitle .tt1 {
+  opacity: 1;
+}
+.about_intro .Atitle + .Atitle {
+  margin-top: 0;
+}
+
+/* --- about_dual --- */
+:root.D .about_dual {
+  margin-top: 2rem;
+  padding-bottom: 17.8rem;
+}
+@media (orientation: landscape) {
+  :root.T .about_dual {
+    margin-top: 2rem;
+    padding-bottom: 17.8rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .about_dual {
+    margin-top: 12px;
+    padding-bottom: 8rem;
+  }
+}
+.about_dual .cnt {
+  display: flex;
+  justify-content: flex-start;
+}
+:root.D .about_dual .cnt {
+  align-items: flex-start;
+}
+@media (orientation: landscape) {
+  :root.T .about_dual .cnt {
+    align-items: flex-start;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .about_dual .cnt {
+    align-items: flex-start;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .about_dual .cnt {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+.about_dual .cnt_im {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+:root.D .about_dual .cnt_im {
+  width: 58.2rem;
+}
+@media (orientation: landscape) {
+  :root.T .about_dual .cnt_im {
+    width: 58.2rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .about_dual .cnt_im {
+    width: 28.8rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .about_dual .cnt_im {
+    width: 100%;
+  }
+}
+.about_dual .cnt_im_el {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.about_dual .cnt_im_el .Oi {
+  pointer-events: all;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.about_dual .cnt_im_el video,
+.about_dual .cnt_im_el img {
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+:root.AND .about_dual .cnt_im_el video,
+:root.AND .about_dual .cnt_im_el img {
+  opacity: 1;
+  visibility: visible;
+}
+.about_dual .cnt_im_t {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 0.8rem;
+}
+.about_dual .cnt_im_t .Awrite:first-child {
+  --dark: #8a8a8a;
+  --light: #000;
+}
+.about_dual .cnt_t {
+  position: relative;
+  pointer-events: none;
+}
+:root.D .about_dual .cnt_t {
+  width: 46.3rem;
+  margin-left: 12.6rem;
+}
+@media (orientation: landscape) {
+  :root.T .about_dual .cnt_t {
+    width: 46.3rem;
+    margin-left: 12.6rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .about_dual .cnt_t {
+    margin-left: auto;
+    width: 36rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .about_dual .cnt_t {
+    margin-top: 8rem;
+    width: 28rem;
+  }
+}
+.about_dual .cnt_t .iO {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: -10vh;
+  width: 1px;
+}
+.about_dual .cnt_t p {
+  letter-spacing: -0.01em;
+  font-family: montreal;
+  transition: 0.45s color cubic-bezier(0.55, 0, 0.1, 1);
+}
+:root.D .about_dual .cnt_t p {
+  font-size: 1.6rem;
+  line-height: 1.38;
+}
+@media (orientation: landscape) {
+  :root.T .about_dual .cnt_t p {
+    font-size: 1.6rem;
+    line-height: 1.38;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .about_dual .cnt_t p {
+    font-size: 1.4rem;
+    letter-spacing: -0.01em;
+    line-height: 1.43;
+  }
+}
+.about_dual .cnt_t p .word {
+  display: inline !important;
+}
+.about_dual .cnt_t p i {
+  width: 0.8rem;
+  margin-left: 0.4rem;
+}
+.about_dual .cnt_t p strong,
+.about_dual .cnt_t p b {
+  color: #8a8a8a;
+}
+.about_dual .cnt_t p a {
+  pointer-events: all;
+  position: relative;
+  color: #8a8a8a;
+  transition: 0.6s color cubic-bezier(0.55, 0, 0.1, 1);
+}
+.about_dual .cnt_t p a:hover {
+  color: #000;
+}
+.about_dual .cnt_t p a i {
+  display: inline-block;
+  width: 0.8rem;
+  margin-left: 0.4rem;
+}
+.about_dual .cnt_t p a i svg {
+  width: 100%;
+}
+.about_dual .cnt_t p a i svg *:not(g) {
+  fill: #000;
+  transition: 0.45s fill cubic-bezier(0.55, 0, 0.1, 1);
+}
+.about_dual .cnt_t p + p {
+  margin-top: 4rem;
+}
+.about_dual .cnt_t:hover {
+  color: #8a8a8a;
+}
+.about_dual .cnt_t:hover a i svg:not(g) * {
+  fill: #8a8a8a;
+}
+
+/* --- about_list --- */
+@media (orientation: portrait) {
+  :root.T .about_list + .footer {
+    margin-top: 10rem;
+  }
+}
+.about_list .cnt {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8rem 0;
+  flex-wrap: wrap;
+}
+:root.D .about_list .cnt {
+  padding-left: calc(50vw - 57.6rem);
+  padding-right: calc(50vw - 47rem);
+}
+@media (orientation: landscape) {
+  :root.T .about_list .cnt {
+    padding-left: calc(50vw - 57.6rem);
+    padding-right: calc(50vw - 47rem);
+  }
+}
+.about_list .cnt_cl {
+  width: 50%;
+  width: 46.4rem;
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .about_list .cnt_cl {
+    margin-left: 29rem;
+  }
+}
+.about_list .cnt_cl-sm .cnt_el + .cnt_el {
+  margin-top: 8rem;
+}
+.about_list .cnt_el_t {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-weight: 500;
+  position: relative;
+  transition:
+    0.6s opacity cubic-bezier(0.55, 0, 0.1, 1),
+    0.6s transform cubic-bezier(0.55, 0, 0.1, 1);
+}
+.about_list .cnt_el_t:not(.stview) {
+  opacity: 0;
+  transform: translateY(100%);
+  transition:
+    0.6s opacity cubic-bezier(0.55, 0, 0.1, 1),
+    0.6s transform cubic-bezier(0.55, 0, 0.1, 1);
+}
+.about_list .cnt_el_t .iO {
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+:root.D .about_list .cnt_el_t .n {
+  width: 11.8rem;
+}
+@media (orientation: landscape) {
+  :root.T .about_list .cnt_el_t .n {
+    width: 11.8rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .about_list .cnt_el_t .n {
+    width: 8.2rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .about_list .cnt_el_t .n {
+    width: 9.4rem;
+  }
+}
+.about_list .cnt_el_t + .cnt_el_b {
+  margin-top: 4rem;
+}
+.about_list .cnt_el_b {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+:root.D .about_list .cnt_el_b {
+  padding-left: 11.8rem;
+}
+@media (orientation: landscape) {
+  :root.T .about_list .cnt_el_b {
+    padding-left: 11.8rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .about_list .cnt_el_b {
+    padding-left: 8.2rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .about_list .cnt_el_b {
+    padding-left: 9.4rem;
+  }
+}
+.about_list .cnt_el_b .Awrite {
+  line-height: 1.27;
+}
+.about_list .cnt_el_b .Awrite .iO {
+  width: 10px;
+  top: 20vh;
+}
+.about_list .cnt_el_b .Awrite.lig {
+  --dark: #8a8a8a;
+}
+.about_list .cnt_el_b .Awrite i {
+  width: 0.8rem;
+  margin-left: 0.4rem;
+  display: inline-flex;
+  opacity: 0;
+}
+.about_list .cnt_el_b .Awrite i svg {
+  width: 100%;
+}
+.about_list .cnt_el_b .Awrite i svg path {
+  fill: #8a8a8a;
+}
+.about_list .cnt_el_b .Awrite.ivi i {
+  opacity: 1;
+}
+.about_list .cnt_el.sm1 .cnt_el_b + .cnt_el_b {
+  margin-top: 2.4rem;
+}```
+
+### ./src/styles/animations.css
+```css
+// src/styles/animations.css
+.Awrite,
+.Atext {
+  position: relative;
+  text-transform: uppercase;
+}
+.Awrite.char,
+.Atext.char {
+  position: relative;
+  pointer-events: none;
+}
+.Awrite.char.n,
+.Atext.char.n {
+  opacity: 0;
+  color: var(--dark);
+}
+.Awrite.char.f,
+.Atext.char.f {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  color: var(--light);
+  z-index: 1;
+  background: var(--dark);
+  display: none;
+  transform-origin: left center;
+}
+.Awrite.nono,
+.Atext.nono {
+  color: var(--dark);
+}
+.Awrite-inv,
+.Atext-inv {
+  color: var(--light);
+  padding: 2px 4px 1px;
+  background: var(--dark);
+}
+.Awrite-inv.char.n,
+.Atext-inv.char.n,
+.Awrite-inv.nono,
+.Atext-inv.nono {
+  color: var(--light);
+}
+.Atext {
+  text-transform: uppercase;
+  position: relative;
+  line-height: 1.27;
+  pointer-events: none;
+}
+.Atext a {
+  pointer-events: all;
+}
+.Atext p + p {
+  margin-top: 1.8rem;
+}
+.Atext.char.f {
+  background: transparent;
+}
+.Aline {
+  text-transform: uppercase;
+  position: relative;
+  line-height: 1.27;
+  pointer-events: none;
+  opacity: 0;
+}
+.Aline a {
+  pointer-events: all;
+}
+.Aline p + p {
+  margin-top: 1.8rem;
+}
+.Atitle {
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+}
+.Atitle.cCover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.Atitle.Oi {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 1!important;
+}
+.Atitle.ttj,.Atitle.tt1 {
+  opacity: 0;
+}
+.Atitle canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.mouse {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 49;
+  pointer-events: none;
+}```
+
+### ./src/styles/background.css
+```css
+/* src/styles/background.css */
+.Mbg {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  opacity: 0.15;
+  max-height: 100vh;
+  pointer-events: none;
+  transition: 2s max-height var(--ease-out-quart);
+  padding: 0 var(--spacing-page);
+
+  @media (--mobile) and (max-width: 745px) {
+    padding: 0;
+  }
+}
+
+.Mbg_col {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 1rem;
+
+  @media (--mobile) and (max-width: 745px) {
+    width: 0.5rem;
+  }
+
+  & > div {
+    width: 100%;
+    background: var(--color-border);
+    flex-shrink: 0;
+  }
+}
+
+.Mbg_col:nth-child(1) {
+  & > div {
+    background: var(--color-text-secondary);
+  }
+}
+
+.Mbg_col:nth-child(2) {
+  & > div {
+    background: var(--color-accent);
+  }
+}
+
+.Mbg_col:nth-child(3) {
+  & > div {
+    background: var(--color-text-primary);
+  }
+}
+
+.Mbg_col:nth-child(4) {
+  & > div {
+    background: var(--color-text-tertiary);
+  }
+}
+
+.Mbg_col:nth-child(5) {
+  & > div {
+    background: var(--color-border);
+  }
+}
+
+.Mbg_col:nth-child(6) {
+  & > div {
+    background: var(--color-text-secondary);
+  }
+}
+
+.Mbg_col:nth-child(7) {
+  & > div {
+    background: var(--color-accent);
+  }
+}
+
+.Mbg_col:nth-child(8) {
+  & > div {
+    background: var(--color-text-primary);
+  }
+}
+
+.Mbg_col:nth-child(9) {
+  & > div {
+    background: var(--color-text-tertiary);
+  }
+}
+
+.Mbg_col:nth-child(10) {
+  & > div {
+    background: var(--color-border);
+  }
+}
+
+.Mbg_col:nth-child(11) {
+  & > div {
+    background: var(--color-text-secondary);
+  }
+}
+
+.Mbg_col:nth-child(12) {
+  & > div {
+    background: var(--color-accent);
+  }
+}
+
+.Mbg_col_el {
+  width: 1px;
+  display: block;
+  background: linear-gradient(to bottom, transparent 50%, #9c9c9c 50%);
+  background-size: 100% 8px;
+}
+
+.Mbg_col:first-child {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.Mbg_col:last-child {
+  opacity: 0;
+  visibility: hidden;
+}```
+
+### ./src/styles/design-system.css
+```css
+// src/styles/design-system.css
+:root {
+  --color-bg: #f8f6f2;
+  --color-text: #000;
+  --color-text-light: #f8f6f2;
+  --color-text-dark: #000;
+  --color-text-muted: #8a8a8a;
+  --color-accent: #e63642;
+}
+
+/* Base HTML and Body styles */
+html {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: 'montrealbook', sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  font-variant-numeric: slashed-zero;
+}
+
+/* Device-specific root classes for CSS targeting */
+html.D {
+  /* Desktop styles */
+}
+html.T {
+  /* Touch device styles */
+}
+
+/* Responsive font-size and grid padding calculations from the original project */
+@media only screen and (min-width: 1441px) {
+  html.D {
+    font-size: calc(0.0694444444vw * var(--ck_multiL));
+    --pgrid: calc(50vw - 70.4rem);
+  }
+}
+@media only screen and (max-width: 1440px) {
+  html.D {
+    font-size: 0.6944444444vw;
+    --pgrid: calc(50vw - 70.4rem);
+  }
+}
+@media (orientation: landscape) {
+  html.T {
+    font-size: 0.6944444444vw;
+    --pgrid: calc(50vw - 70.4rem);
+  }
+}
+@media only screen and (orientation: portrait) and (min-width: 744px) {
+  html.T {
+    --pgrid: calc(50vw - 36.8rem);
+    font-size: 1.3020833333vw;
+  }
+}
+@media only screen and (orientation: portrait) and (max-width: 745px) {
+  html.T {
+    --pgrid: 0.8rem;
+    font-size: calc(0.2564102564vw * var(--ck_multiP));
+  }
+}
+@media only screen and (orientation: portrait) and (max-width: 390px) {
+  html.T {
+    font-size: 2.5641025641vw;
+  }
+}
+.c-vw {
+  margin: 0 auto;
+  width: 100%;
+  padding-left: var(--pgrid);
+  padding-right: var(--pgrid);
+}
+.c-vw-s {
+  margin: 0 auto;
+  width: 100%;
+  padding-left: var(--sgrid);
+  padding-right: var(--sgrid);
+}
+.c-fs {
+  margin: 0 auto;
+  width: 100%;
+  padding-left: var(--fgrid);
+  padding-right: var(--fgrid);
+}```
+
+### ./src/styles/footer.css
+```css
+// src/styles/footer.css
+.footer {
+  padding-bottom: 1.6rem;
+  padding-top: 1.6rem;
+  width: 100%;
+  margin-top: 24rem;
+  padding-bottom: 5.6rem;
+  position: relative;
+  overflow: hidden;
+}
+:root.D .footer_cm {
+  width: 100%;
+}
+@media (orientation: landscape) {
+  :root.T .footer_cm {
+    width: 100%;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .footer_cm {
+    width: 100vw;
+    margin: 0 auto;
+  }
+  :root.T .footer_cm.fix {
+    width: 100vw;
+  }
+}
+@media only screen and (max-width: 430px) {
+  :root.T .footer_cm {
+    width: 39rem;
+  }
+}
+.footer_cm .Atitle {
+  margin-left: var(--pgrid);
+}
+.footer_cm .Atitle .cCover {
+  position: absolute;
+}
+:root.D .footer_cm .Atitle .cCover {
+  left: -2rem;
+  right: -2rem;
+  top: -2rem;
+  bottom: -2rem;
+  pointer-events: none;
+  transform: translateY(-2.2rem);
+}
+@media (orientation: landscape) {
+  :root.T .footer_cm .Atitle .cCover {
+    left: -2rem;
+    right: -2rem;
+    top: -2rem;
+    bottom: -2rem;
+    pointer-events: none;
+    transform: translateY(-2.2rem);
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .footer_cm .Atitle .cCover {
+    left: 0;
+    right: 0;
+    top: -1.5rem;
+    bottom: -1.5rem;
+    pointer-events: none;
+    transform: translateY(-1.4rem);
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .footer_cm .Atitle .cCover {
+    left: 0;
+    right: 0;
+    top: -1rem;
+    bottom: -1rem;
+    pointer-events: none;
+    transform: translateY(-0.8rem);
+  }
+}
+.footer_cm .Atitle .cCover canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.footer_cm .Atitle .ttj {
+  opacity: 0;
+}
+:root.D .footer_cm .Atitle .ttj {
+  font-size: 27.7rem;
+}
+@media (orientation: landscape) {
+  :root.T .footer_cm .Atitle .ttj {
+    font-size: 27.7rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .footer_cm .Atitle .ttj {
+    font-size: 14.8rem;
+    white-space: nowrap;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .footer_cm .Atitle .ttj {
+    font-size: 19vw;
+    white-space: nowrap;
+  }
+}
+@media only screen and (max-width: 430px) {
+  :root.T .footer_cm .Atitle .ttj {
+    font-size: 7.4rem;
+  }
+}
+:root.AND .footer_cm .Atitle .ttj {
+  opacity: 1;
+}
+:root.D .footer .cnt {
+  margin-top: 8.5rem;
+}
+@media (orientation: landscape) {
+  :root.T .footer .cnt {
+    margin-top: 8.5rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .footer .cnt {
+    margin-top: 5.6rem;
+  }
+}
+.footer .cnt_lk {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.4rem 1rem;
+}
+:root.D .footer .cnt_lk {
+  margin-left: 70.9rem;
+  width: 54.9rem;
+}
+@media (orientation: landscape) {
+  :root.T .footer .cnt_lk {
+    margin-left: 70.9rem;
+    width: 54.9rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .footer .cnt_lk {
+    margin-left: 30rem;
+    width: 28.6rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .footer .cnt_lk {
+    margin-left: 9.4rem;
+    width: 18.4rem;
+  }
+}
+.footer .cnt_lk_el {
+  width: calc(50% - 0.5rem);
+}
+.footer .cnt_lk .Awrite {
+  --dark: #8a8a8a;
+  --light: #000;
+}
+.footer .cnt_lk .Awrite .iO {
+  width: 1px;
+}
+.footer .cnt_lk .Awrite i {
+  width: 0.8rem;
+  margin-left: 0.4rem;
+  display: inline-flex;
+  transition: 0.3s opacity cubic-bezier(0.55, 0, 0.1, 1);
+}
+.footer .cnt_lk .Awrite i svg {
+  width: 100%;
+}
+.footer .cnt_lk .Awrite i svg path {
+  fill: #000;
+}
+.footer .cnt_lk .Awrite:not(.ivi) i {
+  opacity: 0;
+}
+:root.D .footer .cnt_cr {
+  margin-left: 70.9rem;
+  width: 54.9rem;
+  margin-top: 3.2rem;
+}
+@media (orientation: landscape) {
+  :root.T .footer .cnt_cr {
+    margin-left: 70.9rem;
+    width: 54.9rem;
+    margin-top: 3.2rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .footer .cnt_cr {
+    margin-top: 4rem;
+    margin-left: 30rem;
+    width: 28.7rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .footer .cnt_cr {
+    margin-top: 4rem;
+    margin-left: 9.4rem;
+    width: 20.7rem;
+  }
+}
+.footer .cnt_cr_el {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.footer .cnt_cr_el + .cnt_cr_el {
+  margin-top: min(2px, 0.2rem);
+}
+.footer .cnt_cr .Awrite:first-child {
+  --dark: #8a8a8a;
+  --light: #000;
+}
+:root.D .footer .cnt_cp {
+  margin-left: 70.9rem;
+  width: 54.9rem;
+  margin-top: 3.2rem;
+}
+@media (orientation: landscape) {
+  :root.T .footer .cnt_cp {
+    margin-left: 70.9rem;
+    width: 54.9rem;
+    margin-top: 3.2rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .footer .cnt_cp {
+    margin-top: 4rem;
+    margin-left: 30rem;
+    width: 100%;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .footer .cnt_cp {
+    margin-top: 4rem;
+    margin-left: 9.4rem;
+    width: 100%;
+  }
+}
+.footer .cnt_cp .Awrite {
+  --dark: #8a8a8a;
+}
+.footer .Awrite.nono:not(.stview.inview) {
+  opacity: 0;
+  transition: 0.4s opacity cubic-bezier(0.55, 0, 0.1, 1);
+}
+```
+
+### ./src/styles/home.css
+```css
+// src/styles/home.css
+.home {
+  position: relative;
+}
+
+.home_hero {
+  height: 100vh;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 20rem;
+}
+@media (min-aspect-ratio: 18/9) {
+  .home_hero {
+    padding-bottom: 10vh;
+  }
+}
+.home_hero .cnt {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.home_hero .cnt_hold {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+:root.D .home_hero .cnt_hold {
+  margin-left: 59.5rem;
+  padding-top: 8rem;
+}
+@media (orientation: landscape) {
+  :root.T .home_hero .cnt_hold {
+    margin-left: 59.5rem;
+    padding-top: 8rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .home_hero .cnt_hold {
+    margin-left: 8.5rem;
+    padding-top: 4rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .home_hero .cnt_hold {
+    margin-left: 4.5rem;
+    padding-top: 4rem;
+  }
+}
+:root.D .home_hero .cnt_hold .Atitle .cCover {
+  left: -2rem;
+  right: -2rem;
+  top: -2rem;
+  bottom: -2rem;
+  pointer-events: none;
+}
+@media (orientation: landscape) {
+  :root.T .home_hero .cnt_hold .Atitle .cCover {
+    left: -2rem;
+    right: -2rem;
+    top: -2rem;
+    bottom: -2rem;
+    pointer-events: none;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .home_hero .cnt_hold .Atitle:first-child .cCover {
+    left: -1.1rem;
+    right: -1.1rem;
+    top: -1.1rem;
+    bottom: -1.1rem;
+    pointer-events: none;
+    transform: translate(-1rem);
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .home_hero .cnt_hold .Atitle:first-child .cCover {
+    left: -0.55rem;
+    right: -0.55rem;
+    top: -0.55rem;
+    bottom: -0.55rem;
+    pointer-events: none;
+    transform: translate(-0.1rem);
+  }
+}
+@media (orientation: portrait) {
+  :root.T .home_hero .cnt_hold .Atitle:last-child {
+    margin-top: -0.6rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .home_hero .cnt_hold .Atitle:last-child .cCover {
+    left: -1.1rem;
+    right: -1.1rem;
+    top: -1.1rem;
+    bottom: -1.1rem;
+    pointer-events: none;
+    transform: translate(0);
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .home_hero .cnt_hold .Atitle:last-child .cCover {
+    left: -0.55rem;
+    right: -0.55rem;
+    top: -0.55rem;
+    bottom: -0.55rem;
+    pointer-events: none;
+    transform: translate(0);
+  }
+}
+.home_hero .cnt_tt {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.home_hero .cnt_tt .Oiel:not(.act) {
+  pointer-events: none;
+}
+.home_hero .cnt_tt .ttj {
+  opacity: 0;
+}
+:root.T .home_hero .cnt_tt .ttj {
+  touch-action: none;
+}
+:root.AND .home_hero .cnt_tt .ttj {
+  opacity: 1;
+}
+.home_hero .cnt_bt {
+  margin-top: 3.2rem;
+}
+.home_hero .cnt_bt h3 {
+  transition:
+    0.8s opacity 1.1s cubic-bezier(0.55, 0, 0.1, 1),
+    0.6s transform 1s cubic-bezier(0.55, 0, 0.1, 1);
+  transform-origin: left center;
+  line-height: 1.19;
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .home_hero .cnt_bt h3 {
+    font-size: 1.4rem;
+  }
+}
+.home_hero .cnt_bt:not(.stview) h3 {
+  opacity: 0;
+  transform: scaleX(1.2);
+  transition: 0.8s all cubic-bezier(0.55, 0, 0.1, 1);
+}
+.home_hero .cnt_bt .Awrite {
+  margin-top: 2.4rem;
+}
+.home_hero .cnt_bt .Awrite .n {
+  color: #00000080;
+}
+.home_hero .cnt_sc {
+  position: absolute;
+  bottom: 2.4rem;
+}
+:root.D .home_hero .cnt_sc {
+  left: 59.2rem;
+  padding-left: var(--pgrid);
+}
+@media (orientation: landscape) {
+  :root.T .home_hero .cnt_sc {
+    left: 59.2rem;
+    padding-left: var(--pgrid);
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .home_hero .cnt_sc {
+    left: 8.5rem;
+    padding-left: var(--pgrid);
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .home_hero .cnt_sc {
+    left: 4.5rem;
+    padding-left: var(--pgrid);
+  }
+}
+.home_hero .cnt_lk {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+:root.D .home_hero .cnt_lk {
+  right: var(--pgrid);
+  bottom: 2.4rem;
+}
+@media (orientation: landscape) {
+  :root.T .home_hero .cnt_lk {
+    right: var(--pgrid);
+    bottom: 2.4rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .home_hero .cnt_lk {
+    flex-direction: column;
+    left: 8.5rem;
+    bottom: 10.7rem;
+    padding-left: var(--pgrid);
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .home_hero .cnt_lk {
+    flex-direction: column;
+    left: 4.5rem;
+    bottom: 10.7rem;
+    padding-left: var(--pgrid);
+  }
+}
+.home_hero .cnt_lk a {
+  --dark: #8a8a8a;
+}
+.home_hero .cnt_lk a .iO {
+  width: 1px;
+}
+.home_hero .cnt_lk a .char .b {
+  background: black;
+}
+.home_hero .cnt_lk a .char .n {
+  transition: 0.3s color cubic-bezier(0.55, 0, 0.1, 1);
+}
+.home_hero .cnt_lk a .char .f {
+  color: #fff;
+  background: #000;
+}
+.home_hero .cnt_lk a i {
+  width: 0.8rem;
+  margin-left: 0.4rem;
+  display: inline-flex;
+  opacity: 0;
+  transition: 0.3s opacity cubic-bezier(0.55, 0, 0.1, 1);
+}
+.home_hero .cnt_lk a i svg {
+  width: 100%;
+}
+.home_hero .cnt_lk a i svg path {
+  fill: #000;
+}
+.home_hero .cnt_lk a.ivi i {
+  opacity: 1;
+}
+.home_hero .cnt_lk a:hover .char .n {
+  transition: 0.45s color cubic-bezier(0.55, 0, 0.1, 1);
+  color: #000;
+}
+:root.D .home_hero .cnt_lk a + a {
+  margin-left: 2.4rem;
+}
+@media (orientation: landscape) {
+  :root.T .home_hero .cnt_lk a + a {
+    margin-left: 2.4rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .home_hero .cnt_lk a + a {
+    margin-top: 0.8rem;
+  }
+}
+
+/* --- home_prjs --- */
+.home_prjs {
+  margin-top: 20rem;
+}
+.home_prjs .cnt_t {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.home_prjs .cnt_t .Atitle {
+  pointer-events: none !important;
+}
+:root.AND .home_prjs .cnt_t .Atitle .tt1 {
+  opacity: 1;
+}
+.home_prjs .cnt_t .Atitle .Oi {
+  top: 16rem;
+  height: 10px;
+}
+:root.D .home_prjs .cnt_t .Atitle .cCover {
+  left: -2rem;
+  right: -2rem;
+  top: -2rem;
+  bottom: -2rem;
+}
+@media (orientation: landscape) {
+  :root.T .home_prjs .cnt_t .Atitle .cCover {
+    left: -2rem;
+    right: -2rem;
+    top: -2rem;
+    bottom: -2rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .home_prjs .cnt_t .Atitle .cCover {
+    left: -0.3rem;
+    right: -0.3rem;
+    top: -0.9rem;
+    bottom: -0.9rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .home_prjs .cnt_t .Atitle .cCover {
+    left: 0;
+    right: 0;
+    top: -0.9rem;
+    bottom: -0.9rem;
+  }
+}
+.home_prjs .cnt_t .Awrite {
+  --dark: rgba(0, 0, 0, 0.5);
+}
+:root.D .home_prjs .cnt_t .Awrite {
+  margin-bottom: 1.2rem;
+  margin-left: 1rem;
+}
+@media (orientation: landscape) {
+  :root.T .home_prjs .cnt_t .Awrite {
+    margin-bottom: 1.2rem;
+    margin-left: 1rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .home_prjs .cnt_t .Awrite {
+    margin-bottom: 0.6rem;
+    margin-left: 0.8rem;
+  }
+}
+.home_prjs .cnt_t .Awrite .iO {
+  height: 10px;
+  width: 10px;
+}
+:root.D .home_prjs .cnt_t .Awrite .iO {
+  top: 9.1rem;
+}
+@media (orientation: landscape) {
+  :root.T .home_prjs .cnt_t .Awrite .iO {
+    top: 9.1rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .home_prjs .cnt_t .Awrite .iO {
+    top: 4rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .home_prjs .cnt_prj {
+    width: 100%;
+  }
+  :root.T .home_prjs .cnt_prj + .cnt_prj {
+    margin-top: 8rem;
+  }
+}
+.home_prjs .cnt_prj_im {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.home_prjs .cnt_prj_im_el {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.home_prjs .cnt_prj_im .Oi {
+  pointer-events: all;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.home_prjs .cnt_prj_im video,
+.home_prjs .cnt_prj_im img {
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+:root.AND .home_prjs .cnt_prj_im video,
+:root.AND .home_prjs .cnt_prj_im img {
+  opacity: 1;
+  visibility: visible;
+}
+.home_prjs .cnt_prj_t {
+  margin-top: 0.8rem;
+}
+.home_prjs .cnt_prj_t .num .char .n {
+  --dark: rgba(0, 0, 0, 0.5);
+}
+:root.D .home_prjs .cnt_prj-0 {
+  width: 58.3rem;
+}
+@media (orientation: landscape) {
+  :root.T .home_prjs .cnt_prj-0 {
+    width: 58.3rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .home_prjs .cnt_prj-0 {
+    width: 28.9rem;
+  }
+}
+:root.D .home_prjs .cnt_prj-1 {
+  width: 58.2rem;
+}
+@media (orientation: landscape) {
+  :root.T .home_prjs .cnt_prj-1 {
+    width: 58.2rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .home_prjs .cnt_prj-1 {
+    width: 28.8rem;
+  }
+}
+:root.D .home_prjs .cnt_prj-2 {
+  width: 45.6rem;
+  margin-left: 12.8rem;
+}
+@media (orientation: landscape) {
+  :root.T .home_prjs .cnt_prj-2 {
+    width: 45.6rem;
+    margin-left: 12.8rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .home_prjs .cnt_prj-2 {
+    width: 21.6rem;
+    margin-left: 8.5rem;
+  }
+}
+.home_prjs .cnt_prj-2 img {
+  aspect-ratio: 582/779;
+}
+.home_prjs .cnt_ft {
+  display: flex;
+  align-items: flex-start;
+}
+:root.D .home_prjs .cnt_ft {
+  justify-content: space-between;
+  margin-top: 8rem;
+}
+@media (orientation: landscape) {
+  :root.T .home_prjs .cnt_ft {
+    justify-content: space-between;
+    margin-top: 8rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .home_prjs .cnt_ft {
+    justify-content: space-between;
+    margin-top: 8rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .home_prjs .cnt_ft {
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 4rem;
+  }
+}
+.home_prjs .cnt_st {
+  display: flex;
+  justify-content: flex-start;
+}
+:root.D .home_prjs .cnt_st {
+  align-items: flex-end;
+  margin-top: 24.4rem;
+}
+@media (orientation: landscape) {
+  :root.T .home_prjs .cnt_st {
+    align-items: flex-end;
+    margin-top: 24.4rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .home_prjs .cnt_st {
+    align-items: flex-end;
+    margin-top: 24.4rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .home_prjs .cnt_st {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 8rem;
+  }
+}
+:root.D .home_prjs .cnt_btn {
+  margin-left: 12.6rem;
+  transform: translateY(-190%);
+}
+@media (orientation: landscape) {
+  :root.T .home_prjs .cnt_btn {
+    margin-left: 12.6rem;
+    transform: translateY(-190%);
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .home_prjs .cnt_btn {
+    margin-left: 14.5rem;
+    transform: translateY(-190%);
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .home_prjs .cnt_btn {
+    margin-top: 10rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+/* --- home_about --- */
+.home_about {
+  position: relative;
+}
+:root.D .home_about {
+  padding-top: 40vh;
+}
+@media (orientation: landscape) {
+  :root.T .home_about {
+    padding-top: 40vh;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .home_about {
+    padding-top: 20vh;
+  }
+  :root.T .home_about + .footer {
+    margin-top: 10rem;
+  }
+}
+:root.AND .home_about {
+  color: #fff;
+}
+:root.AND .home_about:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 25vh;
+  width: 100vw;
+  height: 40vh;
+  background: radial-gradient(83% 50%, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 76%, rgba(0, 0, 0, 0) 100%);
+}
+:root.AND .home_about .cnt {
+  background: black;
+  padding-top: 10vh;
+}
+:root.AND .home_about + .footer {
+  background: black;
+  margin-top: 0;
+}
+:root.AND .home_about + .footer .ttj {
+  opacity: 1;
+  color: #fff;
+}
+.home_about .Oi-bg {
+  position: absolute;
+  left: 0;
+  width: 1px;
+  background: yellow;
+}
+:root.D .home_about .Oi-bg {
+  height: 50vh;
+  top: 15vh;
+}
+@media (orientation: landscape) {
+  :root.T .home_about .Oi-bg {
+    height: 50vh;
+    top: 15vh;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .home_about .Oi-bg {
+    height: 30vh;
+    top: -5vh;
+  }
+}
+.home_about .cnt {
+  overflow: hidden;
+}
+.home_about .cnt_tp {
+  position: relative;
+}
+@media (orientation: portrait) {
+  :root.T .home_about .cnt_tp {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+.home_about .cnt_tp .Atitle .cCover {
+  position: absolute;
+  pointer-events: none;
+}
+:root.D .home_about .cnt_tp .Atitle .cCover {
+  left: -2rem;
+  right: -2rem;
+  top: -2rem;
+  bottom: -2rem;
+}
+@media (orientation: landscape) {
+  :root.T .home_about .cnt_tp .Atitle .cCover {
+    left: -2rem;
+    right: -2rem;
+    top: -2rem;
+    bottom: -2rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .home_about .cnt_tp .Atitle .cCover {
+    left: -1rem;
+    right: -1rem;
+    top: -1rem;
+    bottom: -1rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .home_about .cnt_tp .Atitle .cCover {
+    left: 0;
+    right: 0;
+    top: -1rem;
+    bottom: -1rem;
+    transform: translate(0.02rem, -0.1rem);
+  }
+}
+:root.AND .home_about .cnt_tp .tt1 {
+  opacity: 1;
+  color: #fff;
+}
+.home_about .cnt_tp .Oi {
+  pointer-events: none !important;
+  top: 100%;
+  bottom: auto;
+  height: 100%;
+}
+.home_about .cnt_bp {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+:root.D .home_about .cnt_bp {
+  margin-top: 8rem;
+}
+@media (orientation: landscape) {
+  :root.T .home_about .cnt_bp {
+    margin-top: 8rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .home_about .cnt_bp {
+    margin-top: 4rem;
+  }
+}
+.home_about .cnt_x {
+  --dark: #f8f6f2;
+  --light: #000;
+}
+:root.D .home_about .cnt_x {
+  margin-left: 59.4rem;
+  width: 34.6rem;
+}
+@media (orientation: landscape) {
+  :root.T .home_about .cnt_x {
+    margin-left: 59.4rem;
+    width: 34.6rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .home_about .cnt_x {
+    margin-left: 30rem;
+    width: 34.6rem;
+    margin-top: 4rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .home_about .cnt_x {
+    margin-left: auto;
+    width: 28rem;
+    margin-top: 4rem;
+  }
+}
+.home_about .cnt_x .Aline {
+  color: var(--dark);
+}
+:root.D .home_about .cnt_x .linkXS {
+  display: none;
+}
+@media (orientation: landscape) {
+  :root.T .home_about .cnt_x .linkXS {
+    display: none;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .home_about .cnt_x .linkXS {
+    display: inline-block;
+    margin-top: 4rem;
+    color: #fff;
+    opacity: 0;
+    text-transform: uppercase;
+    line-height: 1.27;
+    transition: 0.45s opacity 1.5s cubic-bezier(0.55, 0, 0.1, 1);
+  }
+}
+.home_about .cnt_x .Aline.stview + .linkXS {
+  opacity: 1;
+}
+.home_about .cnt_l {
+  width: 27.7rem;
+  margin-left: auto;
+  margin-top: 4rem;
+}
+.home_about .cnt_im {
+  position: relative;
+  display: flex;
+}
+:root.D .home_about .cnt_im {
+  margin-left: 59.2rem;
+  margin-top: 8rem;
+  width: 70rem;
+}
+@media (orientation: landscape) {
+  :root.T .home_about .cnt_im {
+    margin-left: 59.2rem;
+    margin-top: 8rem;
+    width: 70rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .home_about .cnt_im {
+    margin-left: auto;
+    width: 43.8rem;
+    margin-top: 4rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .home_about .cnt_im {
+    margin-left: auto;
+    width: 28rem;
+    margin-top: 4rem;
+  }
+}
+.home_about .cnt_im .Oi {
+  pointer-events: all;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.home_about .cnt_im video,
+.home_about .cnt_im img {
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+:root.AND .home_about .cnt_im video,
+:root.AND .home_about .cnt_im img {
+  opacity: 1;
+  visibility: visible;
+}```
+
+### ./src/styles/loader.css
+```css
+// src/styles/loader.css
+.loader {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: left top;
+  overflow: hidden;
+  pointer-events: none;
+}
+.loader_bg {
+  background: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.loader_cnt {
+  height: 100vh;
+  color: #f8f6f2;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+}
+:root.D.loader_cnt {
+  align-items: flex-start;
+  height: 100vh;
+  padding-top: 0.8rem;
+  padding-bottom: 4rem;
+}
+@media (orientation: landscape) {
+  :root.T.loader_cnt {
+    align-items: flex-start;
+    height: 100vh;
+    padding-top: 0.8rem;
+    padding-bottom: 4rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T.loader_cnt {
+    align-items: flex-start;
+    height: 100vh;
+    max-height: var(--ck_hmin);
+    padding-top: 0.8rem;
+    padding-bottom: 4rem;
+  }
+}
+.loader_tp {
+  font-family: var(--font-montreal);
+  font-variant-numeric: tabular-nums lining-nums;
+  font-kerning: none;
+}
+:root.D.loader_tp {
+  font-size: 28rem;
+  margin-left: 59.2rem;
+}
+@media (orientation: landscape) {
+  :root.T.loader_tp {
+    font-size: 28rem;
+    margin-left: 59.2rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T.loader_tp {
+    font-size: 28rem;
+    letter-spacing: -0.02em;
+    margin-left: 8.5rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T.loader_tp {
+    font-size: 16.7rem;
+    letter-spacing: -0.02em;
+    margin-left: 3.7rem;
+  }
+}
+.loader_bp {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+:root.D.loader_bp {
+  margin-left: 59.2rem;
+}
+@media (orientation: landscape) {
+  :root.T.loader_bp {
+    margin-left: 59.2rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T.loader_bp {
+    width: 29rem;
+    margin-left: 8.5rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T.loader_bp {
+    width: 29rem;
+    margin-left: 4.5rem;
+  }
+}
+.loader_bp.Awrite {
+  --light: #000;
+  --dark: #f8f6f2;
+}
+.loader_bp.Awrite +.Awrite {
+  margin-top: 0.2rem;
+}```
+
+### ./src/styles/navigation.css
+```css
+// src/styles/navigation.css
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  --gray: #8a8a8a;
+}
+.nav_blur {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transform-origin: left top;
+  pointer-events: none;
+  transition:
+    1s transform cubic-bezier(0.55, 0, 0.1, 1),
+    1s height cubic-bezier(0.55, 0, 0.1, 1);
+  transform: translateZ(0) translateY(-30%);
+}
+:root.D.nav_blur {
+  height: 280%;
+}
+@media (orientation: landscape) {
+  :root.T.nav_blur {
+    height: 280%;
+  }
+}
+@media (orientation: portrait) {
+  :root.T.nav_blur {
+    height: 280%;
+  }
+}
+.nav_blur > div,
+.nav_blur:before,
+.nav_blur:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.nav_blur > div:nth-of-type(1) {
+  z-index: 2;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  -webkit-mask: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 12.5%, rgb(255, 255, 255) 37.5%, rgba(255, 255, 255, 0) 50%);
+}
+.nav_blur > div:nth-of-type(2) {
+  z-index: 3;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  -webkit-mask: linear-gradient(to top, rgba(255, 255, 255, 0) 12.5%, rgb(255, 255, 255) 37.5%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 62.5%);
+}
+.nav_blur > div:nth-of-type(3) {
+  z-index: 4;
+  -webkit-mask: linear-gradient(to top, rgba(255, 255, 255, 0) 37.5%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 62.5%, rgba(255, 255, 255, 0) 75%);
+}
+:root.D.nav_blur > div:nth-of-type(3) {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+@media (orientation: portrait) {
+  :root.T.nav_blur > div:nth-of-type(3) {
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+  }
+}
+.nav_blur > div:nth-of-type(4) {
+  z-index: 5;
+  -webkit-mask: linear-gradient(to top, rgba(255, 255, 255, 0) 50%, rgb(255, 255, 255) 62.5%, rgb(255, 255, 255) 75%, rgba(255, 255, 255, 0) 87.5%);
+}
+:root.D.nav_blur > div:nth-of-type(4) {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+@media (orientation: portrait) {
+  :root.T.nav_blur > div:nth-of-type(4) {
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+  }
+}
+.nav_top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  z-index: 54;
+  pointer-events: none;
+  line-height: 1.27;
+}
+:root.D.nav_top {
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+  align-items: center;
+}
+@media (orientation: landscape) {
+  :root.T.nav_top {
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+    align-items: center;
+  }
+}
+@media (orientation: portrait) {
+  :root.T.nav_top {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    align-items: flex-start;
+  }
+}
+.nav_left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T.nav_left {
+    width: 8.8rem;
+    flex-wrap: wrap;
+  }
+}
+.nav_left.Awrite {
+  --dark: #8a8a8a;
+}
+.nav_logo {
+  display: flex;
+  pointer-events: all;
+}
+.nav_clock {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  white-space: nowrap;
+}
+.nav_clock_p {
+  margin-right: 0.6rem;
+}
+.nav_clock_s {
+  color: var(--gray);
+}
+.nav_clock_a {
+  margin-left: 0.6rem;
+}
+.nav_right {
+  display: flex;
+}
+:root.D.nav_right {
+  justify-content: flex-end;
+  align-items: center;
+}
+@media (orientation: landscape) {
+  :root.T.nav_right {
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T.nav_right {
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 23.3rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T.nav_right_ops {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  :root.T.nav_right_ops a + a {
+    margin-top: 2px;
+  }
+}
+:root.D.nav_right a {
+  margin-left: 2.4rem;
+}
+@media (orientation: landscape) {
+  :root.T.nav_right a {
+    margin-left: 2.4rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T.nav_right a {
+    margin-left: 2.4rem;
+  }
+}
+.nav_right a.act {
+  pointer-events: all;
+}
+.nav_right a.inac {
+  pointer-events: none!important;
+  opacity: 0.5!important;
+}
+.nav_right a:not(.act) {
+  pointer-events: all;
+}
+.nav_burger {
+  position: relative;
+  width: 3.7rem;
+  height: 10px;
+  justify-content: center;
+  align-items: center;
+}
+:root.D.nav_burger {
+  display: none;
+}
+:root.T.nav_burger {
+  display: flex;
+}
+.nav_burger_i {
+  width: 3.7rem;
+  height: 10px;
+  position: relative;
+}
+.nav_burger_i span {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 1px;
+}
+.nav_burger_i span:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: var(--ck_accent);
+  transition: 0.6s transform cubic-bezier(0.55, 0, 0.1, 1);
+}
+.nav_burger_i span:first-child {
+  top: 0;
+  transition:
+    0.6s left cubic-bezier(0.55, 0, 0.1, 1),
+    0.6s top cubic-bezier(0.55, 0, 0.1, 1),
+    0.6s transform cubic-bezier(0.55, 0, 0.1, 1);
+}
+.nav_burger_i span:first-child:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #e63642;
+  transform: ScaleX(0);
+  transform-origin: center center;
+  transition: 0.6s transform cubic-bezier(0.55, 0, 0.1, 1);
+}
+.nav_burger_i span:last-child {
+  top: 100%;
+  transform: translateY(-100%) rotate(0);
+  transition:
+    0.6s left cubic-bezier(0.55, 0, 0.1, 1),
+    0.6s top cubic-bezier(0.55, 0, 0.1, 1),
+    0.6s transform cubic-bezier(0.55, 0, 0.1, 1);
+}
+.nav_burger_i span:last-child:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #e63642;
+  transform: scaleX(0);
+  transform-origin: center center;
+  transition: 0.6s transform cubic-bezier(0.55, 0, 0.1, 1);
+}
+.nav_menu {
+  position: absolute;
+  right: 0;
+}
+:root.D.nav_menu {
+  display: flex;
+  justify-content: flex-end;
+  top: 50%;
+  transform: translateY(-50%);
+}
+:root.T.nav_menu {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.6s opacity cubic-bezier(0.55, 0, 0.1, 1);
+  background: #eceae4;
+  color: #000;
+  overflow-y: Scroll;
+  padding-bottom: 32rem;
+  padding-top: 15rem;
+}
+:root.T html:not(.act-menu).nav_menu {
+  pointer-events: none!important;
+}
+:root.T html:not(.act-menu).nav_menu * {
+  pointer-events: none!important;
+}
+:root.T.act-menu.nav_menu {
+  opacity: 1;
+  pointer-events: all;
+}
+.act-menu.nav_burger span:first-child {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(25deg);
+}
+.act-menu.nav_burger span:last-child {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+}```
+
+### ./src/styles/playground.css
+```css
+```
+
+### ./src/styles/project.css
+```css
+// src/styles/project.css
+.project .backto {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 57;
+  pointer-events: none;
+}
+:root.D .project .backto {
+  top: 8rem;
+}
+@media (orientation: landscape) {
+  :root.T .project .backto {
+    top: 8rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .project .backto {
+    top: 12rem;
+  }
+}
+.project .backto .Awrite {
+  white-space: nowrap;
+  pointer-events: all;
+  --dark: #8a8a8a;
+  --light: #000;
+}
+:root.D .project .backto .Awrite {
+  margin-left: 59rem;
+}
+@media (orientation: landscape) {
+  :root.T .project .backto .Awrite {
+    margin-left: 59rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .project .backto .Awrite {
+    margin-left: 8.2rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .project .backto .Awrite {
+    margin-left: 9.3rem;
+  }
+}
+.project_intro {
+  padding-top: 35vh;
+  position: relative;
+}
+.project_intro .iO.iO-outin {
+  height: 20vh;
+  top: 0;
+  left: 0;
+  width: 10px;
+  background: yellow;
+  position: absolute;
+}
+.project_intro .cnt {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.project_intro .cnt_n {
+  flex-shrink: 0;
+}
+:root.D .project_intro .cnt_n {
+  width: 59rem;
+}
+@media (orientation: landscape) {
+  :root.T .project_intro .cnt_n {
+    width: 59rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .project_intro .cnt_n {
+    width: 4.3rem;
+  }
+}
+:root.D .project_intro .cnt_mn {
+  width: 34.6rem;
+}
+@media (orientation: landscape) {
+  :root.T .project_intro .cnt_mn {
+    width: 34.6rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .project_intro .cnt_mn {
+    width: 34.6rem;
+    margin-left: 4rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .project_intro .cnt_mn {
+    width: 27.2rem;
+    margin-left: 5rem;
+  }
+}
+.project_intro .cnt .tt3 {
+  opacity: 0;
+  transform: scaleX(1.2);
+  transition:
+    0.6s opacity cubic-bezier(0.55, 0, 0.1, 1),
+    0.7s transform 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  transform-origin: left center;
+}
+.project_intro .cnt .tt3.stview {
+  opacity: 1;
+  transform: scaleX(1);
+  transition:
+    0.8s opacity 0.1s cubic-bezier(0.55, 0, 0.1, 1),
+    0.6s transform cubic-bezier(0.55, 0, 0.1, 1);
+}
+.project_intro .cnt .tt3.notran {
+  opacity: 1;
+  transform: scaleX(1);
+  transition: none;
+}
+:root.D .project_intro .cnt_x {
+  margin-top: 10rem;
+}
+@media (orientation: landscape) {
+  :root.T .project_intro .cnt_x {
+    margin-top: 10rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .project_intro .cnt_x {
+    margin-top: 8rem;
+  }
+}
+.project_intro .cnt_cr {
+  margin-top: 4rem;
+}
+.project_intro .cnt_cr_el {
+  width: 100%;
+}
+.project_intro .cnt_cr_el + .cnt_cr_el {
+  margin-top: min(2px, 0.2rem);
+}
+.project_intro .cnt_cr .Awrite {
+  display: inline;
+  line-height: 1.27;
+}
+.project_intro .cnt_cr .Awrite:first-child {
+  --dark: #8a8a8a;
+  --light: #f8f6f2;
+}
+.project_intro .cnt_cr .Awrite .word {
+  white-space: nowrap;
+}
+.project_intro .cnt_l {
+  margin-top: 4rem;
+}
+.project_intro .cnt_l .Awrite {
+  --dark: #8a8a8a;
+  --light: #000;
+}
+.project_intro .cnt_l .Awrite .iO {
+  width: 1px;
+}
+.project_intro .cnt_l .Awrite i {
+  width: 0.8rem;
+  margin-left: 0.4rem;
+  display: inline-flex;
+}
+.project_intro .cnt_l .Awrite i svg {
+  width: 100%;
+}
+.project_intro .cnt_l .Awrite i svg path {
+  fill: #000;
+}
+:root.D .project_els .cnt {
+  margin-top: 30rem;
+}
+@media (orientation: landscape) {
+  :root.T .project_els .cnt {
+    margin-top: 30rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .project_els .cnt {
+    margin-top: 20rem;
+  }
+}
+.project_els .cnt_els {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.project_els .cnt_el {
+  position: relative;
+}
+:root.D .project_els .cnt_el {
+  width: 105rem;
+}
+@media (orientation: landscape) {
+  :root.T .project_els .cnt_el {
+    width: 105rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .project_els .cnt_el {
+    width: 58.2rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .project_els .cnt_el {
+    width: 100%;
+  }
+}
+.project_els .cnt_el .iO {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.project_els .cnt_el img,
+.project_els .cnt_el video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition:
+    0.6s opacity cubic-bezier(0.55, 0, 0.1, 1),
+    1s filter cubic-bezier(0.55, 0, 0.1, 1);
+}
+.project_els .cnt_el img:not(.Ldd),
+.project_els .cnt_el video:not(.Ldd) {
+  opacity: 0;
+  filter: blur(10px);
+}
+.project_els .cnt_el img:not(.Ldd) ~ .iO,
+.project_els .cnt_el video:not(.Ldd) ~ .iO {
+  top: 6rem;
+}
+.project_els .cnt_el img:not(.Ldd) + button,
+.project_els .cnt_el video:not(.Ldd) + button {
+  pointer-events: none;
+  opacity: 0;
+}
+.project_els .cnt_el button {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  height: 16px;
+  width: 64px;
+  transition: 0.6s opacity 0.4s cubic-bezier(0.55, 0, 0.1, 1);
+  --light: #000;
+  --dark: #f8f6f2;
+  --dark: #8a8a8a;
+  mix-blend-mode: screen;
+}
+.project_els .cnt_el button .Awrite {
+  white-space: nowrap;
+}
+.project_els .cnt_el button .on,
+.project_els .cnt_el button .off {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+:root.D .project_els .cnt_el + .cnt_el {
+  margin-top: 1rem;
+}
+@media (orientation: landscape) {
+  :root.T .project_els .cnt_el + .cnt_el {
+    margin-top: 1rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .project_els .cnt_el + .cnt_el {
+    margin-top: 0.8rem;
+  }
+}
+.project_nxt {
+  height: 100vh;
+  padding-top: 35vh;
+  position: relative;
+}
+.project_nxt .iO-nxt {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 50vh;
+  width: 10px;
+  background: blue;
+}
+.project_nxt .top {
+  position: absolute;
+  left: 0;
+  top: 4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  --dark: #8a8a8a;
+}
+:root.D .project_nxt .top_sc {
+  width: 34.6rem;
+  margin-left: 59rem;
+}
+@media (orientation: landscape) {
+  :root.T .project_nxt .top_sc {
+    width: 34.6rem;
+    margin-left: 59rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .project_nxt .top_sc {
+    margin-left: 8.2rem;
+    width: 13rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .project_nxt .top_sc {
+    margin-left: 9.5rem;
+    width: 13rem;
+  }
+}
+.project_nxt .top_sc .Awrite {
+  white-space: nowrap;
+}
+.project_nxt .cnt {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.project_nxt .cnt_n {
+  flex-shrink: 0;
+}
+:root.D .project_nxt .cnt_n {
+  width: 59rem;
+}
+@media (orientation: landscape) {
+  :root.T .project_nxt .cnt_n {
+    width: 59rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .project_nxt .cnt_n {
+    width: 4.3rem;
+  }
+}
+:root.D .project_nxt .cnt_mn {
+  width: 34.6rem;
+}
+@media (orientation: landscape) {
+  :root.T .project_nxt .cnt_mn {
+    width: 34.6rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .project_nxt .cnt_mn {
+    width: 34.6rem;
+    margin-left: 4rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .project_nxt .cnt_mn {
+    width: 27.2rem;
+    margin-left: 5rem;
+  }
+}```
+
+### ./src/styles/projects.css
+```css
+// src/styles/projects.css
+.projects_intro {
+  padding-top: calc(50vh - 17rem);
+  position: relative;
+}
+.projects_intro .Size {
+  top: 0;
+  left: 0;
+  height: 35vh;
+  position: absolute;
+  width: 1px;
+}
+.projects_intro .cnt_tp {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.projects_intro .cnt_t {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .projects_intro .cnt_t {
+    margin-left: 8.5rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .projects_intro .cnt_t {
+    margin-left: 9.3rem;
+  }
+}
+.projects_intro .cnt_t_comp {
+  display: flex;
+  transform: translateY(-0.1rem);
+}
+.projects_intro .cnt_t_comp .Atitle + .Atitle {
+  margin-left: 2rem;
+}
+@media (orientation: portrait) {
+  :root.T .projects_intro .cnt_t_comp .Atitle + .Atitle {
+    margin-left: 1.2rem;
+  }
+}
+.projects_intro .cnt_t .Atitle {
+  pointer-events: none !important;
+}
+:root.AND .projects_intro .cnt_t .Atitle .tt1 {
+  opacity: 1;
+}
+.projects_intro .cnt_t .Atitle .Oi {
+  top: 16rem;
+  height: 10px;
+}
+:root.D .projects_intro .cnt_t .Atitle .cCover {
+  left: -2rem;
+  right: -2rem;
+  top: -2rem;
+  bottom: -2rem;
+}
+@media (orientation: landscape) {
+  :root.T .projects_intro .cnt_t .Atitle .cCover {
+    left: -2rem;
+    right: -2rem;
+    top: -2rem;
+    bottom: -2rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .projects_intro .cnt_t .Atitle .cCover {
+    left: -0.2rem;
+    right: -0.2rem;
+    top: -1rem;
+    bottom: -1rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .projects_intro .cnt_t .Atitle .cCover {
+    left: 0;
+    right: 0;
+    top: -1rem;
+    bottom: -1rem;
+  }
+}
+.projects_intro .cnt_t .Awrite {
+  --dark: rgba(0, 0, 0, 0.5);
+}
+:root.D .projects_intro .cnt_t .Awrite {
+  margin-bottom: 1rem;
+  margin-left: 1.6rem;
+}
+@media (orientation: landscape) {
+  :root.T .projects_intro .cnt_t .Awrite {
+    margin-bottom: 1rem;
+    margin-left: 1.6rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .projects_intro .cnt_t .Awrite {
+    margin-bottom: 0.6rem;
+    margin-left: 0.8rem;
+  }
+}
+.projects_intro .cnt_t .Awrite .iO {
+  height: 10px;
+  width: 10px;
+}
+:root.D .projects_intro .cnt_t .Awrite .iO {
+  top: 9.1rem;
+}
+@media (orientation: landscape) {
+  :root.T .projects_intro .cnt_t .Awrite .iO {
+    top: 9.1rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .projects_intro .cnt_t .Awrite .iO {
+    top: 4rem;
+  }
+}
+.projects_intro .cnt_ctr {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 24rem;
+  padding-left: 0.6rem;
+}
+@media (orientation: portrait) {
+  :root.T .projects_intro .cnt_ctr {
+    display: none;
+  }
+}
+.projects_intro .cnt_ctr .iO {
+  top: 16rem;
+  height: 10px;
+}
+.projects_intro .cnt_ctr h3 {
+  --dark: #8a8a8a;
+}
+.projects_intro .cnt_ctr button {
+  margin: 0 0.4rem 0 0.8rem;
+}
+.projects_intro .cnt_ctr button + button {
+  margin: 0 0.4rem;
+}
+.projects_intro .cnt_ctr button i {
+  flex-shrink: 0;
+  margin-left: 0.4rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 1px solid #8a8a8a;
+  display: inline-block;
+  position: relative;
+}
+.projects_intro .cnt_ctr button i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  background: #000;
+  transform-origin: right center;
+  transition: 0.6s transform cubic-bezier(0.55, 0, 0.1, 1);
+}
+.projects_intro .cnt_ctr button.act {
+  pointer-events: none;
+}
+.projects_intro .cnt_ctr button.act i:before {
+  transform: scaleX(1);
+  transform-origin: left center;
+  transition: 0.6s transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.projects_intro .cnt_els {
+  position: relative;
+}
+:root.D .projects_intro .cnt_els {
+  padding-bottom: 20rem;
+  margin-top: 11.6rem;
+}
+@media (orientation: landscape) {
+  :root.T .projects_intro .cnt_els {
+    padding-bottom: 20rem;
+    margin-top: 11.6rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .projects_intro .cnt_els {
+    padding-bottom: 10rem;
+    margin-top: 5.6rem;
+  }
+}
+.projects_intro .cnt_els_sld {
+  position: absolute;
+  left: 0;
+  top: calc(-50vh + 17.4rem);
+  right: 50%;
+  z-index: 5;
+  pointer-events: none;
+  bottom: -3rem;
+}
+.projects_intro .cnt_els_sld .Oi {
+  position: absolute;
+  left: 0;
+  top: calc(50vh - 17.4rem);
+  width: 10px;
+}
+.projects_intro .cnt_els_sld .Oi .elh {
+  width: 10px;
+  height: 100vh;
+}
+.projects_intro .cnt_els_sld .Oi .elh:last-child {
+  display: none;
+}
+.projects_intro .cnt_els .stck_hold {
+  position: sticky;
+  height: 100vh;
+  top: 0;
+  left: var(--pgrid);
+  width: 46.4rem;
+}
+.projects_intro .cnt_els .stck_hold .single {
+  aspect-ratio: 464/348;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+.projects_intro .cnt_els .stck_hold .single img,
+.projects_intro .cnt_els .stck_hold .single video {
+  display: none;
+}
+.projects_intro .cnt_els .stck_hold .cRoll {
+  aspect-ratio: 464/348;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+.projects_intro .cnt_els .stck_hold canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition:
+    0.4s opacity cubic-bezier(0.55, 0, 0.1, 1),
+    0.6s filter 0.2s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.projects_intro .cnt_els .stck_hold canvas.hideme {
+  opacity: 0;
+  filter: blur(6px);
+  transition:
+    0.4s opacity cubic-bezier(0.55, 0, 0.1, 1),
+    0.6s filter 0.2s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.projects_intro .cnt_el {
+  position: relative;
+  transition: 0.6s margin-top cubic-bezier(0.55, 0, 0.1, 1);
+}
+.projects_intro .cnt_el:after {
+  content: "";
+  width: 1px;
+  height: 21.4rem;
+  display: block;
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .projects_intro .cnt_el:after {
+    height: 30vw;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .projects_intro .cnt_el:after {
+    height: 55.93vw;
+  }
+}
+.projects_intro .cnt_el > .iO {
+  position: absolute;
+  left: 0;
+  top: 11rem;
+  width: 10px;
+  height: 10px;
+}
+.projects_intro .cnt_el .Oi {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100vw;
+  height: 34.8rem;
+  bottom: 0;
+  z-index: 12;
+  background: red;
+  opacity: 0.1;
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .projects_intro .cnt_el .Oi {
+    height: 30vw;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .projects_intro .cnt_el .Oi {
+    height: 55.93vw;
+  }
+}
+.projects_intro .cnt_el .sldGuide {
+  opacity: 0.1;
+  position: absolute;
+  bottom: 0;
+  height: 34.8rem;
+  left: calc(-1 * var(--pgrid));
+  right: calc(-1 * var(--pgrid));
+}
+.projects_intro .cnt_el + .cnt_el {
+  margin-top: 50vh;
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .projects_intro .cnt_el + .cnt_el {
+    margin-top: 30vh;
+  }
+}
+.projects_intro .cnt_el + .cnt_el .Oiwatch {
+  background: blue;
+  left: 30px;
+}
+.projects_intro .cnt_el_nfo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+:root.D .projects_intro .cnt_el_nfo {
+  padding-bottom: 18.4rem;
+}
+@media (orientation: landscape) {
+  :root.T .projects_intro .cnt_el_nfo {
+    padding-bottom: 18.4rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .projects_intro .cnt_el_nfo {
+    padding-bottom: 6.6rem;
+    flex-wrap: wrap;
+  }
+}
+.projects_intro .cnt_el_nfo .nfo_n {
+  flex-shrink: 0;
+}
+:root.D .projects_intro .cnt_el_nfo .nfo_n {
+  width: 23.6rem;
+}
+@media (orientation: landscape) {
+  :root.T .projects_intro .cnt_el_nfo .nfo_n {
+    width: 23.6rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .projects_intro .cnt_el_nfo .nfo_n {
+    width: 3.5rem;
+  }
+}
+.projects_intro .cnt_el_nfo .nfo_t {
+  flex-shrink: 0;
+}
+:root.D .projects_intro .cnt_el_nfo .nfo_t {
+  width: 34.6rem;
+  padding-left: 1rem;
+}
+@media (orientation: landscape) {
+  :root.T .projects_intro .cnt_el_nfo .nfo_t {
+    width: 34.6rem;
+    padding-left: 1rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .projects_intro .cnt_el_nfo .nfo_t {
+    width: 27.2rem;
+    position: relative;
+    overflow-x: clip;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .projects_intro .cnt_el_nfo .nfo_t {
+    margin-left: 4rem;
+    padding-left: 0.8rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .projects_intro .cnt_el_nfo .nfo_t {
+    margin-left: 5rem;
+    padding-left: 0.8rem;
+  }
+}
+.projects_intro .cnt_el_nfo .nfo_x {
+  flex-shrink: 0;
+}
+:root.D .projects_intro .cnt_el_nfo .nfo_x {
+  width: 34.6rem;
+  padding-left: 1rem;
+}
+@media (orientation: landscape) {
+  :root.T .projects_intro .cnt_el_nfo .nfo_x {
+    width: 34.6rem;
+    padding-left: 1rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .projects_intro .cnt_el_nfo .nfo_x {
+    margin-top: 2.4rem;
+    width: 100%;
+  }
+  :root.T .projects_intro .cnt_el_nfo .nfo_x .linkXS {
+    display: block;
+    margin-top: 2.4rem;
+    color: #8a8a8a;
+    opacity: 0;
+    text-transform: uppercase;
+    line-height: 1.27;
+    transition: 0.6s opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  }
+  :root.T .projects_intro .cnt_el_nfo .nfo_x .Aline.stview + .linkXS {
+    opacity: 1;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .projects_intro .cnt_el_nfo .nfo_x {
+    padding-left: 8.5rem;
+  }
+  :root.T .projects_intro .cnt_el_nfo .nfo_x .Aline {
+    max-width: 34.6rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .projects_intro .cnt_el_nfo .nfo_x {
+    padding-left: 9.4rem;
+  }
+}
+.projects_intro .cnt_el_nfo .nfo_l {
+  width: 100%;
+}
+:root.D .projects_intro .cnt_el_nfo .nfo_l {
+  padding-left: 1rem;
+  margin-left: 24rem;
+}
+@media (orientation: landscape) {
+  :root.T .projects_intro .cnt_el_nfo .nfo_l {
+    padding-left: 1rem;
+    margin-left: 24rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .projects_intro .cnt_el_nfo .nfo_l {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-left: 8.2rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .projects_intro .cnt_el_nfo .nfo_l {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-left: 9.4rem;
+  }
+}
+.projects_intro .cnt_el_nfo .nfo_l .Awrite {
+  --dark: #8a8a8a;
+  --light: #000;
+}
+.projects_intro .cnt_el_nfo .nfo_l .Awrite .iO {
+  width: 1px;
+}
+:root.D .projects_intro .cnt_el_nfo .nfo_l .Awrite .iO {
+  top: 11rem;
+}
+@media (orientation: landscape) {
+  :root.T .projects_intro .cnt_el_nfo .nfo_l .Awrite .iO {
+    top: 11rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .projects_intro .cnt_el_nfo .nfo_l .Awrite .iO {
+    top: 0;
+  }
+}
+.projects_intro .cnt_el_nfo .nfo_l .Awrite i {
+  width: 0.8rem;
+  margin-left: 0.4rem;
+  display: inline-flex !important;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s opacity cubic-bezier(0.55, 0, 0.1, 1);
+}
+.projects_intro .cnt_el_nfo .nfo_l .Awrite i svg {
+  width: 100%;
+}
+.projects_intro .cnt_el_nfo .nfo_l .Awrite i svg path {
+  fill: #000;
+}
+.projects_intro .cnt_el_nfo .nfo_l .Awrite:not(.ivi) i {
+  opacity: 0;
+}
+.projects_intro .cnt_el_sld {
+  width: 100%;
+  height: 34.8rem;
+  margin-top: 4rem;
+  display: block;
+  position: absolute;
+  left: 0;
+}
+:root.D .projects_intro .cnt_el_sld {
+  bottom: 0;
+}
+@media (orientation: landscape) {
+  :root.T .projects_intro .cnt_el_sld {
+    bottom: 0;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .projects_intro .cnt_el_sld {
+    height: 30vw;
+    bottom: 3.5rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .projects_intro .cnt_el_sld {
+    height: 55.93vw;
+    bottom: 3.5rem;
+  }
+}
+:root.AND .projects_intro .cnt_el_sld {
+  overflow-x: scroll;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.projects_intro .cnt_el_sld .cCover {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+.projects_intro .cnt_el_sld canvas {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  transition:
+    0.4s opacity 0.2s cubic-bezier(0.55, 0, 0.1, 1),
+    0.6s filter cubic-bezier(0.55, 0, 0.1, 1);
+}
+.projects_intro .cnt_el_sld canvas.hideme {
+  opacity: 0;
+  filter: blur(6px);
+}
+.projects_intro .cnt_el_sld canvas.fCanvas {
+  opacity: 0;
+  filter: blur(6px);
+}
+.projects_intro .cnt_el_sld img,
+.projects_intro .cnt_el_sld video {
+  display: none;
+}
+:root.AND .projects_intro .cnt_el_sld img,
+:root.AND .projects_intro .cnt_el_sld video {
+  display: block;
+  width: 75vw;
+  height: 55.93vw;
+  object-fit: cover;
+}
+:root.AND .projects_intro .cnt_el_sld img + img,
+:root.AND .projects_intro .cnt_el_sld img + video,
+:root.AND .projects_intro .cnt_el_sld video + img,
+:root.AND .projects_intro .cnt_el_sld video + video {
+  margin-left: 0.8rem;
+}
+.projects_intro .cnt_el .tt3 {
+  transition:
+    0.8s opacity 0.1s cubic-bezier(0.55, 0, 0.1, 1),
+    0.6s transform cubic-bezier(0.55, 0, 0.1, 1);
+  transform-origin: left center;
+}
+.projects_intro .cnt_el:not(.stview) .tt3 {
+  transition: 0.6s all cubic-bezier(0.55, 0, 0.1, 1);
+  opacity: 0;
+  transform: scaleX(1.2);
+}
+.projects_intro .cnt_el:not(.stview) .linkXS {
+  opacity: 0 !important;
+  transition: 0.6s opacity cubic-bezier(0.55, 0, 0.1, 1) !important;
+}
+.projects_intro .cnt_el.noOut .tt3 {
+  opacity: 1 !important;
+  transform: scaleX(1) !important;
+}
+.projects_intro .cnt_el.noOut .linkXS {
+  opacity: 0 !important;
+  transition: 0.6s opacity cubic-bezier(0.55, 0, 0.1, 1) !important;
+}
+.projects_intro .cnt_el-singlemod {
+  margin-top: 0 !important;
+  padding-bottom: 17rem;
+}
+.projects_intro .cnt_el-singlemod .cnt_el_nfo {
+  position: sticky;
+  top: calc(50vh - 17rem);
+}
+.projects_intro .cnt_el-singlemod .Oi {
+  height: 50vh;
+}
+.projects_intro .cnt_el-singlemod:last-child {
+  height: auto !important;
+}
+.projects_intro .cnt_el-singlemod:last-child .cnt_el_sld {
+  position: static;
+}
+.projects_intro .cnt_el-singlemod:last-child .Oi {
+  transform: translate(-50%);
+  top: 50vh;
+}
+.projects_intro .cnt_el-singlemod .cnt_el_sld {
+  pointer-events: none !important;
+}
+.faketit {
+  position: fixed;
+  left: 0;
+  top: 35vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.faketit .nfo_n {
+  flex-shrink: 0;
+}
+:root.D .faketit .nfo_n {
+  width: 23.6rem;
+}
+@media (orientation: landscape) {
+  :root.T .faketit .nfo_n {
+    width: 23.6rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .faketit .nfo_n {
+    width: 3.5rem;
+  }
+}
+.faketit .nfo_t {
+  flex-shrink: 0;
+}
+:root.D .faketit .nfo_t {
+  width: 34.6rem;
+  padding-left: 1rem;
+}
+@media (orientation: landscape) {
+  :root.T .faketit .nfo_t {
+    width: 34.6rem;
+    padding-left: 1rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .faketit .nfo_t {
+    padding-left: 0.8rem;
+    width: 34.6rem;
+    margin-left: 4rem;
+    position: relative;
+    overflow-x: clip;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .faketit .nfo_t {
+    width: 27.2rem;
+    padding-left: 0.8rem;
+    margin-left: 5rem;
+    position: relative;
+    overflow-x: clip;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .projects_arc + .footer {
+    margin-top: 10rem;
+  }
+}
+.projects_arc .cnt_t {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+:root.D .projects_arc .cnt_t {
+  margin-left: 59rem;
+}
+@media (orientation: landscape) {
+  :root.T .projects_arc .cnt_t {
+    margin-left: 59rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .projects_arc .cnt_t {
+    margin-left: 8.5rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .projects_arc .cnt_t {
+    margin-left: 9.3rem;
+  }
+}
+.projects_arc .cnt_t .Atitle {
+  pointer-events: none !important;
+}
+:root.AND .projects_arc .cnt_t .Atitle .tt1 {
+  opacity: 1;
+}
+:root.D .projects_arc .cnt_t .Atitle .Oi {
+  top: 16rem;
+  height: 10px;
+}
+@media (orientation: landscape) {
+  :root.T .projects_arc .cnt_t .Atitle .Oi {
+    top: 16rem;
+    height: 10px;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .projects_arc .cnt_t .Atitle .Oi {
+    top: 16rem;
+    height: 10px;
+  }
+}
+:root.D .projects_arc .cnt_t .Atitle .cCover {
+  left: -2rem;
+  right: -2rem;
+  top: -2rem;
+  bottom: -2rem;
+  transform: translate(-0.2rem);
+}
+@media (orientation: landscape) {
+  :root.T .projects_arc .cnt_t .Atitle .cCover {
+    left: -2rem;
+    right: -2rem;
+    top: -2rem;
+    bottom: -2rem;
+    transform: translate(-0.2rem);
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .projects_arc .cnt_t .Atitle .cCover {
+    left: -0.2rem;
+    right: -0.2rem;
+    top: -1rem;
+    bottom: -1rem;
+    transform: translate(-0.1rem, -0.1rem);
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .projects_arc .cnt_t .Atitle .cCover {
+    left: 0;
+    right: 0;
+    top: -1rem;
+    bottom: -1rem;
+    transform: translate(-0.1rem, -0.1rem);
+  }
+}
+.projects_arc .cnt_b {
+  margin-top: 8rem;
+}
+.projects_arc .cnt_arc {
+  position: relative;
+  display: block;
+  pointer-events: none;
+}
+.projects_arc .cnt_arc > .iO {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 10px;
+  height: 10px;
+}
+@media (orientation: portrait) {
+  :root.T .projects_arc .cnt_arc > .iO {
+    top: 50%;
+  }
+}
+.projects_arc .cnt_arc + .cnt_arc {
+  margin-top: 8.4rem;
+}
+.projects_arc .cnt_arc_nfo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+@media (orientation: portrait) {
+  :root.T .projects_arc .cnt_arc_nfo {
+    flex-wrap: wrap;
+  }
+}
+.projects_arc .cnt_arc_nfo .nfo_n {
+  flex-shrink: 0;
+  opacity: 0;
+  transition: 0.6s opacity cubic-bezier(0.55, 0, 0.1, 1);
+}
+:root.D .projects_arc .cnt_arc_nfo .nfo_n {
+  width: 23.6rem;
+  transform: translate(47.4rem);
+}
+@media (orientation: landscape) {
+  :root.T .projects_arc .cnt_arc_nfo .nfo_n {
+    width: 23.6rem;
+    transform: translate(47.4rem);
+  }
+}
+@media (orientation: portrait) {
+  :root.T .projects_arc .cnt_arc_nfo .nfo_n {
+    width: 3.5rem;
+  }
+}
+.projects_arc .cnt_arc_nfo .nfo_t {
+  flex-shrink: 0;
+  opacity: 0;
+  transition: 0.6s opacity cubic-bezier(0.55, 0, 0.1, 1);
+}
+.projects_arc .cnt_arc_nfo .nfo_t .tt3 {
+  opacity: 0;
+  transform: scaleX(1.2);
+  transition:
+    0.8s opacity 0.1s cubic-bezier(0.55, 0, 0.1, 1),
+    0.6s transform cubic-bezier(0.55, 0, 0.1, 1);
+  transform-origin: left center;
+}
+:root.D .projects_arc .cnt_arc_nfo .nfo_t {
+  width: 34.6rem;
+  padding-left: 1rem;
+  transform: translate(34.6rem);
+}
+@media (orientation: landscape) {
+  :root.T .projects_arc .cnt_arc_nfo .nfo_t {
+    width: 34.6rem;
+    padding-left: 1rem;
+    transform: translate(34.6rem);
+  }
+}
+@media (orientation: portrait) {
+  :root.T .projects_arc .cnt_arc_nfo .nfo_t {
+    width: 27.2rem;
+    position: relative;
+    overflow-x: clip;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .projects_arc .cnt_arc_nfo .nfo_t {
+    margin-left: 4rem;
+    padding-left: 0.8rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .projects_arc .cnt_arc_nfo .nfo_t {
+    margin-left: 5rem;
+    padding-left: 0.8rem;
+  }
+}
+.projects_arc .cnt_arc_nfo .nfo_x {
+  flex-shrink: 0;
+  opacity: 0;
+  transition: 0.6s opacity cubic-bezier(0.55, 0, 0.1, 1);
+}
+:root.D .projects_arc .cnt_arc_nfo .nfo_x {
+  width: 34.6rem;
+  padding-left: 1rem;
+  padding-top: 3.2rem;
+}
+@media (orientation: landscape) {
+  :root.T .projects_arc .cnt_arc_nfo .nfo_x {
+    width: 34.6rem;
+    padding-left: 1rem;
+    padding-top: 3.2rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .projects_arc .cnt_arc_nfo .nfo_x {
+    margin-top: 2.4rem;
+    width: 100%;
+  }
+  :root.T .projects_arc .cnt_arc_nfo .nfo_x .linkXS {
+    display: block;
+    margin-top: 2.4rem;
+    color: #8a8a8a;
+    opacity: 0;
+    text-transform: uppercase;
+    line-height: 1.27;
+    transition: 0.6s opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  }
+  :root.T .projects_arc .cnt_arc_nfo .nfo_x .Aline.stview + .linkXS {
+    opacity: 1;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .projects_arc .cnt_arc_nfo .nfo_x {
+    padding-left: 8.5rem;
+  }
+  :root.T .projects_arc .cnt_arc_nfo .nfo_x .Aline {
+    max-width: 34.6rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .projects_arc .cnt_arc_nfo .nfo_x {
+    padding-left: 9.4rem;
+  }
+}
+.projects_arc .cnt_arc_nfo .nfo_x .iO {
+  top: 0%;
+  height: 100%;
+}
+:root.D .projects_arc .cnt_arc_nfo .nfo_sld {
+  width: 100%;
+  padding-left: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 1rem;
+  overflow-x: clip;
+}
+@media (orientation: landscape) {
+  :root.T .projects_arc .cnt_arc_nfo .nfo_sld {
+    width: 100%;
+    padding-left: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 1rem;
+    overflow-x: clip;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .projects_arc .cnt_arc_nfo .nfo_sld {
+    margin-top: 2.4rem;
+    width: 28rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T .projects_arc .cnt_arc_nfo .nfo_sld {
+    padding-left: 8.6rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T .projects_arc .cnt_arc_nfo .nfo_sld {
+    padding-left: 9.4rem;
+  }
+}
+.projects_arc .cnt_arc_nfo .nfo_sld .md {
+  position: relative;
+  width: 100%;
+}
+:root.D .projects_arc .cnt_arc_nfo .nfo_sld .md {
+  max-width: 11rem;
+}
+@media (orientation: landscape) {
+  :root.T .projects_arc .cnt_arc_nfo .nfo_sld .md {
+    max-width: 11rem;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .projects_arc .cnt_arc_nfo .nfo_sld .md {
+    display: none;
+  }
+  :root.T .projects_arc .cnt_arc_nfo .nfo_sld .md:first-child {
+    display: block;
+  }
+}
+.projects_arc .cnt_arc_nfo .nfo_sld .md .iO {
+  position: absolute;
+  left: 0;
+  bottom: 50%;
+  z-index: 5;
+  background: blue;
+  width: 10px;
+  height: 10px;
+}
+:root.D .projects_arc .cnt_arc_nfo .nfo_sld .md .iO {
+  display: none;
+}
+.projects_arc .cnt_arc_nfo .nfo_sld .md_h {
+  position: relative;
+  width: 100%;
+}
+:root.D .projects_arc .cnt_arc_nfo .nfo_sld .md_h {
+  aspect-ratio: 110/83;
+}
+@media (orientation: landscape) {
+  :root.T .projects_arc .cnt_arc_nfo .nfo_sld .md_h {
+    aspect-ratio: 110/83;
+  }
+}
+@media (orientation: portrait) {
+  :root.T .projects_arc .cnt_arc_nfo .nfo_sld .md_h {
+    aspect-ratio: 184/139;
+  }
+}
+.projects_arc .cnt_arc_nfo .nfo_sld .md_h img,
+.projects_arc .cnt_arc_nfo .nfo_sld .md_h video {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform, filter, opacity;
+  transition:
+    0.6s filter cubic-bezier(0.55, 0, 0.1, 1),
+    0.6s opacity cubic-bezier(0.55, 0, 0.1, 1),
+    0s transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  opacity: 0;
+  filter: blur(4px);
+}
+:root.D .projects_arc .cnt_arc_nfo .nfo_sld .md_h img,
+:root.D .projects_arc .cnt_arc_nfo .nfo_sld .md_h video {
+  transform: translate(2.4rem);
+}
+:root.T .projects_arc .cnt_arc_nfo .nfo_sld .md_h img,
+:root.T .projects_arc .cnt_arc_nfo .nfo_sld .md_h video {
+  transform: translateY(1.2rem);
+}
+:root.T .projects_arc .cnt_arc_nfo .nfo_sld .md_h img.Ldd,
+:root.T .projects_arc .cnt_arc_nfo .nfo_sld .md_h video.Ldd {
+  transition:
+    1.2s filter cubic-bezier(0.55, 0, 0.1, 1),
+    0.6s opacity cubic-bezier(0.55, 0, 0.1, 1),
+    0.6s transform cubic-bezier(0.55, 0, 0.1, 1);
+  opacity: 1;
+  transform: translate(0);
+  filter: blur(0);
+}
+.projects_arc .cnt_arc:not(.stview) .linkXS {
+  opacity: 0 !important;
+  transition: 0.6s opacity cubic-bezier(0.55, 0, 0.1, 1) !important;
+}
+.projects_arc .cnt_arc.stview .nfo_n,
+.projects_arc .cnt_arc.stview .nfo_t {
+  opacity: 1;
+}
+.projects_arc .cnt_arc.stview .nfo_t .tt3 {
+  opacity: 1;
+  transform: scaleX(1);
+}
+.projects_arc .cnt_arc.stview .nfo_x {
+  opacity: 1;
+  pointer-events: all;
+}
+.projects_arc .cnt_arc.stview .nfo_sld {
+  pointer-events: all;
+}
+.projects_arc .cnt_arc.noOut .nfo_n,
+.projects_arc .cnt_arc.noOut .nfo_t {
+  opacity: 1 !important;
+}
+.projects_arc .cnt_arc.noOut .nfo_t .tt3 {
+  opacity: 1 !important;
+  transform: scaleX(1) !important;
+}
+.projects_arc .cnt_arc.noOut .nfo .linkXS {
+  opacity: 0 !important;
+  transition: 0.6s opacity cubic-bezier(0.55, 0, 0.1, 1) !important;
+}
+@media (orientation: portrait) {
+  :root.T .projects_arc .cnt_arc.noOut .nfo .md img,
+  :root.T .projects_arc .cnt_arc.noOut .nfo .md video {
+    opacity: 0 !important;
+    filter: blur(4px) !important;
+  }
+}
+.projects_arc .cnt_arc:hover .nfo_n,
+.projects_arc .cnt_arc:hover .nfo_t,
+.projects_arc .cnt_arc:hover .nfo_x {
+  opacity: 0.5;
+}
+:root.D .projects_arc .cnt_arc:hover .nfo_sld .iO {
+  display: block;
+}
+:root.D .projects_arc .cnt_arc:hover .nfo_sld .Ldd {
+  opacity: 1;
+  transform: translate(0);
+  filter: blur(0);
+  transition:
+    1.2s filter cubic-bezier(0.55, 0, 0.1, 1),
+    0.6s opacity cubic-bezier(0.55, 0, 0.1, 1),
+    0.6s transform cubic-bezier(0.55, 0, 0.1, 1);
+}
+@media (orientation: landscape) {
+  :root.T .projects_arc .cnt_arc:hover .nfo_sld .iO {
+    display: block;
+  }
+  :root.T .projects_arc .cnt_arc:hover .nfo_sld .Ldd {
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0);
+    transition:
+      1.2s filter cubic-bezier(0.55, 0, 0.1, 1),
+      0.6s opacity cubic-bezier(0.55, 0, 0.1, 1),
+      0.6s transform cubic-bezier(0.55, 0, 0.1, 1);
+  }
+}```
+
+### ./src/styles/reset.css
+```css
+// src/styles/reset.css
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: 700;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: 700;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ul {
+  list-style: none;
+}
+html {
+  box-sizing: border-box;
+  overscroll-behavior: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-size-adjust: none;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  -webkit-user-select: none;
+  user-select: none;
+  outline: none;
+  -webkit-touch-callout: none;
+}
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+button {
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: inherit;
+  font: inherit;
+  outline: none;
+  pointer-events: auto;
+}
+img {
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+}```
+
+### ./src/styles/typography.css
+```css
+body {
+  font-family: var(--font-montrealbook); /* Use CSS variable from next/font */
+  color: #000;
+  background: #f8f6f2;
+  font-weight: 400;
+  line-height: 1;
+  font-variant-numeric: slashed-zero;
+}
+:root.D body {
+  font-size: max(11px, 1.1rem);
+}
+@media (orientation: landscape) {
+  :root.T body {
+    font-size: max(11px, 1.1rem);
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T body {
+    font-size: clamp(9px, 13px, 0.55rem);
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T body {
+    font-size: clamp(9px, 13px, 1.1rem);
+  }
+}
+.ttj {
+  letter-spacing: -0.02em;
+  font-family: var(--font-montreal); /* Use CSS variable from next/font */
+}
+:root.D.ttj {
+  font-size: 18rem;
+  line-height: 0.9;
+}
+@media (orientation: landscape) {
+  :root.T.ttj {
+    font-size: 18rem;
+    line-height: 0.9;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T.ttj {
+    font-size: 14.8rem;
+    line-height: 1;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T.ttj {
+    font-size: 7.6rem;
+    line-height: 1;
+  }
+}
+.tt1 {
+  letter-spacing: -0.02em;
+  font-family: var(--font-montreal); /* Use CSS variable from next/font */
+}
+:root.D.tt1 {
+  font-size: 8rem;
+}
+@media (orientation: landscape) {
+  :root.T.tt1 {
+    font-size: 8rem;
+  }
+}
+@media (orientation: portrait) and (min-width: 744px) {
+  :root.T.tt1 {
+    font-size: 4.8rem;
+  }
+}
+@media (orientation: portrait) and (max-width: 745px) {
+  :root.T.tt1 {
+    font-size: 3.8rem;
+  }
+}
+.tt3 {
+  font-size: 1.6rem;
+  letter-spacing: -0.01em;
+  font-family: var(--font-montreal); /* Use CSS variable from next/font */
+}```
+
+### ./src/styles/webgl-utils.css
+```css
+// src/styles/webgl-utils.css
+.pHide {
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+.iO,
+.Oi,
+.OiAlt {
+  visibility: hidden;
+  pointer-events: none;
+}
+html:not(.dev).iO,
+html:not(.dev).Oi,
+html:not(.dev).OiChange,
+html:not(.dev).OiAlt {
+  background: transparent!important;
+}
+section.fake {
+  height: 110vh;
+}
+#gl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  pointer-events: none;
+}
+#glLoader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 32;
+}
+#glBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.move {
+  will-change: transform;
+}
+.canvas {
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.imgP {
+  opacity: 0;
+  height: auto;
+  transition: 0.6s opacity cubic-bezier(0.55, 0, 0.1, 1);
+}
+.imgP.Ldd {
+  opacity: 1;
+}
+.glMedia {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}```
+
+### ./src/styles/wysiwyg.css
+```css
+/* src/styles/wysiwyg.css */
+.wysi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  --wysil: 8rem;
+  --wysim: 2rem;
+  --wysis: 2rem;
+}
+@media only screen and (max-width: 1024px) {
+  :root.T .wysi {
+    --wysil: 4.8rem;
+    --wysim: 2rem;
+    --wysis: 2rem;
+  }
+}
+.wysi img {
+  width: 100%;
+  height: auto;
+  max-width: 77.6rem;
+  position: relative;
+  border-radius: 3.2rem;
+}
+.wysi img + ul,
+.wysi img + ol {
+  margin-top: var(--wysil);
+}
+.wysi img + img {
+  margin-top: var(--wysil);
+}
+.wysi img + p {
+  margin-top: var(--wysil);
+}
+.wysi img + h1,
+.wysi img + h2,
+.wysi img + h3 {
+  margin-top: var(--wysil);
+}
+.wysi img + h4,
+.wysi img + h5,
+.wysi img + h6,
+.wysi img + h7 {
+  margin-top: var(--wysil);
+}
+.wysi img + blockquote {
+  margin-top: var(--wysil);
+}
+.wysi p {
+  font-size: 1.8rem;
+  line-height: 1.56;
+  width: 100%;
+  max-width: 57.5rem;
+}
+.wysi p a {
+  text-decoration: underline;
+  color: #e63642;
+}
+.wysi p strong,
+.wysi p b {
+  font-weight: 700;
+}
+.wysi p + ul,
+.wysi p + ol {
+  margin-top: var(--wysim);
+}
+.wysi p + img {
+  margin-top: var(--wysil);
+}
+.wysi p + p {
+  margin-top: var(--wysis);
+}
+.wysi p + h1,
+.wysi p + h2,
+.wysi p + h3 {
+  margin-top: 4rem;
+}
+.wysi p + h4,
+.wysi p + h5,
+.wysi p + h6,
+.wysi p + h7 {
+  margin-top: var(--wysim);
+}
+.wysi p + blockquote {
+  margin-top: var(--wysim);
+}
+.wysi ul {
+  width: 100%;
+  max-width: 57.5rem;
+}
+.wysi ul li {
+  font-size: 1.8rem;
+  line-height: 1.56;
+  position: relative;
+}
+.wysi ul li:before {
+  content: "";
+  width: 0.4rem;
+  height: 0.4rem;
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: 0.3rem;
+  background-color: #e63642;
+}
+.wysi ul li + li {
+  margin-top: 0.6rem;
+}
+.wysi ul li a {
+  text-decoration: underline;
+}
+.wysi ul + h1,
+.wysi ul + h2,
+.wysi ul + h3 {
+  margin-top: 4rem;
+}
+.wysi ul + h4,
+.wysi ul + h5,
+.wysi ul + h6,
+.wysi ul + h7 {
+  margin-top: var(--wysim);
+}
+.wysi ul + ul {
+  margin-top: var(--wysim);
+}
+.wysi ul + ol {
+  margin-top: var(--wysim);
+}
+.wysi ul + img {
+  margin-top: var(--wysil);
+}
+.wysi ul + p {
+  margin-top: var(--wysim);
+}
+.wysi ul + blockquote {
+  margin-top: var(--wysim);
+}
+.wysi ol {
+  width: 100%;
+  max-width: 57.5rem;
+  font-size: 1.8rem;
+  line-height: 1.56;
+}
+.wysi ol li {
+  position: relative;
+  counter-increment: step-counter;
+}
+.wysi ol li:before {
+  content: counter(step-counter);
+  margin-right: 1rem;
+  color: #e63642;
+}
+.wysi ol li + li {
+  margin-top: 0.6rem;
+}
+.wysi ol li a {
+  text-decoration: underline;
+}
+.wysi ol + ul {
+  margin-top: var(--wysim);
+}
+.wysi ol + ol {
+  margin-top: var(--wysim);
+}
+.wysi ol + img {
+  margin-top: var(--wysil);
+}
+.wysi ol + p {
+  margin-top: var(--wysim);
+}
+.wysi ol + h1,
+.wysi ol + h2,
+.wysi ol + h3 {
+  margin-top: 4rem;
+}
+.wysi ol + h4,
+.wysi ol + h5,
+.wysi ol + h6,
+.wysi ol + h7 {
+  margin-top: var(--wysim);
+}
+.wysi ol + blockquote {
+  margin-top: var(--wysim);
+}
+.wysi blockquote {
+  width: 100%;
+  max-width: 57.5rem;
+  font-size: 3.2rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+@media only screen and (max-width: 1024px) {
+  :root.T .wysi blockquote {
+    font-size: 1.8rem;
+    line-height: 1.44;
+  }
+}
+.wysi blockquote p {
+  color: #000;
+}
+.wysi blockquote a {
+  text-decoration: underline;
+}
+.wysi blockquote + ul,
+.wysi blockquote + ol {
+  margin-top: var(--wysim);
+}
+.wysi blockquote + img {
+  margin-top: var(--wysil);
+}
+.wysi blockquote + h1,
+.wysi blockquote + h2,
+.wysi blockquote + h3 {
+  margin-top: 4rem;
+}
+.wysi blockquote + h4,
+.wysi blockquote + h5,
+.wysi blockquote + h6,
+.wysi blockquote + h7 {
+  margin-top: var(--wysim);
+}
+.wysi blockquote + blockquote {
+  margin-top: var(--wysim);
+}
+.wysi h1,
+.wysi h2,
+.wysi h3 {
+  font-size: 4rem;
+  line-height: 1.3;
+  font-weight: 600;
+  width: 100%;
+  max-width: 57.5rem;
+}
+@media only screen and (max-width: 1024px) {
+  :root.T .wysi h1,
+  :root.T .wysi h2,
+  :root.T .wysi h3 {
+    font-size: 2.8rem;
+    line-height: 1.14;
+  }
+}
+.wysi h1 + p,
+.wysi h2 + p,
+.wysi h3 + p {
+  margin-top: 2rem;
+}
+.wysi h1 + ul,
+.wysi h1 + ol,
+.wysi h2 + ul,
+.wysi h2 + ol,
+.wysi h3 + ul,
+.wysi h3 + ol {
+  margin-top: 2rem;
+}
+.wysi h1 + img,
+.wysi h2 + img,
+.wysi h3 + img {
+  margin-top: 2rem;
+}
+.wysi h1 + blockquote,
+.wysi h2 + blockquote,
+.wysi h3 + blockquote {
+  margin-top: 2rem;
+}
+.wysi h1 + h1,
+.wysi h1 + h2,
+.wysi h1 + h3,
+.wysi h1 + h4,
+.wysi h1 + h5,
+.wysi h1 + h6,
+.wysi h1 + h7,
+.wysi h2 + h1,
+.wysi h2 + h2,
+.wysi h2 + h3,
+.wysi h2 + h4,
+.wysi h2 + h5,
+.wysi h2 + h6,
+.wysi h2 + h7,
+.wysi h3 + h1,
+.wysi h3 + h2,
+.wysi h3 + h3,
+.wysi h3 + h4,
+.wysi h3 + h5,
+.wysi h3 + h6,
+.wysi h3 + h7 {
+  margin-top: 2rem;
+}
+.wysi h4,
+.wysi h5,
+.wysi h6,
+.wysi h7 {
+  width: 100%;
+  max-width: 57.5rem;
+  font-size: 3.2rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+@media only screen and (max-width: 1024px) {
+  :root.T .wysi h4,
+  :root.T .wysi h5,
+  :root.T .wysi h6,
+  :root.T .wysi h7 {
+    font-size: 1.8rem;
+    line-height: 1.44;
+  }
+}
+.wysi h4 + p,
+.wysi h5 + p,
+.wysi h6 + p,
+.wysi h7 + p {
+  margin-top: 2rem;
+}
+.wysi h4 + ul,
+.wysi h4 + ol,
+.wysi h5 + ul,
+.wysi h5 + ol,
+.wysi h6 + ul,
+.wysi h6 + ol,
+.wysi h7 + ul,
+.wysi h7 + ol {
+  margin-top: 2rem;
+}
+.wysi h4 + img,
+.wysi h5 + img,
+.wysi h6 + img,
+.wysi h7 + img {
+  margin-top: 2rem;
+}
+.wysi h4 + blockquote,
+.wysi h5 + blockquote,
+.wysi h6 + blockquote,
+.wysi h7 + blockquote {
+  margin-top: 2rem;
+}
+.wysi h4 + h1,
+.wysi h4 + h2,
+.wysi h4 + h3,
+.wysi h5 + h1,
+.wysi h5 + h2,
+.wysi h5 + h3,
+.wysi h6 + h1,
+.wysi h6 + h2,
+.wysi h6 + h3,
+.wysi h7 + h1,
+.wysi h7 + h2,
+.wysi h7 + h3 {
+  margin-top: 2rem;
+}
+.wysi h4 + h4,
+.wysi h4 + h5,
+.wysi h4 + h6,
+.wysi h4 + h7,
+.wysi h5 + h4,
+.wysi h5 + h5,
+.wysi h5 + h6,
+.wysi h5 + h7,
+.wysi h6 + h4,
+.wysi h6 + h5,
+.wysi h6 + h6,
+.wysi h6 + h7,
+.wysi h7 + h4,
+.wysi h7 + h5,
+.wysi h7 + h6,
+.wysi h7 + h7 {
+  margin-top: 2rem;
+}```
+
+### ./src/webgl/BackgroundWebGL.tsx
+```typescript
+// src/webgl/BackgroundWebGL.tsx
+'use client';
+
+import { useRef, useEffect } from 'react';
+import { useFrame, useThree } from '@react-three/fiber';
+import { motion, useAnimate } from 'framer-motion';
+import { Mesh, ShaderMaterial, Vector2 } from 'three';
+import { power2InOut } from '@/lib/easings';
+
+// The vertex and fragment shaders are identical to the LoaderScene
+const vertexShader = `
+  varying vec2 vUv;
+  void main() {
+    vUv = uv;
+    gl_Position = vec4(position, 1.0);
+  }
+`;
+
+const fragmentShader = `
+  precision highp float;
+  varying vec2 vUv;
+  uniform float uStart0;
+  uniform float uStart1;
+  uniform float uStart2;
+  uniform float uStartX;
+  uniform float uStartY;
+  uniform float uMultiX;
+  uniform float uMultiY;
+  uniform vec2 uResolution;
+
+  vec3 p(vec3 x,vec3 a,vec3 b,vec3 c,vec3 d){
+    return a+b*cos(6.28318*(c*x+d));
+  }
+
+  void main() {
+    vec2 uv = gl_FragCoord.xy/uResolution.xy;
+    float u = 1. - uv.y;
+    float f = uStart0;
+    float s = uStart1;
+    float t = uStart2;
+    float x = uStartX;
+    float y = uStartY;
+    float mx = uMultiX;
+    float my = uMultiY;
+    float r = p(vec3(u),vec3(f),vec3(s),vec3(t),vec3(x,y,0.)).x;
+    float g = p(vec3(u),vec3(f),vec3(s),vec3(t),vec3(x,y,0.)).y;
+    float b = p(vec3(u),vec3(f),vec3(s),vec3(t),vec3(x,y,0.)).z;
+    vec3 color = vec3(r,g,b);
+    gl_FragColor = vec4(color,1.);
+  }
+`;
+
+export function BackgroundWebGL() {
+  const meshRef = useRef<Mesh>(null);
+  const { gl, size } = useThree();
+  const [scope, animate] = useAnimate();
+
+  const uniforms = useRef({
+    uStart0: { value: 0.0 },
+    uStart1: { value: 0.5 },
+    uStart2: { value: 1.0 },
+    uStartX: { value: 0.0 },
+    uStartY: { value: 0.1 },
+    uMultiX: { value: 0.0 },
+    uMultiY: { value: 0.45 },
+    uResolution: { value: new Vector2(size.width, size.height) },
+  });
+
+  useEffect(() => {
+    // Replicates the GSAP timeline from /🏜️/base.js
+    animate(uniforms.current.uStart0, , { duration: 0.6, ease: power2InOut });
+    animate(uniforms.current.uStartX, [0, -0.1], { duration: 2, ease: power2InOut });
+    animate(uniforms.current.uMultiX, [-0.4, 0.1], { duration: 2, ease: power2InOut });
+    animate(uniforms.current.uStartY, [0.1, 0.95], { duration: 2, ease: power2InOut });
+    animate(uniforms.current.uMultiY, [0.45, 0.3], { duration: 2, ease: power2InOut });
+    animate(uniforms.current.uStart2, , { duration: 1, ease: power2InOut, delay: 0.6 });
+  }, [animate]);
+
+  useFrame(() => {
+    uniforms.current.uResolution.value.set(gl.drawingBufferWidth, gl.drawingBufferHeight);
+  });
+
+  return (
+    <motion.mesh ref={scope}>
+      <planeGeometry args={} />
+      <shaderMaterial
+        vertexShader={vertexShader}
+        fragmentShader={fragmentShader}
+        uniforms={uniforms.current}
+      />
+    </motion.mesh>
+  );
+}```
+
+### ./src/webgl/FooterWebGL.tsx
+```typescript
+// src/webgl/FooterWebGL.tsx
+'use client';
+
+import { useRef, useEffect } from 'react';
+import { Text } from '@react-three/drei';
+import { motion }s useAnimate;
+import { power4InOut } from '@/lib/easings';
+import { Mesh, ShaderMaterial } from 'three';
+
+// We reuse the same shader logic from the main hero title for visual consistency.
+const vertexShader = `
+  varying vec2 vUv;
+  void main() {
+    vUv = uv;
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+  }
+`;
+
+const fragmentShader = `
+  uniform sampler2D tMap;
+  uniform vec3 uColor;
+  uniform float uPower;
+  varying vec2 vUv;
+
+  void main() {
+    vec4 tex = texture2D(tMap, vUv);
+    float a = smoothstep(0.5 - uPower, 0.5 + uPower, tex.a);
+    gl_FragColor = vec4(uColor, a);
+  }
+`;
+
+type FooterWebGLProps = {
+  text: string;
+  isVisible: boolean;
+};
+
+export function FooterWebGL({ text, isVisible }: FooterWebGLProps) {
+  const meshRef = useRef<Mesh>(null);
+  const [scope, animate] = useAnimate();
+
+  const uniforms = {
+    tMap: { value: null },
+    uColor: { value: new THREE.Color('#000000') },
+    uPower: { value: 0.0 },
+  };
+
+  useEffect(() => {
+    if (isVisible) {
+      animate(scope.current, { uPower: 0.5 }, { duration: 1.2, ease: power4InOut, delay: 0.2 });
+    }
+  }, [isVisible, animate, scope]);
+
+  return (
+    <group>
+      <Text
+        ref={meshRef}
+        font="/fonts/PPNeueMontreal-Medium.json"
+        fontSize={1}
+        letterSpacing={-0.024}
+        anchorX="left"
+        anchorY="middle"
+      >
+        {text.toUpperCase()}
+        <shaderMaterial
+          args={}
+          attach="material"
+        />
+      </Text>
+    </group>
+  );
+}```
+
+### ./src/webgl/LoaderScene.tsx
+```typescript
+// src/webgl/LoaderScene.tsx
+'use client';
+
+import { useRef, useEffect } from 'react';
+import { useFrame, useThree } from '@react-three/fiber';
+import { Mesh, ShaderMaterial, Vector2 } from 'three';
+import { animate } from 'framer-motion';
+import { power2InOut, power4InOut } from '@/lib/easings';
+
+// Translated from /gl🌊🌊🌊/⌛️/🩻main.glsl (Vertex Shader)
+const vertexShader = `
+  varying vec2 vUv;
+  void main() {
+    vUv = uv;
+    gl_Position = vec4(position, 1.0);
+  }
+`;
+
+// Translated from /gl🌊🌊🌊/⌛️/🧪main.glsl (Fragment Shader)
+const fragmentShader = `
+  precision highp float;
+  varying vec2 vUv;
+  uniform float uStart0;
+  uniform float uStart1;
+  uniform float uStart2;
+  uniform float uStartX;
+  uniform float uStartY;
+  uniform float uMultiX;
+  uniform float uMultiY;
+  uniform vec2 uResolution;
+
+  vec3 p(vec3 x,vec3 a,vec3 b,vec3 c,vec3 d){
+    return a+b*cos(6.28318*(c*x+d));
+  }
+
+  void main() {
+    vec2 uv = gl_FragCoord.xy/uResolution.xy;
+    float u = 1. - uv.y;
+    float f = uStart0;
+    float s = uStart1;
+    float t = uStart2;
+    float x = uStartX;
+    float y = uStartY;
+    float mx = uMultiX;
+    float my = uMultiY;
+    float r = p(vec3(u),vec3(f),vec3(s),vec3(t),vec3(x,y,0.)).x;
+    float g = p(vec3(u),vec3(f),vec3(s),vec3(t),vec3(x,y,0.)).y;
+    float b = p(vec3(u),vec3(f),vec3(s),vec3(t),vec3(x,y,0.)).z;
+    vec3 color = vec3(r,g,b);
+    gl_FragColor = vec4(color,1.);
+  }
+`;
+
+export function LoaderScene({ onComplete }: { onComplete: () => void }) {
+  const meshRef = useRef<Mesh>(null);
+  const { gl, size } = useThree();
+
+  const uniforms = useRef({
+    uStart0: { value: 1.0 },
+    uStart1: { value: 0.5 },
+    uStart2: { value: 1.0 },
+    uStartX: { value: 0.0 },
+    uStartY: { value: 0.1 },
+    uMultiX: { value: -0.4 },
+    uMultiY: { value: 0.45 },
+    uResolution: { value: new Vector2(size.width, size.height) },
+  });
+
+  useEffect(() => {
+    // Replicates the GSAP timeline from /⌛️/base.js
+    animate(uniforms.current.uStart0, { value: 0 }, { duration: 1.0, ease: power4InOut });
+    animate(uniforms.current.uStart1, { value: 1 }, { duration: 2.0, ease: power2InOut });
+    animate(uniforms.current.uStart2, { value: 0 }, { duration: 2.6, ease: power4InOut, onComplete });
+  }, [onComplete]);
+
+  useFrame(() => {
+    // Ensure resolution is up-to-date
+    uniforms.current.uResolution.value.set(gl.drawingBufferWidth, gl.drawingBufferHeight);
+  });
+
+  return (
+    <mesh ref={meshRef}>
+      <planeGeometry args={} />
+      <shaderMaterial
+        vertexShader={vertexShader}
+        fragmentShader={fragmentShader}
+        uniforms={uniforms.current}
+      />
+    </mesh>
+  );
+}```
+
+### ./src/webgl/MainCanvas.tsx
+```typescript
+// src/webgl/MainCanvas.tsx
+'use client';
+
+import { Canvas } from '@react-three/fiber';
+import { View } from '@react-three/drei';
+
+export function MainCanvas() {
+  return (
+    <Canvas
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100vw',
+        height: '100vh',
+        pointerEvents: 'none', // The canvas itself should not be interactive
+        zIndex: 10, // Positioned above the background but below main UI
+      }}
+      eventSource={document.getElementById('root')!} // Connect events to the main app body
+    >
+      <View.Port />
+    </Canvas>
+  );
+}```
+
+### ./src/webgl/Media.tsx
+```typescript
+// src/webgl/Media.tsx
+'use client';
+
+import { useRef, useMemo } from 'react';
+import { useFrame, useThree } from '@react-three/fiber';
+import { useTexture } from '@react-three/drei';
+import { ShaderMaterial, Vector2, Color } from 'three';
+
+// Translated directly from the original project's 🩻main.glsl
+const vertexShader = `
+  varying vec2 vUv;
+  void main() {
+    vUv = uv;
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+  }
+`;
+
+// Translated directly from the original project's 🧪main.glsl
+const fragmentShader = `
+  precision highp float;
+  varying vec2 vUv;
+  uniform sampler2D uMap;
+  uniform vec2 uTextureSize;
+  uniform vec2 uMouse;
+  uniform float uTime;
+  uniform float uHover;
+  uniform vec2 uCover;
+
+  // Simplex noise function from the original shader for the fractal effect
+  vec3 mod289(vec3 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
+  vec2 mod289(vec2 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
+  vec3 permute(vec3 x) { return mod289(((x*34.0)+1.0)*x); }
+  float snoise(vec2 v) {
+    const vec4 C = vec4(0.211324865405187, 0.366025403784439, -0.577350269189626, 0.024390243902439);
+    vec2 i  = floor(v + dot(v, C.yy));
+    vec2 x0 = v -   i + dot(i, C.xx);
+    vec2 i1;
+    i1 = (x0.x > x0.y)? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+    vec4 x12 = x0.xyxy + C.xxzz;
+    x12.xy -= i1;
+    i = mod289(i);
+    vec3 p = permute( permute( i.y + vec3(0.0, i1.y, 1.0 )) + i.x + vec3(0.0, i1.x, 1.0 ));
+    vec3 m = max(0.5 - vec3(dot(x0,x0), dot(x12.xy,x12.xy), dot(x12.zw,x12.zw)), 0.0);
+    m = m*m;
+    m = m*m;
+    vec3 x = 2.0 * fract(p * C.www) - 1.0;
+    vec3 h = abs(x) - 0.5;
+    vec3 ox = floor(x + 0.5);
+    vec3 a0 = x - ox;
+    m *= 1.79284291400159 - 0.85373472095314 * ( a0*a0 + h*h );
+    vec3 g;
+    g.x  = a0.x  * x0.x  + h.x  * x0.y;
+    g.yz = a0.yz * x12.xz + h.yz * x12.yw;
+    return 130.0 * dot(m, g);
+  }
+
+  void main() {
+    vec2 ratio = vec2(
+        min((uCover.x / uCover.y) / (uTextureSize.x / uTextureSize.y), 1.0),
+        min((uCover.y / uCover.x) / (uTextureSize.y / uTextureS.y), 1.0)
+    );
+    vec2 uv = vec2(
+        vUv.x * ratio.x + (1.0 - ratio.x) * 0.5,
+        vUv.y * ratio.y + (1.0 - ratio.y) * 0.5
+    );
+
+    float uL = length(uMouse) * uHover;
+    float uA = atan(uMouse.x, uMouse.y);
+
+    vec2 p = uv -.5;
+    p.x *= uCover.x/uCover.y;
+
+    float a = (atan(p.y,p.x) + uA);
+    float r = length(p);
+    float ns = snoise(vec2(p.x*14., p.y*14.) + uTime*.1);
+    float f = fract(r*4. - uTime*.2 + ns*.2);
+    float val = smoothstep(0.,.1,f) * smoothstep(.4,.3,f);
+    
+    vec4 color = texture2D(uMap, uv);
+    color.rgb += val * uL * 2.;
+    gl_FragColor = color;
+  }
+`;
+
+type MediaProps = {
+  url: string;
+  isHovered: boolean;
+};
+
+export function Media({ url, isHovered }: MediaProps) {
+  const materialRef = useRef<ShaderMaterial>(null);
+  const texture = useTexture(url);
+  const { size } = useThree(); // viewport size
+
+  const uniforms = useMemo(
+    () => ({
+      uMap: { value: texture },
+      uTime: { value: 0 },
+      uMouse: { value: new Vector2(0.5, 0.5) },
+      uHover: { value: 0.0 },
+      uTextureSize: { value: new Vector2(texture.image.width, texture.image.height) },
+      uCover: { value: new Vector2(size.width, size.height) },
+    }),
+    [texture, size]
+  );
+
+  useFrame((state, delta) => {
+    if (materialRef.current) {
+      materialRef.current.uniforms.uTime.value = state.clock.getElapsedTime();
+      // Animate hover state for smooth transitions
+      materialRef.current.uniforms.uHover.value = THREE.MathUtils.lerp(
+        materialRef.current.uniforms.uHover.value,
+        isHovered? 1 : 0,
+        0.1
+      );
+    }
+  });
+
+  return (
+    <mesh>
+      <planeGeometry args={} />
+      <shaderMaterial
+        ref={materialRef}
+        vertexShader={vertexShader}
+        fragmentShader={fragmentShader}
+        uniforms={uniforms}
+        transparent
+      />
+    </mesh>
+  );
+}```
+
+### ./src/webgl/TitleWebGL.tsx
+```typescript
+// src/webgl/TitleWebGL.tsx
+'use client';
+
+import { useRef, useEffect } from 'react';
+import { useFrame } from '@react-three/fiber';
+import { Text } from '@react-three/drei';
+import { Mesh, ShaderMaterial } from 'three';
+import { motion }s useAnimate;
+import { power4InOut } from '@/lib/easings';
+
+// Custom shader to add the interactive "power" effect
+const vertexShader = `
+  varying vec2 vUv;
+  void main() {
+    vUv = uv;
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+  }
+`;
+
+const fragmentShader = `
+  uniform sampler2D tMap;
+  uniform vec3 uColor;
+  uniform float uPower;
+  varying vec2 vUv;
+
+  void main() {
+    vec4 tex = texture2D(tMap, vUv);
+    float a = smoothstep(0.5 - uPower, 0.5 + uPower, tex.a);
+    gl_FragColor = vec4(uColor, a);
+  }
+`;
+
+type TitleWebGLProps = {
+  text: string;
+  isVisible: boolean;
+};
+
+export function TitleWebGL({ text, isVisible }: TitleWebGLProps) {
+  const meshRef = useRef<Mesh>(null);
+  const [scope, animate] = useAnimate();
+
+  const uniforms = {
+    tMap: { value: null },
+    uColor: { value: new THREE.Color('#000000') },
+    uPower: { value: 0.0 },
+  };
+
+  useEffect(() => {
+    if (isVisible) {
+      // Entrance animation for the text shader
+      animate(scope.current, { uPower: 0.5 }, { duration: 2, ease: power4InOut, delay: 0.8 });
+    }
+  }, [isVisible, animate, scope]);
+
+  useFrame(() => {
+    if (meshRef.current) {
+      const material = meshRef.current.material as ShaderMaterial;
+      // This is where mouse interaction logic would go to update uniforms
+    }
+  });
+
+  return (
+    <group>
+      <Text
+        ref={meshRef}
+        font="/fonts/PPNeueMontreal-Medium.json"
+        fontSize={1}
+        letterSpacing={-0.024}
+        anchorX="center"
+        anchorY="middle"
+      >
+        {text.toUpperCase()}
+        <shaderMaterial
+          args={}
+          attach="material"
+        />
+      </Text>
+    </group>
+  );
+}```
+

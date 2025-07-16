@@ -24,13 +24,11 @@
       }
     ],
     "paths": {
-      "@/*": ["src/*"],
-      "contentlayer/generated": ["./.contentlayer/generated"]
+      "@/*": ["src/*"]
     }
   },
   "include": [
     "src",
-    ".contentlayer",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",

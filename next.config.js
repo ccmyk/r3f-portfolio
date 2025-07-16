@@ -1,9 +1,12 @@
 // next.config.js
-const { withContentlayer } = require('next-contentlayer2')
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+});
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  // Your existing config
-}
-
-module.exports = withContentlayer(nextConfig)
+const nextConfig = withMDX({
+  // Your Next.js config here
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'], // add md/mdx
+});
+ 
+module.exports = nextConfig;

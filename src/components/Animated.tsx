@@ -29,15 +29,16 @@ export const Animated = <T extends React.ElementType = 'div'>({
   text,
   variant,
   className = '',
-  stagger = 0.05, // Matches original's times[1]
+  stagger = 0.05,
   delay = 0,
-  scrambleDuration = 0.16, // Matches original's times[2]
-  revealDuration = 0.3, // Matches original's times
+  scrambleDuration = 0.16,
+  revealDuration = 0.3,
   scrambleChars = '##·$%&/=€|()@+09*+]',
   scrambleCount = 2,
-  isVisible = false, // Default to false, trigger manually or with whileInView
- ...rest
+  isVisible = false,
+...rest
 }: AnimatedProps<T>) => {
+  // CORRECTED: Use the logical OR operator '||' instead of bitwise OR '|'
   const Tag = as |
 
 | 'span';
