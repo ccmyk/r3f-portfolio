@@ -1,13 +1,13 @@
-// src/webgl/BackgroundWebGL.tsx
+// src/webgl/LoaderScene.tsx
 'use client';
 
 import { useRef, useEffect } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
-import { motion, useAnimate } from 'framer-motion';
 import { Mesh, ShaderMaterial, Vector2 } from 'three';
-import { power2InOut } from '@/lib/easings';
+import { animate } from 'framer-motion';
+import { power2InOut, power4InOut } from '@/lib/easings';
 
-// The vertex and fragment shaders are identical to the LoaderScene
+// Translated from /gl🌊🌊🌊/⌛️/🩻main.glsl (Vertex Shader)
 const vertexShader = `
   varying vec2 vUv;
   void main() {
@@ -16,6 +16,7 @@ const vertexShader = `
   }
 `;
 
+// Translated from /gl🌊🌊🌊/⌛️/🧪main.glsl (Fragment Shader)
 const fragmentShader = `
   precision highp float;
   varying vec2 vUv;
@@ -50,44 +51,41 @@ const fragmentShader = `
   }
 `;
 
-export function BackgroundWebGL() {
+export function LoaderScene({ onComplete }: { onComplete: () => void }) {
   const meshRef = useRef<Mesh>(null);
   const { gl, size } = useThree();
-  const [scope, animate] = useAnimate();
 
   const uniforms = useRef({
-    uStart0: { value: 0.0 },
+    uStart0: { value: 1.0 },
     uStart1: { value: 0.5 },
     uStart2: { value: 1.0 },
     uStartX: { value: 0.0 },
     uStartY: { value: 0.1 },
-    uMultiX: { value: 0.0 },
+    uMultiX: { value: -0.4 },
     uMultiY: { value: 0.45 },
     uResolution: { value: new Vector2(size.width, size.height) },
   });
 
   useEffect(() => {
-    // Replicates the GSAP timeline from /🏜️/base.js
-    animate(uniforms.current.uStart0, , { duration: 0.6, ease: power2InOut });
-    animate(uniforms.current.uStartX, [0, -0.1], { duration: 2, ease: power2InOut });
-    animate(uniforms.current.uMultiX, [-0.4, 0.1], { duration: 2, ease: power2InOut });
-    animate(uniforms.current.uStartY, [0.1, 0.95], { duration: 2, ease: power2InOut });
-    animate(uniforms.current.uMultiY, [0.45, 0.3], { duration: 2, ease: power2InOut });
-    animate(uniforms.current.uStart2, , { duration: 1, ease: power2InOut, delay: 0.6 });
-  }, [animate]);
+    // Replicates the GSAP timeline from /⌛️/base.js
+    animate(uniforms.current.uStart0, { value: 0 }, { duration: 1.0, ease: power4InOut });
+    animate(uniforms.current.uStart1, { value: 1 }, { duration: 2.0, ease: power2InOut });
+    animate(uniforms.current.uStart2, { value: 0 }, { duration: 2.6, ease: power4InOut, onComplete });
+  }, [onComplete]);
 
   useFrame(() => {
+    // Ensure resolution is up-to-date
     uniforms.current.uResolution.value.set(gl.drawingBufferWidth, gl.drawingBufferHeight);
   });
 
   return (
-    <motion.mesh ref={scope}>
+    <mesh ref={meshRef}>
       <planeGeometry args={} />
       <shaderMaterial
         vertexShader={vertexShader}
         fragmentShader={fragmentShader}
         uniforms={uniforms.current}
       />
-    </motion.mesh>
+    </mesh>
   );
 }

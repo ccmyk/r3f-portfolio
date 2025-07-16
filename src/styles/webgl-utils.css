@@ -1,0 +1,71 @@
+// src/styles/webgl-utils.css
+.pHide {
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+.iO,
+.Oi,
+.OiAlt {
+  visibility: hidden;
+  pointer-events: none;
+}
+html:not(.dev).iO,
+html:not(.dev).Oi,
+html:not(.dev).OiChange,
+html:not(.dev).OiAlt {
+  background: transparent!important;
+}
+section.fake {
+  height: 110vh;
+}
+#gl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  pointer-events: none;
+}
+#glLoader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 32;
+}
+#glBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.move {
+  will-change: transform;
+}
+.canvas {
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.imgP {
+  opacity: 0;
+  height: auto;
+  transition: 0.6s opacity cubic-bezier(0.55, 0, 0.1, 1);
+}
+.imgP.Ldd {
+  opacity: 1;
+}
+.glMedia {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}

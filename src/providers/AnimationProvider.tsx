@@ -1,54 +1,43 @@
 // src/providers/AnimationProvider.tsx
-"use client";
+'use client';
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useReducer, ReactNode } from 'react';
 
-// This defines the "cues" our animation system will use.
-interface AnimationContextType {
-  isNavVisible: boolean;
-  isHeroVisible: boolean;
-  // We will add more cues here later (isProjectsVisible, etc.)
+type AnimationState = 'LOADING' | 'LOADER_EXITING' | 'CONTENT_VISIBLE' | 'IDLE';
+type Action = { type: 'LOADER_EXIT_COMPLETE' } | { type: 'SET_IDLE' };
+
+interface AnimationContextProps {
+  state: AnimationState;
+  dispatch: React.Dispatch<Action>;
 }
 
-const AnimationContext = createContext<AnimationContextType | undefined>(undefined);
+const AnimationContext = createContext<AnimationContextProps | undefined>(undefined);
 
-export const AnimationProvider = ({ children }: { children: React.ReactNode }) => {
-  const [isNavVisible, setNavVisible] = useState(false);
-  const [isHeroVisible, setHeroVisible] = useState(false);
+const animationReducer = (state: AnimationState, action: Action): AnimationState => {
+  switch (action.type) {
+    case 'LOADER_EXIT_COMPLETE':
+      return 'CONTENT_VISIBLE';
+    case 'SET_IDLE':
+      return 'IDLE';
+    default:
+      return state;
+  }
+};
 
-  useEffect(() => {
-    // This sequence REPLACES the old setTimeout-based master timeline.
-    // We are disabling the loader for now by using short delays.
-
-    // Cue 1: Show the Nav. (Matches the 2600ms mark in your docs)
-    const navTimer = setTimeout(() => {
-      setNavVisible(true);
-    }, 200); // Using a short delay for testing
-
-    // Cue 2: Show the Hero section. (Matches the 3000ms mark in your docs)
-    const heroTimer = setTimeout(() => {
-      setHeroVisible(true);
-    }, 500); // A slightly longer delay
-
-    return () => {
-      clearTimeout(navTimer);
-      clearTimeout(heroTimer);
-    };
-  }, []);
-
-  const value = { isNavVisible, isHeroVisible };
+export const AnimationProvider = ({ children }: { children: ReactNode }) => {
+  const [state, dispatch] = useReducer(animationReducer, 'LOADING');
 
   return (
-    <AnimationContext.Provider value={value}>
+    <AnimationContext.Provider value={{ state, dispatch }}>
       {children}
     </AnimationContext.Provider>
   );
 };
 
-export const useAnimations = (): AnimationContextType => {
+export const useAnimation = () => {
   const context = useContext(AnimationContext);
-  if (context === undefined) {
-    throw new Error('useAnimations must be used within an AnimationProvider');
+  if (!context) {
+    throw new Error('useAnimation must be used within an AnimationProvider');
   }
   return context;
 };

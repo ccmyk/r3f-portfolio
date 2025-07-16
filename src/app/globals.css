@@ -1,55 +1,13 @@
 /* src/app/globals.css */
-
-/* Update all imports to use the .css extension */
 @import '../styles/reset.css';
-@import '../styles/typography.css';
 @import '../styles/design-system.css';
+@import '../styles/typography.css';
 @import '../styles/animations.css';
-@import '../styles/home.css';
-@import '../styles/navigation.css';
-@import '../styles/footer.css';
 @import '../styles/loader.css';
+@import '../styles/navigation.css';
 @import '../styles/background.css';
+@import '../styles/home.css';
+@import '../styles/footer.css';
 @import '../styles/about.css';
-@import '../styles/error.css';
-@import '../styles/playground.css';
-@import '../styles/project.css';
-@import '../styles/projects.css';
-
-/* Global styles */
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'montrealbook', sans-serif;
-  color: var(--color-text-primary);
-  background: var(--color-bg-primary);
-  overflow-x: hidden;
-}
-
-/* Prevent scroll restoration */
-html {
-  scroll-behavior: auto;
-}
-
-/* Lenis smooth scroll classes */
-.lenis-stopped {
-  overflow: hidden;
-}
-
-/* Base HTML and Body styles */
-html {
-  font-size: var(--base-font-size);
-  line-height: var(--base-line-height);
-}
-
-body {
-  font-family: var(--font-primary);
-  background-color: var(--color-bg-primary);
-  color: var(--color-text-primary);
-  font-weight: var(--font-weight-normal);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-}
+@import '../styles/wysiwyg.css';
+@import '../styles/webgl-utils.css'; 
